@@ -7,9 +7,19 @@ import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 
+
+import os
+
 matplotlib.rcParams['pdf.fonttype'] = 42
 matplotlib.rcParams['ps.fonttype'] = 42
 
+# Resolve absolute paths based on this script's location
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# Assumes structure: marconi/plotting/token_hit_rate.py -> marconi/logs/
+marconi_root = os.path.dirname(current_dir)
+logs_dir = os.path.join(marconi_root, "logs")
+figures_dir = os.path.join(marconi_root, "figures", "eval")
+os.makedirs(figures_dir, exist_ok=True)
 
 def plot_token_hit_rate(log_filename, colors=None):
     # log_filename: a string of the path of the log
@@ -111,14 +121,14 @@ def plot_token_hit_rate(log_filename, colors=None):
     plt.show()
     # dataset_name = log_filename.split('_', 2)[1].split('.')[0]
     dataset_name = log_filename.split('/')[-1].split('.')[0]
-    fig.savefig(f"../figures/eval/{dataset_name}.pdf", dpi=500, bbox_inches='tight')
+    fig.savefig(os.path.join(figures_dir, f"{dataset_name}.pdf"), dpi=500, bbox_inches='tight')
 
 
 # %%
 for log_filename in [
-    "../logs/lmsys.txt",
-    "../logs/sharegpt.txt",
-    "../logs/swebench.txt",
+    os.path.join(logs_dir, "lmsys.txt"),
+    os.path.join(logs_dir, "sharegpt.txt"),
+    os.path.join(logs_dir, "swebench.txt"),
 ]:
     plot_token_hit_rate(log_filename)
 

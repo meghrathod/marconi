@@ -3,6 +3,13 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
+import os
+
+# Resolve absolute paths based on this script's location
+current_dir = os.path.dirname(os.path.abspath(__file__))
+marconi_root = os.path.dirname(current_dir)
+figures_dir = os.path.join(marconi_root, "figures", "eval")
+os.makedirs(figures_dir, exist_ok=True)
 
 art = (5.0, 7.5, 10.0)
 hitrate_dict = {  # first version -- unsure where these numbers are from
@@ -46,7 +53,7 @@ ax.grid(color='lightgrey', linestyle='dashed', axis="y", linewidth=0.8)
 # ax.set_ylim(0, 250)
 
 plt.show()
-fig.savefig(f"../figures/eval/microbenchmark_art.pdf", dpi=500, bbox_inches='tight')
+fig.savefig(os.path.join(figures_dir, "microbenchmark_art.pdf"), dpi=500, bbox_inches='tight')
 # %%
 import matplotlib.pyplot as plt
 import numpy as np
@@ -90,5 +97,5 @@ ax.grid(color='lightgrey', linestyle='dashed', axis="y", linewidth=0.8)
 # ax.set_ylim(0, 250)
 
 plt.show()
-# fig.savefig(f"../figures/eval/microbenchmark_sps.pdf", dpi=500, bbox_inches='tight')
+# fig.savefig(os.path.join(figures_dir, "microbenchmark_sps.pdf"), dpi=500, bbox_inches='tight')
 # %%

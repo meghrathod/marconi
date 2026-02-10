@@ -10,12 +10,22 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
+import os
+
 matplotlib.rcParams['pdf.fonttype'] = 42
 matplotlib.rcParams['ps.fonttype'] = 42
 
+# Resolve absolute paths based on this script's location
+current_dir = os.path.dirname(os.path.abspath(__file__))
+marconi_root = os.path.dirname(current_dir)
+results_dir = os.path.join(marconi_root, "results")
+data_dir = os.path.join(marconi_root, "data")
+figures_dir = os.path.join(marconi_root, "figures", "eval")
+os.makedirs(figures_dir, exist_ok=True)
+
 config = ("swebench", 100, 8e10, 10, 7.5,)
 trace_name, num_sessions, capacity_bytes, sessions_per_second, avg_response_time = config
-trace_filename_dir = f"../results/{capacity_bytes}/{trace_name}_sps={sessions_per_second}"
+trace_filename_dir = os.path.join(results_dir, str(capacity_bytes), f"{trace_name}_sps={sessions_per_second}")
 if trace_name in ["swebench"]:
     trace_filename_dir += f"_art={avg_response_time}"
 # trace_filename += f"_nums={num_sessions}_finegrainedanalysis.pickle"
@@ -37,7 +47,8 @@ for fname in trace_filenames:
         experiment_data = pickle.load(f)
 
     # TTFT latencies
-    latency_pickle_filename = f"../data/ttft_AI21-Jamba-1.5-Mini.pickle"
+    # TTFT latencies
+    latency_pickle_filename = os.path.join(data_dir, "ttft_AI21-Jamba-1.5-Mini.pickle")
     with open(latency_pickle_filename, "rb") as f:
         ttft_latencies = pickle.load(f)
 
@@ -119,7 +130,7 @@ for fname in trace_filenames:
     # ax.axhline(y=0, color="black", linestyle="dashed")
 
     plt.show()
-    fig.savefig("../figures/eval/token_hit_rate_comparison.pdf", dpi=500, bbox_inches='tight')
+    fig.savefig(os.path.join(figures_dir, "token_hit_rate_comparison.pdf"), dpi=500, bbox_inches='tight')
 
     # XXX
     # Token hit rate comparison, binned
@@ -159,7 +170,7 @@ for fname in trace_filenames:
     ax.grid(color='lightgrey', linestyle='dashed', axis="both", linewidth=0.8)
 
     plt.show()
-    fig.savefig("../figures/eval/token_hit_rate_comparison_bined.pdf", dpi=500, bbox_inches='tight')
+    fig.savefig(os.path.join(figures_dir, "token_hit_rate_comparison_bined.pdf"), dpi=500, bbox_inches='tight')
 
     # XXX
     # TTFT CDF
@@ -245,6 +256,6 @@ for fname in trace_filenames:
     # ax.grid(color='lightgrey', linestyle='dashed', axis="both", linewidth=0.8)
 
     plt.show()
-    fig.savefig("../figures/eval/ttft_distribution.pdf", dpi=500, bbox_inches='tight')
+    fig.savefig(os.path.join(figures_dir, "ttft_distribution.pdf"), dpi=500, bbox_inches='tight')
 
     # %%

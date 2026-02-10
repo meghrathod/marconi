@@ -1,5 +1,6 @@
 # %%
 import re
+import os
 import pickle
 import itertools
 import statistics
@@ -55,8 +56,16 @@ def linear_smooth(data):
 
     return smoothed_data
 
+
+# Resolve absolute paths based on this script's location
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# Assumes structure: marconi/plotting/ttft.py -> marconi/data/
+marconi_root = os.path.dirname(current_dir)
+data_dir = os.path.join(marconi_root, "data")
+logs_dir = os.path.join(marconi_root, "logs")
+
 # TTFT latencies
-latency_pickle_filename = f"../data/ttft_AI21-Jamba-1.5-Mini.pickle"
+latency_pickle_filename = os.path.join(data_dir, "ttft_AI21-Jamba-1.5-Mini.pickle")
 with open(latency_pickle_filename, "rb") as f:
     ttft_latencies = pickle.load(f)
 ttft_latencies = linear_smooth(ttft_latencies)
@@ -209,17 +218,14 @@ colors = ['#52B788', '#40916C', '#2D6A4F', "#081C15"]
 linestyles = ["solid", "dotted", "dashed"]
 fontsize = 14
 
-for fig_id, log_filename in enumerate([
-    # '../logs/1011_lmsys_nums=100_wind=1000_initw=0.txt',
-    # '../logs/1010_sharegpt.txt',  # window is either 200, 500, or 1000. Prob 200?
-    # '../logs/1010_swebench.txt'  # window 200, init weight 1
-    # "../logs/1013_swebench_nums=100_wind=200.txt",
+for fig_id, dataset in enumerate(["lmsys", "sharegpt", "swebench"]):
+    if dataset == "lmsys":
+       log_filename = os.path.join(logs_dir, "1029_lmsys_initw0.0_wind=1000.txt")
+    elif dataset == "sharegpt":
+       log_filename = os.path.join(logs_dir, "1029_sharegpt_initw0.0_wind=1000.txt")
+    elif dataset == "swebench":
+       log_filename = os.path.join(logs_dir, "1029_swebench_initw0.0_wind=1000.txt")
     
-    # SOSP version
-    "../logs/1029_lmsys_initw0.0_wind=1000.txt",
-    "../logs/1029_sharegpt_initw0.0_wind=5x.txt",
-    "../logs/1029_swebench_initw0.0_wind=5x.txt",
-]):
     vllm_win_list, sglang_win_list, marconi_win_list = analyze_ttft(log_filename)
     
     ax = axs[fig_id]

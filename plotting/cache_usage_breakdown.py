@@ -7,8 +7,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+import os
+
 matplotlib.rcParams['pdf.fonttype'] = 42
 matplotlib.rcParams['ps.fonttype'] = 42
+
+# Resolve absolute paths based on this script's location
+current_dir = os.path.dirname(os.path.abspath(__file__))
+marconi_root = os.path.dirname(current_dir)
+figures_dir = os.path.join(marconi_root, "figures", "eval")
+os.makedirs(figures_dir, exist_ok=True)
 
 block_sizes = ("32", "64", "128")
 reuse_rate = {
@@ -47,7 +55,7 @@ ax.set_axisbelow(True)
 ax.grid(color='lightgrey', linestyle='dashed', axis="y", linewidth=0.8)
 
 plt.show()
-fig.savefig(f"../figures/eval/cache_usage_breakdown.pdf", dpi=500, bbox_inches='tight')
+fig.savefig(os.path.join(figures_dir, "cache_usage_breakdown.pdf"), dpi=500, bbox_inches='tight')
 
 """
 Motivational experiment

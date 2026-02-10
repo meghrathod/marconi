@@ -3,6 +3,13 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
+import os
+
+# Resolve absolute paths based on this script's location
+current_dir = os.path.dirname(os.path.abspath(__file__))
+marconi_root = os.path.dirname(current_dir)
+figures_dir = os.path.join(marconi_root, "figures", "eval")
+os.makedirs(figures_dir, exist_ok=True)
 
 # see 1017_micro_layer_composition.txt
 compositions = ("(32,4)", "(30,5)", "(28,7)", "(24,12)", "(0,36)")  # (SSM, Attn)
@@ -44,5 +51,5 @@ ax.grid(color='lightgrey', linestyle='dashed', axis="y", linewidth=0.8)
 # ax.set_ylim(0, 250)
 
 plt.show()
-fig.savefig(f"../figures/eval/microbenchmark_layer_composition.pdf", dpi=500, bbox_inches='tight')
+fig.savefig(os.path.join(figures_dir, "microbenchmark_layer_composition.pdf"), dpi=500, bbox_inches='tight')
 # %%
