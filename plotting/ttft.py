@@ -109,7 +109,12 @@ def analyze_ttft(log_filename):
             capacity_bytes = float(match.group('capacity'))
             # print(capacity_bytes, type(capacity_bytes))
         
-        pickle_filename = "." + entry[entry.find("stored in ")+10:entry.rfind("\n")]
+        relative_path = entry[entry.find("stored in ")+10:entry.rfind("\n")]
+        
+        if relative_path.startswith("./"):
+            relative_path = relative_path[2:]
+            
+        pickle_filename = os.path.join(marconi_root, relative_path)
         
         ttft_original, ttft_vllm, ttft_sglang, ttft_marconi, \
             raw_reduction_vllm, raw_reduction_sglang, raw_reduction_marconi \
@@ -220,11 +225,11 @@ fontsize = 14
 
 for fig_id, dataset in enumerate(["lmsys", "sharegpt", "swebench"]):
     if dataset == "lmsys":
-       log_filename = os.path.join(logs_dir, "1029_lmsys_initw0.0_wind=1000.txt")
+       log_filename = os.path.join(logs_dir, "lmsys.txt")
     elif dataset == "sharegpt":
-       log_filename = os.path.join(logs_dir, "1029_sharegpt_initw0.0_wind=1000.txt")
+       log_filename = os.path.join(logs_dir, "sharegpt.txt")
     elif dataset == "swebench":
-       log_filename = os.path.join(logs_dir, "1029_swebench_initw0.0_wind=1000.txt")
+       log_filename = os.path.join(logs_dir, "swebench.txt")
     
     vllm_win_list, sglang_win_list, marconi_win_list = analyze_ttft(log_filename)
     
@@ -264,7 +269,10 @@ for fig_id, dataset in enumerate(["lmsys", "sharegpt", "swebench"]):
 title = "P95 TTFT Relative to Vanilla Inference"
 fig.text(0.5, -0.2, title, ha='center', va='top', fontsize=fontsize)
 plt.show()
-# fig.savefig("../figures/eval/ttft_total_distribution.pdf", dpi=500, bbox_inches='tight')
-# fig.savefig("../figures/eval/ttft_distribution_p95.pdf", dpi=500, bbox_inches='tight')
+figures_dir = os.path.join(marconi_root, "figures", "eval")
+os.makedirs(figures_dir, exist_ok=True)
+
+fig.savefig(os.path.join(figures_dir, "ttft_total_distribution.pdf"), dpi=500, bbox_inches='tight')
+# fig.savefig(os.path.join(figures_dir, "ttft_distribution_p95.pdf"), dpi=500, bbox_inches='tight')
 
 # %%
