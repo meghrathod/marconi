@@ -414,13 +414,13 @@ def generate_wildchat_trace(
 # )
 
 # %%
-for sps in [0.25, 0.5, 1, 2, 5, 10]:
-    for avg_response_time in [5, 7.5, 10]:
-        all_requests = process_swebench_trace(
-            sessions_per_second=sps,
-            avg_response_time=avg_response_time,
-            num_sessions=100,
-        )
+# for sps in [0.25, 0.5, 1, 2, 5, 10]:
+#     for avg_response_time in [5, 7.5, 10]:
+#         all_requests = process_swebench_trace(
+#             sessions_per_second=sps,
+#             avg_response_time=avg_response_time,
+#             num_sessions=100,
+#         )
         
 # %%
 for sps in [0.25, 0.5, 1, 2, 5, 10]:
