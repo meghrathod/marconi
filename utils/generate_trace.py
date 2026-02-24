@@ -13,6 +13,11 @@ TOKENIZER_MODEL = os.environ.get("TOKENIZER_MODEL", "meta-llama/Llama-2-7b-hf")
 tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_MODEL, use_fast=True)
 print(f"Using tokenizer: {TOKENIZER_MODEL}")
 
+# Output directory for generated traces (absolute, works from any cwd)
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+TRACES_DIR = os.path.join(_SCRIPT_DIR, "..", "traces")
+os.makedirs(TRACES_DIR, exist_ok=True)
+
 # %%
 # def contains_unicode(s):
 #     # Check if any character in the string has a Unicode code point greater than 127 (non-ASCII)
@@ -122,7 +127,7 @@ def generate_lmsys_trace(
     all_requests = sorted(all_requests, key=lambda x: x["ts"])
     print(f"Generated {len(all_requests)} requests")
     
-    with open(f"../traces/lmsys_sps={sessions_per_second}_nums={num_sessions}.jsonl", 'w') as f:
+    with open(os.path.join(TRACES_DIR, f"lmsys_sps={sessions_per_second}_nums={num_sessions}.jsonl"), 'w') as f:
         for r in all_requests:
             json.dump(r, f)
             f.write('\n')
@@ -214,7 +219,7 @@ def generate_sharegpt_trace(
     import statistics
     print(f"num_input_tokens: max {max(num_input_tokens)}, min {min(num_input_tokens)}, mean {statistics.mean(num_input_tokens)}")
     
-    with open(f"../traces/sharegpt_sps={sessions_per_second}_nums={num_sessions}.jsonl", 'w') as f:
+    with open(os.path.join(TRACES_DIR, f"sharegpt_sps={sessions_per_second}_nums={num_sessions}.jsonl"), 'w') as f:
         for r in all_requests:
             json.dump(r, f)
             f.write('\n')
@@ -298,7 +303,7 @@ def process_swebench_trace(
     all_requests = sorted(all_requests, key=lambda x: x["ts"])
     print(f"Generated {len(all_requests)} requests")
     
-    with open(f"../traces/swebench_sps={sessions_per_second}_art={avg_response_time}_nums={num_sessions}.jsonl", 'w') as f:
+    with open(os.path.join(TRACES_DIR, f"swebench_sps={sessions_per_second}_art={avg_response_time}_nums={num_sessions}.jsonl"), 'w') as f:
         for r in all_requests:
             json.dump(r, f)
             f.write('\n')
