@@ -9,7 +9,9 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 tqdm.pandas()
 
 device = "cuda:0"
-tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf", use_fast=True)
+TOKENIZER_MODEL = os.environ.get("TOKENIZER_MODEL", "meta-llama/Llama-2-7b-hf")
+tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_MODEL, use_fast=True)
+print(f"Using tokenizer: {TOKENIZER_MODEL}")
 
 # %%
 # def contains_unicode(s):
