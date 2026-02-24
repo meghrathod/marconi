@@ -98,8 +98,8 @@ def generate_lmsys_trace(
             
             tokens = tokenizer(llm_output, return_tensors="pt")
             llm_output_tokens = tokens.input_ids[0].tolist()  # weird issue: the last token of input_tokens is different from the token at the same index in output_tokens.
-            
-            if len(conv_history_ids + user_input_tokens + llm_output_tokens) > 32768:
+                    
+            if len(conv_history_ids + user_input_tokens + llm_output_tokens) > 8192:
                 # skip all requests with >32k input tokens
                 break
             
@@ -191,7 +191,7 @@ def generate_sharegpt_trace(
             tokens = tokenizer(llm_output, return_tensors="pt")
             llm_output_tokens = tokens.input_ids[0].tolist()  # weird issue: the last token of input_tokens is different from the token at the same index in output_tokens.
             
-            if len(conv_history_ids + user_input_tokens) > 32768:
+            if len(conv_history_ids + user_input_tokens) > 8192:
                 # skip all requests with >32k input tokens
                 break
             
@@ -285,7 +285,8 @@ def process_swebench_trace(
             if turn_id != 0:
                 curr_ts += np.random.poisson(lam=avg_response_time, size=1)[0]
             
-            if len(conv_history_ids + user_input_tokens) > 32768 or turn_id > 50:
+
+            if len(conv_history_ids + user_input_tokens) > 8192 or turn_id > 50:
                 # skip all requests with >32k input tokens or exceeds 50 rounds
                 break
             
