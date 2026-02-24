@@ -55,11 +55,16 @@ def generate_lmsys_trace(
 ):
     words_per_second = words_per_min / 60.0  # words per second
     
-    df = pd.read_pickle("../datasets/lmsys_chat_1m.pickle")
+    # Load directly from HuggingFace (no pickle preprocessing needed)
+    ds = load_dataset("lmsys/lmsys-chat-1m")
+    ds.set_format(type="pandas")
+    df = ds["train"][:]
+    df = df[df["turn"] >= 10]  # only keep conversations with 10+ turns
+    df["conversation_str"] = df["conversation"].apply(lambda x: str(x))
     # drop sessions that has many unicode characters
     df["contains_many_unicode"] = df["conversation_str"].apply(lambda x: contains_many_unicode(x))
     df = df[df["contains_many_unicode"] == False]
-    df.reset_index()
+    df = df.reset_index(drop=True)
     
     if num_sessions is None:
         num_sessions = len(df.index)
