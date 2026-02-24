@@ -60,16 +60,18 @@ def generate_lmsys_trace(
 ):
     words_per_second = words_per_min / 60.0  # words per second
     
-    # Load from HuggingFace, filter BEFORE converting to pandas (1M rows is too slow)
-    ds = load_dataset("lmsys/lmsys-chat-1m")
-    ds_filtered = ds["train"].filter(lambda x: x["turn"] >= 10)
-    df = ds_filtered.to_pandas()
-    df["conversation_str"] = df["conversation"].apply(lambda x: str(x))
-    # drop sessions that has many unicode characters
-    df["contains_many_unicode"] = df["conversation_str"].apply(lambda x: contains_many_unicode(x))
-    df = df[df["contains_many_unicode"] == False]
-    df = df.reset_index(drop=True)
-    print(f"Loaded {len(df)} sessions from lmsys/lmsys-chat-1m (10+ turns, no heavy unicode)")
+    # Load from HuggingFace, filter BEFORE converting to pandas (cached after first call)
+    if not hasattr(generate_lmsys_trace, "_cached_df"):
+        ds = load_dataset("lmsys/lmsys-chat-1m")
+        ds_filtered = ds["train"].filter(lambda x: x["turn"] >= 10)
+        df = ds_filtered.to_pandas()
+        df["conversation_str"] = df["conversation"].apply(lambda x: str(x))
+        df["contains_many_unicode"] = df["conversation_str"].apply(lambda x: contains_many_unicode(x))
+        df = df[df["contains_many_unicode"] == False]
+        df = df.reset_index(drop=True)
+        generate_lmsys_trace._cached_df = df
+        print(f"Loaded {len(df)} sessions from lmsys/lmsys-chat-1m (10+ turns, no heavy unicode)")
+    df = generate_lmsys_trace._cached_df
     
     if num_sessions is None:
         num_sessions = len(df.index)
@@ -159,7 +161,10 @@ def generate_sharegpt_trace(
 ):
     words_per_second = words_per_min / 60.0  # words per second
     
-    dataset = process_sharegpt_dataset()
+    # Cache dataset after first call
+    if not hasattr(generate_sharegpt_trace, "_cached_dataset"):
+        generate_sharegpt_trace._cached_dataset = process_sharegpt_dataset()
+    dataset = generate_sharegpt_trace._cached_dataset
     
     if num_sessions is None:
         num_sessions = len(dataset)
@@ -238,11 +243,12 @@ def process_swebench_trace(
 ):
     np.random.seed(seed)
     
-    # Load trajectories from HuggingFace
-    ds = load_dataset("nebius/SWE-agent-trajectories")
-    # Filter to trajectories with enough turns (10+ messages = 5+ turns)
-    ds_filtered = ds["train"].filter(lambda x: len(x["trajectory"]) >= 10)
-    print(f"Loaded {len(ds_filtered)} SWE-agent trajectories (10+ messages)")
+    # Load trajectories from HuggingFace (cached after first call)
+    if not hasattr(process_swebench_trace, "_cached_ds"):
+        ds = load_dataset("nebius/SWE-agent-trajectories")
+        process_swebench_trace._cached_ds = ds["train"].filter(lambda x: len(x["trajectory"]) >= 10)
+        print(f"Loaded {len(process_swebench_trace._cached_ds)} SWE-agent trajectories (10+ messages)")
+    ds_filtered = process_swebench_trace._cached_ds
     
     if num_sessions is None:
         num_sessions = len(ds_filtered)
