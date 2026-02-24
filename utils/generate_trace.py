@@ -55,16 +55,16 @@ def generate_lmsys_trace(
 ):
     words_per_second = words_per_min / 60.0  # words per second
     
-    # Load directly from HuggingFace (no pickle preprocessing needed)
+    # Load from HuggingFace, filter BEFORE converting to pandas (1M rows is too slow)
     ds = load_dataset("lmsys/lmsys-chat-1m")
-    ds.set_format(type="pandas")
-    df = ds["train"][:]
-    df = df[df["turn"] >= 10]  # only keep conversations with 10+ turns
+    ds_filtered = ds["train"].filter(lambda x: x["turn"] >= 10)
+    df = ds_filtered.to_pandas()
     df["conversation_str"] = df["conversation"].apply(lambda x: str(x))
     # drop sessions that has many unicode characters
     df["contains_many_unicode"] = df["conversation_str"].apply(lambda x: contains_many_unicode(x))
     df = df[df["contains_many_unicode"] == False]
     df = df.reset_index(drop=True)
+    print(f"Loaded {len(df)} sessions from lmsys/lmsys-chat-1m (10+ turns, no heavy unicode)")
     
     if num_sessions is None:
         num_sessions = len(df.index)
@@ -232,22 +232,26 @@ def process_swebench_trace(
     collapse_except_last: int = 5,  # observations preceding the last 5 are each collapsed into a single line -- following the guidelines in [SWEAgent](https://arxiv.org/pdf/2405.15793)
 ):
     np.random.seed(seed)
-    model_name = "20240820_honeycomb"
-    default_trajs_dir = f"/home/cc/datasets/swebench-experiments/evaluation/verified/{model_name}/trajs"
-    dirname = os.environ.get("SWEBENCH_TRAJS_DIR", default_trajs_dir)
-    trace_name_list = sorted(os.listdir(dirname))
+    
+    # Load trajectories from HuggingFace
+    ds = load_dataset("nebius/SWE-agent-trajectories")
+    # Filter to trajectories with enough turns (10+ messages = 5+ turns)
+    ds_filtered = ds["train"].filter(lambda x: len(x["trajectory"]) >= 10)
+    print(f"Loaded {len(ds_filtered)} SWE-agent trajectories (10+ messages)")
     
     if num_sessions is None:
-        num_sessions = len(trace_name_list)
+        num_sessions = len(ds_filtered)
+    num_sessions = min(num_sessions, len(ds_filtered))
     all_requests = []
     
-    # for session_id, trace_name in enumerate(tqdm(trace_name_list)):
     for session_id in tqdm(range(num_sessions)):
-        trace_name = trace_name_list[session_id]
-        with open(os.path.join(dirname, trace_name), "r") as f:
-            traj = json.load(f)
-
-        num_messages = len(traj)
+        row = ds_filtered[session_id]
+        traj = row["trajectory"]  # list of {role, text, ...} dicts
+        
+        # Build alternating user/assistant pairs from trajectory
+        # Filter to user/assistant roles only
+        messages = [(m["role"], m["text"]) for m in traj if m["role"] in ("user", "assistant") and m["text"]]
+        num_messages = len(messages)
         num_turns = int(num_messages / 2)
 
         curr_ts = session_id / sessions_per_second
@@ -258,21 +262,18 @@ def process_swebench_trace(
 
         for turn_id in range(num_turns):
             conv_history_ids = [item for sublist1 in conv_history_ids_list for sublist2 in sublist1 for item in sublist2]
-            user_input = json.dumps(traj[2 * turn_id])
-            llm_output = json.dumps(traj[2 * turn_id + 1])
-            
-            # print(f"Turn {turn_id},\n\tuser_input {user_input},\n\tllm_output {llm_output}")
+            user_input = json.dumps({"role": messages[2 * turn_id][0], "content": messages[2 * turn_id][1]})
+            llm_output = json.dumps({"role": messages[2 * turn_id + 1][0], "content": messages[2 * turn_id + 1][1]})
 
             tokens = tokenizer(user_input, return_tensors="pt")
             user_input_tokens = tokens.input_ids[0].tolist()
             
             tokens = tokenizer(llm_output, return_tensors="pt")
-            llm_output_tokens = tokens.input_ids[0].tolist()  # weird issue: the last token of input_tokens is different from the token at the same index in output_tokens.
+            llm_output_tokens = tokens.input_ids[0].tolist()
             
             if turn_id != 0:
-                curr_ts += np.random.poisson(lam=avg_response_time, size=1)[0]  # or, take from Poisson distribution
+                curr_ts += np.random.poisson(lam=avg_response_time, size=1)[0]
             
-            # if len(conv_history_ids + user_input_tokens) > 32768:
             if len(conv_history_ids + user_input_tokens) > 32768 or turn_id > 50:
                 # skip all requests with >32k input tokens or exceeds 50 rounds
                 break
@@ -287,13 +288,8 @@ def process_swebench_trace(
                 "output_tokens": llm_output_tokens,  # not including the input tokens
             })
             
-            # print(f"session {session_id}, turn {turn_id}, num_input_tokens {len(conv_history_ids + user_input_tokens)}")
-            
-            # conv_history_ids += (user_input_tokens + llm_output_tokens)
-            # print(f"Num full interaction pairs is {[len(x) for x in conv_history_ids_list]}")
             if [len(x) for x in conv_history_ids_list].count(2) >= collapse_except_last + 1:
                 conv_history_ids_list[-(collapse_except_last)].pop(0)  # collapse the environment observation
-                # print(f"popping observation of round {-(collapse_except_last)}")
             conv_history_ids_list.append([user_input_tokens, llm_output_tokens])
 
 
@@ -303,7 +299,6 @@ def process_swebench_trace(
     print(f"Generated {len(all_requests)} requests")
     
     with open(f"../traces/swebench_sps={sessions_per_second}_art={avg_response_time}_nums={num_sessions}.jsonl", 'w') as f:
-    # with open(f"../traces/archive/SWEBench_manyrounds_collapsed/swebench_sps={sessions_per_second}_art={avg_response_time}_nums={num_sessions}.jsonl", 'w') as f:
         for r in all_requests:
             json.dump(r, f)
             f.write('\n')
@@ -414,13 +409,13 @@ def generate_wildchat_trace(
 # )
 
 # %%
-# for sps in [0.25, 0.5, 1, 2, 5, 10]:
-#     for avg_response_time in [5, 7.5, 10]:
-#         all_requests = process_swebench_trace(
-#             sessions_per_second=sps,
-#             avg_response_time=avg_response_time,
-#             num_sessions=100,
-#         )
+for sps in [0.25, 0.5, 1, 2, 5, 10]:
+    for avg_response_time in [5, 7.5, 10]:
+        all_requests = process_swebench_trace(
+            sessions_per_second=sps,
+            avg_response_time=avg_response_time,
+            num_sessions=100,
+        )
         
 # %%
 for sps in [0.25, 0.5, 1, 2, 5, 10]:
