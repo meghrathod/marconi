@@ -128,11 +128,8 @@ def generate_lmsys_trace(
 def process_sharegpt_dataset(
     min_num_rounds: int = 10,
 ):
-    # filename = "../datasets/sg_90k_part1.json"  # https://huggingface.co/datasets/RyokoAI/ShareGPT52K
-    filename = "../datasets/ShareGPT_V3_unfiltered_cleaned_split.json"  # https://huggingface.co/datasets/anon8231489123/ShareGPT_Vicuna_unfiltered
-    
-    with open(filename) as f:
-        dataset = json.load(f)
+    ds = load_dataset("anon8231489123/ShareGPT_Vicuna_unfiltered", data_files="ShareGPT_V3_unfiltered_cleaned_split.json")
+    dataset = list(ds["train"])
     
     # filter out short conversations
     # num_turns * 2 == num_messages
@@ -231,7 +228,8 @@ def process_swebench_trace(
 ):
     np.random.seed(seed)
     model_name = "20240820_honeycomb"
-    dirname = f"/home/ubuntu/SWE-bench-experiments/evaluation/verified/{model_name}/trajs"
+    default_trajs_dir = f"/home/cc/datasets/swebench-experiments/evaluation/verified/{model_name}/trajs"
+    dirname = os.environ.get("SWEBENCH_TRAJS_DIR", default_trajs_dir)
     trace_name_list = sorted(os.listdir(dirname))
     
     if num_sessions is None:
