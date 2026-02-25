@@ -183,7 +183,7 @@ def generate_sharegpt_trace(
             llm_output = json.dumps(dataset[session_id]["conversations"][2 * turn_id + 1])
             user_input_content = dataset[session_id]["conversations"][2 * turn_id]["value"]
             
-            print(f"Turn {turn_id},\n\tuser_input {user_input},\n\tllm_output {llm_output}")
+            # print(f"Turn {turn_id},\n\tuser_input {user_input},\n\tllm_output {llm_output}")
 
             tokens = tokenizer(user_input, return_tensors="pt")
             user_input_tokens = tokens.input_ids[0].tolist()
@@ -414,28 +414,26 @@ def generate_wildchat_trace(
     return all_requests, df
 
 # %%
-# all_requests = process_swebench_trace(
-#     sessions_per_second=1,
-#     avg_response_time=2,
-#     num_sessions=500,
-# )
+if __name__ == "__main__":
+    # all_requests = process_swebench_trace(
+    #     sessions_per_second=1,
+    #     avg_response_time=2,
+    #     num_sessions=500,
+    # )
 
-# %%
-for sps in [0.25, 0.5, 1, 2, 5, 10]:
-    for avg_response_time in [5, 7.5, 10]:
-        all_requests = process_swebench_trace(
-            sessions_per_second=sps,
-            avg_response_time=avg_response_time,
-            num_sessions=100,
-        )
-        
-# %%
-for sps in [0.25, 0.5, 1, 2, 5, 10]:
-    all_requests, df = generate_lmsys_trace(sps, num_sessions=100)
+    for sps in [0.25, 0.5, 1, 2, 5, 10]:
+        for avg_response_time in [5, 7.5, 10]:
+            all_requests = process_swebench_trace(
+                sessions_per_second=sps,
+                avg_response_time=avg_response_time,
+                num_sessions=100,
+            )
 
-# %%
-for sps in [0.25, 0.5, 1, 2, 5, 10]:
-    all_requests = generate_sharegpt_trace(sps, num_sessions=100)
+    for sps in [0.25, 0.5, 1, 2, 5, 10]:
+        all_requests, df = generate_lmsys_trace(sps, num_sessions=100)
+
+    for sps in [0.25, 0.5, 1, 2, 5, 10]:
+        all_requests = generate_sharegpt_trace(sps, num_sessions=100)
 
 
 # %%
