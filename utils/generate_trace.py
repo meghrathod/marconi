@@ -8,8 +8,8 @@ from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM
 tqdm.pandas()
 
-device = "cuda:0"
-TOKENIZER_MODEL = os.environ.get("TOKENIZER_MODEL", "meta-llama/Llama-2-7b-hf")
+device = "cpu"
+TOKENIZER_MODEL = os.environ.get("TOKENIZER_MODEL", "nvidia/Nemotron-H-8B-Base-8K")
 tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_MODEL, use_fast=True)
 print(f"Using tokenizer: {TOKENIZER_MODEL}")
 
@@ -33,9 +33,7 @@ def get_num_tokens(x):
     # x is a numpy.ndarray
     num_rounds = len(x)
     full_history = "".join([json.dumps(x[i]) for i in range(num_rounds)])
-    tokens = tokenizer(x, return_tensors="pt").to(device)
-    input_ids = tokens.input_ids
-    return input_ids.size(1)
+    return len(tokenizer.encode(full_history))
 
 def process_lmsys_dataset(
     min_num_rounds: int = 10,
@@ -93,11 +91,9 @@ def generate_lmsys_trace(
             
             # print(f"Turn {turn_id},\n\tuser_input {user_input},\n\tllm_output {llm_output}")
 
-            tokens = tokenizer(user_input, return_tensors="pt")
-            user_input_tokens = tokens.input_ids[0].tolist()
+            user_input_tokens = tokenizer.encode(user_input)
             
-            tokens = tokenizer(llm_output, return_tensors="pt")
-            llm_output_tokens = tokens.input_ids[0].tolist()  # weird issue: the last token of input_tokens is different from the token at the same index in output_tokens.
+            llm_output_tokens = tokenizer.encode(llm_output)
                     
             if len(conv_history_ids + user_input_tokens + llm_output_tokens) > 8192:
                 # skip all requests with >32k input tokens
@@ -185,11 +181,9 @@ def generate_sharegpt_trace(
             
             # print(f"Turn {turn_id},\n\tuser_input {user_input},\n\tllm_output {llm_output}")
 
-            tokens = tokenizer(user_input, return_tensors="pt")
-            user_input_tokens = tokens.input_ids[0].tolist()
+            user_input_tokens = tokenizer.encode(user_input)
             
-            tokens = tokenizer(llm_output, return_tensors="pt")
-            llm_output_tokens = tokens.input_ids[0].tolist()  # weird issue: the last token of input_tokens is different from the token at the same index in output_tokens.
+            llm_output_tokens = tokenizer.encode(llm_output)
             
             if len(conv_history_ids + user_input_tokens) > 8192:
                 # skip all requests with >32k input tokens
@@ -276,12 +270,10 @@ def process_swebench_trace(
             user_input = json.dumps({"role": messages[2 * turn_id][0], "content": messages[2 * turn_id][1]})
             llm_output = json.dumps({"role": messages[2 * turn_id + 1][0], "content": messages[2 * turn_id + 1][1]})
 
-            tokens = tokenizer(user_input, return_tensors="pt")
-            user_input_tokens = tokens.input_ids[0].tolist()
+            user_input_tokens = tokenizer.encode(user_input)
             
-            tokens = tokenizer(llm_output, return_tensors="pt")
-            llm_output_tokens = tokens.input_ids[0].tolist()
-            
+            llm_output_tokens = tokenizer.encode(llm_output)
+
             if turn_id != 0:
                 curr_ts += np.random.poisson(lam=avg_response_time, size=1)[0]
             
@@ -374,11 +366,9 @@ def generate_wildchat_trace(
             
             # print(f"Turn {turn_id},\n\tuser_input {user_input},\n\tllm_output {llm_output}")
 
-            tokens = tokenizer(user_input, return_tensors="pt")
-            user_input_tokens = tokens.input_ids[0].tolist()
+            user_input_tokens = tokenizer.encode(user_input)
             
-            tokens = tokenizer(llm_output, return_tensors="pt")
-            llm_output_tokens = tokens.input_ids[0].tolist()  # weird issue: the last token of input_tokens is different from the token at the same index in output_tokens.
+            llm_output_tokens = tokenizer.encode(llm_output)
             
             if turn_id != 0:
                 # Inter-request latency is user's typing speed
