@@ -5,12 +5,17 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 from datasets import load_dataset
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, PreTrainedTokenizerFast
 tqdm.pandas()
 
 device = "cpu"
 TOKENIZER_MODEL = os.environ.get("TOKENIZER_MODEL", "nvidia/Nemotron-H-8B-Base-8K")
-tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_MODEL, use_fast=True)
+try:
+    tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_MODEL, use_fast=True)
+except Exception:
+    # AutoTokenizer can fail on models with unsupported pattern chars (e.g. Nemotron '-' in hybrid_override_pattern).
+    # Fall back to PreTrainedTokenizerFast which skips model config parsing.
+    tokenizer = PreTrainedTokenizerFast.from_pretrained(TOKENIZER_MODEL)
 print(f"Using tokenizer: {TOKENIZER_MODEL}")
 
 # Output directory for generated traces (absolute, works from any cwd)
