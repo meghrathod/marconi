@@ -121,7 +121,7 @@ def plot_token_hit_rate(log_filename, colors=None):
     plt.show()
     # dataset_name = log_filename.split('_', 2)[1].split('.')[0]
     dataset_name = log_filename.split('/')[-1].split('.')[0]
-    fig.savefig(os.path.join(figures_dir, f"{dataset_name}.pdf"), dpi=500, bbox_inches='tight')
+    fig.savefig(os.path.join(figures_dir, f"fig7_{dataset_name}.pdf"), dpi=500, bbox_inches='tight')
 
 
 # %%

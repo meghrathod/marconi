@@ -20,7 +20,7 @@ print(f"Using tokenizer: {TOKENIZER_MODEL}")
 
 # Output directory for generated traces (absolute, works from any cwd)
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-TRACES_DIR = os.path.join(_SCRIPT_DIR, "..", "traces")
+TRACES_DIR = os.environ.get("TRACES_DIR", os.path.join(_SCRIPT_DIR, "..", "traces"))
 os.makedirs(TRACES_DIR, exist_ok=True)
 
 # %%
@@ -100,7 +100,7 @@ def generate_lmsys_trace(
             
             llm_output_tokens = tokenizer.encode(llm_output)
                     
-            if len(conv_history_ids + user_input_tokens + llm_output_tokens) > 8192:
+            if len(conv_history_ids + user_input_tokens + llm_output_tokens) > 32768:
                 # skip all requests with >32k input tokens
                 break
             
@@ -190,7 +190,7 @@ def generate_sharegpt_trace(
             
             llm_output_tokens = tokenizer.encode(llm_output)
             
-            if len(conv_history_ids + user_input_tokens) > 8192:
+            if len(conv_history_ids + user_input_tokens) > 32768:
                 # skip all requests with >32k input tokens
                 break
             
@@ -283,7 +283,7 @@ def process_swebench_trace(
                 curr_ts += np.random.poisson(lam=avg_response_time, size=1)[0]
             
 
-            if len(conv_history_ids + user_input_tokens) > 8192 or turn_id > 50:
+            if len(conv_history_ids + user_input_tokens) > 32768 or turn_id > 50:
                 # skip all requests with >32k input tokens or exceeds 50 rounds
                 break
             

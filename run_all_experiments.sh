@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 datasets=("sharegpt" "lmsys" "swebench")
 # datasets=("lmsys" "swebench")
 # datasets=("sharegpt")
@@ -10,5 +12,5 @@ mkdir -p logs
 # Loop over each dataset and run the Python script
 for dataset in "${datasets[@]}"; do
     echo "Doing a configuration sweep for dataset: $dataset"
-    python policy_exploration.py --dataset "$dataset" > "./logs/$dataset.txt" 2>&1
+    uv run python policy_exploration.py --dataset "$dataset" > "./logs/$dataset.txt" 2>&1
 done

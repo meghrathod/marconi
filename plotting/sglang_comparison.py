@@ -117,16 +117,16 @@ def plot_sglang_comparison(log_filename_list, colors=None):
     # Set custom x-axis labels and scatter plot for means
     ax.tick_params(axis='x', which='major', labelsize=fontsize)
     ax.set_yticklabels(custom_xlabels, rotation=0, fontsize=fontsize)
-    ax.set_xlabel('Marconi’s Token Hit Rate Improvement over SGLang+ (%)', fontsize=fontsize)
-    ax.xaxis.set_label_coords(0.375, -0.2)
-    ax.set_xticks([0, 25, 50, 75, 100, 125, 150, 175, 200])  # Define all tick locations
-    ax.set_xticklabels(['0', '', '50', '', '100', '', '150', '', '200'])  # Define labels, leave blanks for hidden labels
+    ax.set_xlabel("Token Hit Rate Improvement over SGLang+ (%)", fontsize=fontsize)
+    min_p5 = min(np.percentile(d, 5) for d in data)
+    ax.set_xlim(min(0, min_p5), 270)
+    # ax.set_xticks([0, 10, 20, 30, 40, 50])
     ax.grid(color='lightgrey', linestyle='dashed', axis="x", linewidth=0.8)
 
     # Display the plots
     plt.tight_layout()
     plt.show()
-    fig.savefig(os.path.join(figures_dir, "sglang_comparison_horizontal.pdf"), dpi=500, bbox_inches='tight')
+    fig.savefig(os.path.join(figures_dir, "fig8_sglang_comparison_horizontal.pdf"), dpi=500, bbox_inches='tight')
 
 
 # %%

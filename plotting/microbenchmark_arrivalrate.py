@@ -1,6 +1,5 @@
 # %%
-# data from https://allisonhorst.github.io/palmerpenguins/
-
+import re
 import matplotlib.pyplot as plt
 import numpy as np
 import os
@@ -8,94 +7,109 @@ import os
 # Resolve absolute paths based on this script's location
 current_dir = os.path.dirname(os.path.abspath(__file__))
 marconi_root = os.path.dirname(current_dir)
+logs_dir = os.path.join(marconi_root, "logs")
 figures_dir = os.path.join(marconi_root, "figures", "eval")
 os.makedirs(figures_dir, exist_ok=True)
 
-art = (5.0, 7.5, 10.0)
-hitrate_dict = {  # first version -- unsure where these numbers are from
-    'Marconi': (25.90, 24.25, 24.08),
-    'SGLang+': (18.83, 16.60, 15.49),
+CAPACITY_GB = 5.0
+log_path = os.path.join(logs_dir, "swebench.txt")
+
+with open(log_path, "r") as f:
+    log_data = f.read()
+
+entries = [e for e in log_data.split("=" * 50) if e.strip()]
+
+cache_size_pattern = re.compile(r"Cache size ([\d\.]+) GB")
+trace_pattern = re.compile(r"swebench_sps=([\d\.]+)_art=([\d\.]+)_nums=\d+\.jsonl")
+hit_rate_pattern = re.compile(r"^(V1|V2): hit rate ([\d\.]+)%", re.MULTILINE)
+
+# keyed by (sps, art) -> {"SGLang+": float, "Marconi": float}
+results = {}
+
+for entry in entries:
+    cache_match = cache_size_pattern.search(entry)
+    if not cache_match or float(cache_match.group(1)) != CAPACITY_GB:
+        continue
+    trace_match = trace_pattern.search(entry)
+    if not trace_match:
+        continue
+    sps = float(trace_match.group(1))
+    art = float(trace_match.group(2))
+    hit_rates = {m.group(1): float(m.group(2)) for m in hit_rate_pattern.finditer(entry)}
+    if "V1" in hit_rates and "V2" in hit_rates:
+        results[(sps, art)] = {"SGLang+": hit_rates["V1"], "Marconi": hit_rates["V2"]}
+
+
+# --- Fig 13a: vary art, fixed sps=5 ---
+SPS_13A = 5
+arts = sorted({art for (sps, art) in results if sps == SPS_13A})
+hitrate_13a = {
+    "Marconi": tuple(results[(SPS_13A, art)]["Marconi"] for art in arts if (SPS_13A, art) in results),
+    "SGLang+": tuple(results[(SPS_13A, art)]["SGLang+"] for art in arts if (SPS_13A, art) in results),
 }
-# hitrate_dict = {  # 1013_swebench_nums=100_wind=200. capacity_bytes 100000000000.0, sessions_per_second 5
-#     'Marconi': (39.63, 41.61, 43.03),
-#     'SGLang+': (26.10, 25.11, 25.57),
-# }
-colors = {"Marconi": "#2D6A4F", "SGLang+": "#52B788", "vLLM+": "#95D5B2"}
+art_labels = [str(a) for a in arts if (SPS_13A, a) in results]
+
+print(f"Fig 13a — sps={SPS_13A}, arts={art_labels}")
+for scheme, rates in hitrate_13a.items():
+    print(f"  {scheme}: {rates}")
+
+colors = {"Marconi": "#2D6A4F", "SGLang+": "#52B788"}
 fontsize = 14
 
-x = np.arange(len(art))  # the label locations
-width = 0.25  # the width of the bars
-multiplier = 0
+x = np.arange(len(art_labels))
+width = 0.25
 
 fig, ax = plt.subplots(figsize=(4, 2.7), layout="constrained")
-
-for scheme, hitrate in hitrate_dict.items():
-    offset = width * multiplier
-    rects = ax.bar(x + offset, hitrate, width, label=scheme, color=colors[scheme])
-    # ax.bar_label(rects, padding=3)
-    if scheme in ["SGLang+", "vLLM+"]:
-        x_offset = 0.175 if scheme == "SGLang+" else 0.4
+for multiplier, (scheme, hitrate) in enumerate(hitrate_13a.items()):
+    ax.bar(x + width * multiplier, hitrate, width, label=scheme, color=colors[scheme])
+    if scheme == "SGLang+":
         for i, rate in enumerate(hitrate):
-            diff = hitrate_dict["Marconi"][i] / hitrate_dict[scheme][i]
-            ax.text(i + x_offset, rate + 2, f"{diff:.1f}×", rotation=90, fontsize=fontsize-2)
-    multiplier += 1
+            diff = hitrate_13a["Marconi"][i] / rate
+            ax.text(i + width * multiplier, rate + 2, f"{diff:.1f}×", rotation=90, fontsize=fontsize - 2)
 
-# Add some text for labels, title and custom x-axis tick labels, etc.
-ax.set_ylabel('Token Hit Rate (%)', fontsize=fontsize)
-ax.set_xticks(x + width/2, art)
-# ax.set_ylim(0, 60)
-ax.tick_params(axis='both', which='major', labelsize=fontsize)
+ax.set_ylabel("Token Hit Rate (%)", fontsize=fontsize)
+ax.set_xticks(x + width / 2, art_labels)
+ax.tick_params(axis="both", which="major", labelsize=fontsize)
 ax.set_xlabel("Avg Response Time (s)", fontsize=fontsize)
-ax.legend(loc="upper center", ncols=3, fontsize=fontsize, bbox_to_anchor=(0.5, 1.2), columnspacing=0.8, handlelength=0.8, frameon=False, borderaxespad=0)  # , mode="expand"
+ax.legend(loc="upper center", ncols=3, fontsize=fontsize, bbox_to_anchor=(0.5, 1.2), columnspacing=0.8, handlelength=0.8, frameon=False, borderaxespad=0)
 ax.set_axisbelow(True)
-ax.grid(color='lightgrey', linestyle='dashed', axis="y", linewidth=0.8)
-
-# ax.set_ylim(0, 250)
+ax.grid(color="lightgrey", linestyle="dashed", axis="y", linewidth=0.8)
 
 plt.show()
-fig.savefig(os.path.join(figures_dir, "microbenchmark_art.pdf"), dpi=500, bbox_inches='tight')
-# %%
-import matplotlib.pyplot as plt
-import numpy as np
+fig.savefig(os.path.join(figures_dir, "fig13a_microbenchmark_art.pdf"), dpi=500, bbox_inches="tight")
 
-sps = (0.5, 1, 2)
-hitrate_dict = {  # # 1013_swebench, art=7.5_nums=100.jsonl, capacity_bytes 100000000000.0
-    'Marconi': (48.70, 44.92, 43.02),
-    'SGLang+': (35.18, 29.27, 26.36),
+
+# --- Fig 13b: vary sps, fixed art=7.5 ---
+ART_13B = 7.5
+spss = sorted({sps for (sps, art) in results if art == ART_13B})
+hitrate_13b = {
+    "Marconi": tuple(results[(sps, ART_13B)]["Marconi"] for sps in spss if (sps, ART_13B) in results),
+    "SGLang+": tuple(results[(sps, ART_13B)]["SGLang+"] for sps in spss if (sps, ART_13B) in results),
 }
+sps_labels = [str(int(s) if s == int(s) else s) for s in spss if (s, ART_13B) in results]
 
-colors = {"Marconi": "#2D6A4F", "SGLang+": "#52B788", "vLLM+": "#95D5B2"}
-fontsize = 14
+print(f"\nFig 13b — art={ART_13B}, sps={sps_labels}")
+for scheme, rates in hitrate_13b.items():
+    print(f"  {scheme}: {rates}")
 
-x = np.arange(len(sps))  # the label locations
-width = 0.25  # the width of the bars
-multiplier = 0
+x = np.arange(len(sps_labels))
 
 fig, ax = plt.subplots(figsize=(4, 2.7), layout="constrained")
-
-for scheme, hitrate in hitrate_dict.items():
-    offset = width * multiplier
-    rects = ax.bar(x + offset, hitrate, width, label=scheme, color=colors[scheme])
-    # ax.bar_label(rects, padding=3)
-    if scheme in ["SGLang+", "vLLM+"]:
-        x_offset = 0.175 if scheme == "SGLang+" else 0.4
+for multiplier, (scheme, hitrate) in enumerate(hitrate_13b.items()):
+    ax.bar(x + width * multiplier, hitrate, width, label=scheme, color=colors[scheme])
+    if scheme == "SGLang+":
         for i, rate in enumerate(hitrate):
-            diff = hitrate_dict["Marconi"][i] / hitrate_dict[scheme][i]
-            ax.text(i + x_offset, rate + 3, f"{diff:.1f}×", rotation=90, fontsize=fontsize-2)
-    multiplier += 1
+            diff = hitrate_13b["Marconi"][i] / rate
+            ax.text(i + width * multiplier, rate + 3, f"{diff:.1f}×", rotation=90, fontsize=fontsize - 2)
 
-# Add some text for labels, title and custom x-axis tick labels, etc.
-ax.set_ylabel('Token Hit Rate (%)', fontsize=fontsize)
-ax.set_xticks(x + width/2, sps)
-# ax.set_ylim(0, 60)
-ax.tick_params(axis='both', which='major', labelsize=fontsize)
+ax.set_ylabel("Token Hit Rate (%)", fontsize=fontsize)
+ax.set_xticks(x + width / 2, sps_labels)
+ax.tick_params(axis="both", which="major", labelsize=fontsize)
 ax.set_xlabel("Num Sessions per Second", fontsize=fontsize)
-ax.legend(loc="upper center", ncols=3, fontsize=fontsize, bbox_to_anchor=(0.5, 1.2), columnspacing=0.8, handlelength=0.8, frameon=False, borderaxespad=0)  # , mode="expand"
+ax.legend(loc="upper center", ncols=3, fontsize=fontsize, bbox_to_anchor=(0.5, 1.2), columnspacing=0.8, handlelength=0.8, frameon=False, borderaxespad=0)
 ax.set_axisbelow(True)
-ax.grid(color='lightgrey', linestyle='dashed', axis="y", linewidth=0.8)
-
-# ax.set_ylim(0, 250)
+ax.grid(color="lightgrey", linestyle="dashed", axis="y", linewidth=0.8)
 
 plt.show()
-fig.savefig(os.path.join(figures_dir, "microbenchmark_sps.pdf"), dpi=500, bbox_inches='tight')
+fig.savefig(os.path.join(figures_dir, "fig13b_microbenchmark_sps.pdf"), dpi=500, bbox_inches="tight")
 # %%

@@ -23,7 +23,7 @@ data_dir = os.path.join(marconi_root, "data")
 figures_dir = os.path.join(marconi_root, "figures", "eval")
 os.makedirs(figures_dir, exist_ok=True)
 
-config = ("swebench", 100, 8e10, 10, 7.5,)
+config = ("swebench", 100, 6e10, 2, 10,)
 trace_name, num_sessions, capacity_bytes, sessions_per_second, avg_response_time = config
 trace_filename_dir = os.path.join(results_dir, str(capacity_bytes), f"{trace_name}_sps={sessions_per_second}")
 if trace_name in ["swebench"]:
@@ -130,7 +130,7 @@ for fname in trace_filenames:
     # ax.axhline(y=0, color="black", linestyle="dashed")
 
     plt.show()
-    fig.savefig(os.path.join(figures_dir, "token_hit_rate_comparison.pdf"), dpi=500, bbox_inches='tight')
+    fig.savefig(os.path.join(figures_dir, "fig10_token_hit_rate_comparison.pdf"), dpi=500, bbox_inches='tight')
 
     # XXX
     # Token hit rate comparison, binned
@@ -156,7 +156,7 @@ for fname in trace_filenames:
         data[bin_id].append((seqlen, v1_saved, v2_saved,))
 
     ax.axhline(y=0, color="black", linestyle="dashed", zorder=1)
-    y = [100 * statistics.mean([(v2_saved - v1_saved) / seqlen for (seqlen, v1_saved, v2_saved) in bin_data]) for bin_data in data]
+    y = [100 * statistics.mean([(v2_saved - v1_saved) / seqlen for (seqlen, v1_saved, v2_saved) in bin_data]) if bin_data else 0 for bin_data in data]
     ax.bar(x, y, label="Marconi − SGLang+", width=bar_width, color=colors[1], zorder=2)
 
     # ax.set_yticks([100, 50, 0, -50, -100])
@@ -170,7 +170,7 @@ for fname in trace_filenames:
     ax.grid(color='lightgrey', linestyle='dashed', axis="both", linewidth=0.8)
 
     plt.show()
-    fig.savefig(os.path.join(figures_dir, "token_hit_rate_comparison_bined.pdf"), dpi=500, bbox_inches='tight')
+    fig.savefig(os.path.join(figures_dir, "fig10_token_hit_rate_comparison_bined.pdf"), dpi=500, bbox_inches='tight')
 
     # XXX
     # TTFT CDF
@@ -256,6 +256,6 @@ for fname in trace_filenames:
     # ax.grid(color='lightgrey', linestyle='dashed', axis="both", linewidth=0.8)
 
     plt.show()
-    fig.savefig(os.path.join(figures_dir, "ttft_distribution.pdf"), dpi=500, bbox_inches='tight')
+    fig.savefig(os.path.join(figures_dir, "fig10_ttft_distribution.pdf"), dpi=500, bbox_inches='tight')
 
     # %%

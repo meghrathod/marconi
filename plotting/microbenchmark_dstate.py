@@ -50,5 +50,5 @@ ax.grid(color='lightgrey', linestyle='dashed', axis="y", linewidth=0.8)
 # ax.set_ylim(0, 250)
 
 plt.show()
-fig.savefig(os.path.join(figures_dir, "microbenchmark_state_dim.pdf"), dpi=500, bbox_inches='tight')
+fig.savefig(os.path.join(figures_dir, "fig12b_microbenchmark_state_dim.pdf"), dpi=500, bbox_inches='tight')
 # %%

@@ -51,5 +51,5 @@ ax.grid(color='lightgrey', linestyle='dashed', axis="y", linewidth=0.8)
 # ax.set_ylim(0, 250)
 
 plt.show()
-fig.savefig(os.path.join(figures_dir, "microbenchmark_layer_composition.pdf"), dpi=500, bbox_inches='tight')
+fig.savefig(os.path.join(figures_dir, "fig12a_microbenchmark_layer_composition.pdf"), dpi=500, bbox_inches='tight')
 # %%
