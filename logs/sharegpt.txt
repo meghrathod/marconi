@@ -1,0 +1,2096 @@
+==================================================
+2026-04-22 10:53:46 EST
+Cache size 1.0 GB, sessions per second: 0.25
+Running trace (1238 requests): ./traces/sharegpt_sps=0.25_nums=100.jsonl
+vLLM+: hit rate 4.15%, FLOPs saved 787.69e12
+V1: hit rate 25.70%, FLOPs saved 4878.09e12
+V2: Evict() first called, has seen 25 requests, setting bootstrap_window_size to be 125
+len(self.request_history_windowed) 125
+Running config tuning
+Tuning: eff_weight 0, hit rate 73.57%, FLOPs saved 617.90e12
+Tuning: eff_weight 0.1, hit rate 76.09%, FLOPs saved 639.03e12
+Tuning: eff_weight 0.2, hit rate 75.06%, FLOPs saved 630.30e12
+Tuning: eff_weight 0.3, hit rate 75.06%, FLOPs saved 630.36e12
+Tuning: eff_weight 0.4, hit rate 73.70%, FLOPs saved 618.86e12
+Tuning: eff_weight 0.5, hit rate 74.73%, FLOPs saved 627.51e12
+Tuning: eff_weight 0.6, hit rate 72.63%, FLOPs saved 609.85e12
+Tuning: eff_weight 0.7, hit rate 73.24%, FLOPs saved 615.02e12
+Tuning: eff_weight 0.8, hit rate 73.01%, FLOPs saved 613.06e12
+Tuning: eff_weight 0.9, hit rate 72.48%, FLOPs saved 608.67e12
+Tuning: eff_weight 1.0, hit rate 72.49%, FLOPs saved 608.72e12
+Tuning: eff_weight 1.1, hit rate 70.80%, FLOPs saved 594.58e12
+Tuning: eff_weight 1.2, hit rate 70.80%, FLOPs saved 594.58e12
+Tuning: eff_weight 1.3, hit rate 70.55%, FLOPs saved 592.49e12
+Tuning: eff_weight 1.4, hit rate 70.55%, FLOPs saved 592.49e12
+Tuning: eff_weight 1.5, hit rate 70.46%, FLOPs saved 591.72e12
+Tuning: eff_weight 1.6, hit rate 70.47%, FLOPs saved 591.80e12
+Tuning: eff_weight 1.7, hit rate 70.47%, FLOPs saved 591.80e12
+Tuning: eff_weight 1.8, hit rate 70.47%, FLOPs saved 591.80e12
+Tuning: eff_weight 1.9, hit rate 70.47%, FLOPs saved 591.80e12
+Tuning: eff_weight 2.0, hit rate 69.60%, FLOPs saved 584.49e12
+Tuning config took 0.35s
+V2: Updated eff_weight to be 0.1
+V2: hit rate 28.33%, FLOPs saved 5379.10e12
+V3: eff_weight 0, hit rate 27.40%, FLOPs saved 5201.25e12
+V3: eff_weight 0.1, hit rate 28.50%, FLOPs saved 5411.23e12
+V3: eff_weight 0.2, hit rate 28.59%, FLOPs saved 5428.13e12
+V3: eff_weight 0.3, hit rate 28.64%, FLOPs saved 5439.25e12
+V3: eff_weight 0.4, hit rate 27.95%, FLOPs saved 5308.05e12
+V3: eff_weight 0.5, hit rate 28.36%, FLOPs saved 5385.51e12
+V3: eff_weight 0.6, hit rate 28.45%, FLOPs saved 5404.21e12
+V3: eff_weight 0.7, hit rate 28.32%, FLOPs saved 5378.25e12
+V3: eff_weight 0.8, hit rate 28.71%, FLOPs saved 5452.92e12
+V3: eff_weight 0.9, hit rate 27.73%, FLOPs saved 5266.90e12
+V3: eff_weight 1.0, hit rate 26.93%, FLOPs saved 5116.75e12
+V3: eff_weight 1.1, hit rate 19.78%, FLOPs saved 3759.48e12
+V3: eff_weight 1.2, hit rate 20.25%, FLOPs saved 3850.02e12
+V3: eff_weight 1.3, hit rate 19.49%, FLOPs saved 3705.11e12
+V3: eff_weight 1.4, hit rate 18.61%, FLOPs saved 3538.36e12
+V3: eff_weight 1.5, hit rate 19.10%, FLOPs saved 3631.00e12
+V3: eff_weight 1.6, hit rate 19.50%, FLOPs saved 3707.45e12
+V3: eff_weight 1.7, hit rate 19.61%, FLOPs saved 3728.41e12
+V3: eff_weight 1.8, hit rate 16.69%, FLOPs saved 3172.11e12
+V3: eff_weight 1.9, hit rate 16.88%, FLOPs saved 3208.14e12
+V3: eff_weight 2.0, hit rate 17.37%, FLOPs saved 3303.01e12
+V3: hit rate 28.71%, FLOPs saved 5452.92e12
+V2 compared to V1: hit_rate_win 10.26%, flops_saved_win 10.27%
+V2 compared to vLLM: hit_rate_win 581.96%, flops_saved_win 582.90%
+V3 compared to V1: hit_rate_win 11.71%, flops_saved_win 11.78%
+V3 compared to vLLM: hit_rate_win 590.96%, flops_saved_win 592.27%
+V1 compared to vLLM: hit_rate_win 518.52%, flops_saved_win 519.29%
+Results stored in ./results/1000000000.0/sharegpt_sps=0.25_nums=100/2026_04_22_10_53_46.pickle
+==================================================
+2026-04-22 10:53:51 EST
+Cache size 1.0 GB, sessions per second: 0.5
+Running trace (1238 requests): ./traces/sharegpt_sps=0.5_nums=100.jsonl
+vLLM+: hit rate 4.06%, FLOPs saved 769.92e12
+V1: hit rate 18.19%, FLOPs saved 3453.36e12
+V2: Evict() first called, has seen 24 requests, setting bootstrap_window_size to be 120
+len(self.request_history_windowed) 120
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 72.62%, FLOPs saved 516.05e12
+Tuning: eff_weight 0, hit rate 70.21%, FLOPs saved 499.04e12
+Tuning: eff_weight 0.2, hit rate 71.78%, FLOPs saved 510.03e12
+Tuning: eff_weight 0.4, hit rate 69.07%, FLOPs saved 490.72e12
+Tuning: eff_weight 0.3, hit rate 71.01%, FLOPs saved 504.54e12
+Tuning: eff_weight 0.5, hit rate 70.22%, FLOPs saved 498.92e12
+Tuning: eff_weight 0.7, hit rate 66.93%, FLOPs saved 475.39e12
+Tuning: eff_weight 0.6, hit rate 67.23%, FLOPs saved 477.57e12
+Tuning: eff_weight 0.8, hit rate 66.93%, FLOPs saved 475.39e12
+Tuning: eff_weight 0.9, hit rate 64.27%, FLOPs saved 456.56e12
+Tuning: eff_weight 1.1, hit rate 63.82%, FLOPs saved 453.37e12
+Tuning: eff_weight 1.0, hit rate 63.82%, FLOPs saved 453.37e12
+Tuning: eff_weight 1.2, hit rate 63.82%, FLOPs saved 453.37e12
+Tuning: eff_weight 1.3, hit rate 62.17%, FLOPs saved 441.63e12
+Tuning: eff_weight 1.4, hit rate 62.17%, FLOPs saved 441.63e12
+Tuning: eff_weight 1.6, hit rate 62.17%, FLOPs saved 441.63e12
+Tuning: eff_weight 1.7, hit rate 62.17%, FLOPs saved 441.63e12
+Tuning: eff_weight 1.5, hit rate 62.17%, FLOPs saved 441.63e12
+Tuning: eff_weight 1.8, hit rate 62.53%, FLOPs saved 444.21e12
+Tuning: eff_weight 1.9, hit rate 62.26%, FLOPs saved 442.27e12
+Tuning: eff_weight 2.0, hit rate 62.63%, FLOPs saved 444.94e12
+Tuning config took 0.34s
+V2: Updated eff_weight to be 0.1
+V2: hit rate 20.25%, FLOPs saved 3843.73e12
+V3: eff_weight 0, hit rate 19.70%, FLOPs saved 3738.78e12
+V3: eff_weight 0.1, hit rate 20.34%, FLOPs saved 3860.75e12
+V3: eff_weight 0.2, hit rate 20.61%, FLOPs saved 3913.17e12
+V3: eff_weight 0.3, hit rate 21.12%, FLOPs saved 4010.58e12
+V3: eff_weight 0.4, hit rate 20.91%, FLOPs saved 3971.47e12
+V3: eff_weight 0.5, hit rate 21.55%, FLOPs saved 4092.86e12
+V3: eff_weight 0.6, hit rate 21.27%, FLOPs saved 4041.24e12
+V3: eff_weight 0.7, hit rate 21.15%, FLOPs saved 4018.00e12
+V3: eff_weight 0.8, hit rate 21.13%, FLOPs saved 4013.39e12
+V3: eff_weight 0.9, hit rate 20.81%, FLOPs saved 3956.18e12
+V3: eff_weight 1.0, hit rate 20.63%, FLOPs saved 3920.49e12
+V3: eff_weight 1.1, hit rate 17.38%, FLOPs saved 3303.07e12
+V3: eff_weight 1.2, hit rate 17.28%, FLOPs saved 3285.39e12
+V3: eff_weight 1.3, hit rate 17.22%, FLOPs saved 3272.79e12
+V3: eff_weight 1.4, hit rate 17.59%, FLOPs saved 3344.66e12
+V3: eff_weight 1.5, hit rate 17.86%, FLOPs saved 3395.88e12
+V3: eff_weight 1.6, hit rate 16.43%, FLOPs saved 3122.54e12
+V3: eff_weight 1.7, hit rate 15.77%, FLOPs saved 2998.77e12
+V3: eff_weight 1.8, hit rate 14.24%, FLOPs saved 2707.74e12
+V3: eff_weight 1.9, hit rate 14.46%, FLOPs saved 2748.48e12
+V3: eff_weight 2.0, hit rate 14.32%, FLOPs saved 2721.15e12
+V3: hit rate 21.55%, FLOPs saved 4092.86e12
+V2 compared to V1: hit_rate_win 11.28%, flops_saved_win 11.30%
+V2 compared to vLLM: hit_rate_win 398.92%, flops_saved_win 399.24%
+V3 compared to V1: hit_rate_win 18.42%, flops_saved_win 18.52%
+V3 compared to vLLM: hit_rate_win 430.93%, flops_saved_win 431.59%
+V1 compared to vLLM: hit_rate_win 348.33%, flops_saved_win 348.53%
+Results stored in ./results/1000000000.0/sharegpt_sps=0.5_nums=100/2026_04_22_10_53_51.pickle
+==================================================
+2026-04-22 10:53:56 EST
+Cache size 1.0 GB, sessions per second: 1
+Running trace (1238 requests): ./traces/sharegpt_sps=1_nums=100.jsonl
+vLLM+: hit rate 3.17%, FLOPs saved 600.89e12
+V1: hit rate 15.58%, FLOPs saved 2956.99e12
+V2: Evict() first called, has seen 24 requests, setting bootstrap_window_size to be 120
+len(self.request_history_windowed) 120
+Running config tuning
+Tuning: eff_weight 0, hit rate 61.29%, FLOPs saved 357.95e12
+Tuning: eff_weight 0.1, hit rate 65.00%, FLOPs saved 379.61e12
+Tuning: eff_weight 0.2, hit rate 67.64%, FLOPs saved 395.12e12
+Tuning: eff_weight 0.3, hit rate 66.51%, FLOPs saved 388.45e12
+Tuning: eff_weight 0.4, hit rate 67.59%, FLOPs saved 394.76e12
+Tuning: eff_weight 0.5, hit rate 65.00%, FLOPs saved 379.62e12
+Tuning: eff_weight 0.6, hit rate 62.25%, FLOPs saved 363.50e12
+Tuning: eff_weight 0.7, hit rate 64.28%, FLOPs saved 375.32e12
+Tuning: eff_weight 0.8, hit rate 64.30%, FLOPs saved 375.39e12
+Tuning: eff_weight 0.9, hit rate 64.30%, FLOPs saved 375.39e12
+Tuning: eff_weight 1.0, hit rate 65.12%, FLOPs saved 380.27e12
+Tuning: eff_weight 1.1, hit rate 63.25%, FLOPs saved 369.30e12
+Tuning: eff_weight 1.2, hit rate 63.03%, FLOPs saved 368.07e12
+Tuning: eff_weight 1.3, hit rate 65.03%, FLOPs saved 379.81e12
+Tuning: eff_weight 1.4, hit rate 62.73%, FLOPs saved 366.31e12
+Tuning: eff_weight 1.5, hit rate 63.58%, FLOPs saved 371.29e12
+Tuning: eff_weight 1.6, hit rate 63.58%, FLOPs saved 371.29e12
+Tuning: eff_weight 1.7, hit rate 63.58%, FLOPs saved 371.29e12
+Tuning: eff_weight 1.8, hit rate 63.58%, FLOPs saved 371.29e12
+Tuning: eff_weight 1.9, hit rate 63.58%, FLOPs saved 371.29e12
+Tuning: eff_weight 2.0, hit rate 63.58%, FLOPs saved 371.29e12
+Tuning config took 0.33s
+V2: Updated eff_weight to be 0.2
+V2: hit rate 16.80%, FLOPs saved 3188.99e12
+V3: eff_weight 0, hit rate 15.53%, FLOPs saved 2946.63e12
+V3: eff_weight 0.1, hit rate 16.03%, FLOPs saved 3041.80e12
+V3: eff_weight 0.2, hit rate 16.97%, FLOPs saved 3222.30e12
+V3: eff_weight 0.3, hit rate 17.05%, FLOPs saved 3237.70e12
+V3: eff_weight 0.4, hit rate 17.47%, FLOPs saved 3319.19e12
+V3: eff_weight 0.5, hit rate 18.79%, FLOPs saved 3569.87e12
+V3: eff_weight 0.6, hit rate 19.01%, FLOPs saved 3613.08e12
+V3: eff_weight 0.7, hit rate 19.80%, FLOPs saved 3763.05e12
+V3: eff_weight 0.8, hit rate 18.97%, FLOPs saved 3605.42e12
+V3: eff_weight 0.9, hit rate 18.41%, FLOPs saved 3499.00e12
+V3: eff_weight 1.0, hit rate 17.78%, FLOPs saved 3379.93e12
+V3: eff_weight 1.1, hit rate 15.52%, FLOPs saved 2951.01e12
+V3: eff_weight 1.2, hit rate 15.16%, FLOPs saved 2882.66e12
+V3: eff_weight 1.3, hit rate 15.17%, FLOPs saved 2885.64e12
+V3: eff_weight 1.4, hit rate 15.24%, FLOPs saved 2898.84e12
+V3: eff_weight 1.5, hit rate 14.68%, FLOPs saved 2791.22e12
+V3: eff_weight 1.6, hit rate 14.37%, FLOPs saved 2733.18e12
+V3: eff_weight 1.7, hit rate 13.90%, FLOPs saved 2643.38e12
+V3: eff_weight 1.8, hit rate 13.90%, FLOPs saved 2642.81e12
+V3: eff_weight 1.9, hit rate 14.08%, FLOPs saved 2677.92e12
+V3: eff_weight 2.0, hit rate 13.61%, FLOPs saved 2588.27e12
+V3: hit rate 19.80%, FLOPs saved 3763.05e12
+V2 compared to V1: hit_rate_win 7.84%, flops_saved_win 7.85%
+V2 compared to vLLM: hit_rate_win 430.31%, flops_saved_win 430.71%
+V3 compared to V1: hit_rate_win 27.08%, flops_saved_win 27.26%
+V3 compared to vLLM: hit_rate_win 524.91%, flops_saved_win 526.25%
+V1 compared to vLLM: hit_rate_win 391.73%, flops_saved_win 392.10%
+Results stored in ./results/1000000000.0/sharegpt_sps=1_nums=100/2026_04_22_10_53_56.pickle
+==================================================
+2026-04-22 10:54:01 EST
+Cache size 1.0 GB, sessions per second: 2
+Running trace (1238 requests): ./traces/sharegpt_sps=2_nums=100.jsonl
+vLLM+: hit rate 3.04%, FLOPs saved 576.94e12
+V1: hit rate 13.82%, FLOPs saved 2623.50e12
+V2: Evict() first called, has seen 24 requests, setting bootstrap_window_size to be 120
+len(self.request_history_windowed) 120
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 52.76%, FLOPs saved 276.70e12
+Tuning: eff_weight 0, hit rate 53.35%, FLOPs saved 279.85e12
+Tuning: eff_weight 0.2, hit rate 56.78%, FLOPs saved 297.79e12
+Tuning: eff_weight 0.3, hit rate 57.42%, FLOPs saved 301.17e12
+Tuning: eff_weight 0.4, hit rate 53.88%, FLOPs saved 282.54e12
+Tuning: eff_weight 0.5, hit rate 55.34%, FLOPs saved 290.17e12
+Tuning: eff_weight 0.7, hit rate 54.90%, FLOPs saved 287.87e12
+Tuning: eff_weight 0.8, hit rate 54.92%, FLOPs saved 287.96e12
+Tuning: eff_weight 0.9, hit rate 54.92%, FLOPs saved 287.96e12
+Tuning: eff_weight 0.6, hit rate 55.34%, FLOPs saved 290.17e12
+Tuning: eff_weight 1.1, hit rate 54.94%, FLOPs saved 288.05e12
+Tuning: eff_weight 1.2, hit rate 53.90%, FLOPs saved 282.61e12
+Tuning: eff_weight 1.3, hit rate 53.05%, FLOPs saved 278.17e12
+Tuning: eff_weight 1.0, hit rate 54.92%, FLOPs saved 287.96e12
+Tuning: eff_weight 1.4, hit rate 53.84%, FLOPs saved 282.30e12
+Tuning: eff_weight 1.5, hit rate 52.23%, FLOPs saved 273.91e12
+Tuning: eff_weight 1.6, hit rate 52.23%, FLOPs saved 273.91e12
+Tuning: eff_weight 1.7, hit rate 53.62%, FLOPs saved 281.16e12
+Tuning: eff_weight 1.8, hit rate 52.77%, FLOPs saved 276.72e12
+Tuning: eff_weight 1.9, hit rate 52.77%, FLOPs saved 276.72e12
+Tuning: eff_weight 2.0, hit rate 52.77%, FLOPs saved 276.72e12
+Tuning config took 0.35s
+V2: Updated eff_weight to be 0.3
+V2: hit rate 16.74%, FLOPs saved 3181.17e12
+V3: eff_weight 0, hit rate 13.65%, FLOPs saved 2591.62e12
+V3: eff_weight 0.1, hit rate 15.09%, FLOPs saved 2866.50e12
+V3: eff_weight 0.2, hit rate 15.83%, FLOPs saved 3007.13e12
+V3: eff_weight 0.3, hit rate 16.88%, FLOPs saved 3207.53e12
+V3: eff_weight 0.4, hit rate 17.14%, FLOPs saved 3257.76e12
+V3: eff_weight 0.5, hit rate 16.97%, FLOPs saved 3225.23e12
+V3: eff_weight 0.6, hit rate 17.09%, FLOPs saved 3248.66e12
+V3: eff_weight 0.7, hit rate 17.83%, FLOPs saved 3388.36e12
+V3: eff_weight 0.8, hit rate 17.79%, FLOPs saved 3382.20e12
+V3: eff_weight 0.9, hit rate 17.36%, FLOPs saved 3299.68e12
+V3: eff_weight 1.0, hit rate 16.84%, FLOPs saved 3200.20e12
+V3: eff_weight 1.1, hit rate 13.73%, FLOPs saved 2609.77e12
+V3: eff_weight 1.2, hit rate 14.16%, FLOPs saved 2692.85e12
+V3: eff_weight 1.3, hit rate 13.46%, FLOPs saved 2559.94e12
+V3: eff_weight 1.4, hit rate 13.21%, FLOPs saved 2512.79e12
+V3: eff_weight 1.5, hit rate 13.27%, FLOPs saved 2524.25e12
+V3: eff_weight 1.6, hit rate 13.22%, FLOPs saved 2513.85e12
+V3: eff_weight 1.7, hit rate 12.93%, FLOPs saved 2458.98e12
+V3: eff_weight 1.8, hit rate 12.88%, FLOPs saved 2450.05e12
+V3: eff_weight 1.9, hit rate 12.66%, FLOPs saved 2406.74e12
+V3: eff_weight 2.0, hit rate 12.38%, FLOPs saved 2354.55e12
+V3: hit rate 17.83%, FLOPs saved 3388.36e12
+V2 compared to V1: hit_rate_win 21.11%, flops_saved_win 21.26%
+V2 compared to vLLM: hit_rate_win 450.40%, flops_saved_win 451.39%
+V3 compared to V1: hit_rate_win 28.99%, flops_saved_win 29.15%
+V3 compared to vLLM: hit_rate_win 486.20%, flops_saved_win 487.30%
+V1 compared to vLLM: hit_rate_win 354.47%, flops_saved_win 354.73%
+Results stored in ./results/1000000000.0/sharegpt_sps=2_nums=100/2026_04_22_10_54_01.pickle
+==================================================
+2026-04-22 10:54:06 EST
+Cache size 1.0 GB, sessions per second: 5
+Running trace (1238 requests): ./traces/sharegpt_sps=5_nums=100.jsonl
+vLLM+: hit rate 3.33%, FLOPs saved 632.68e12
+V1: hit rate 12.76%, FLOPs saved 2423.61e12
+V2: Evict() first called, has seen 25 requests, setting bootstrap_window_size to be 125
+len(self.request_history_windowed) 125
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 40.54%, FLOPs saved 140.48e12
+Tuning: eff_weight 0, hit rate 39.88%, FLOPs saved 138.21e12
+Tuning: eff_weight 0.2, hit rate 41.46%, FLOPs saved 143.70e12
+Tuning: eff_weight 0.3, hit rate 40.66%, FLOPs saved 140.90e12
+Tuning: eff_weight 0.4, hit rate 40.98%, FLOPs saved 141.99e12
+Tuning: eff_weight 0.5, hit rate 37.82%, FLOPs saved 131.06e12
+Tuning: eff_weight 0.6, hit rate 37.71%, FLOPs saved 130.69e12
+Tuning: eff_weight 0.7, hit rate 38.24%, FLOPs saved 132.52e12
+Tuning: eff_weight 0.8, hit rate 38.24%, FLOPs saved 132.52e12
+Tuning: eff_weight 0.9, hit rate 38.91%, FLOPs saved 134.85e12
+Tuning: eff_weight 1.1, hit rate 38.91%, FLOPs saved 134.85e12
+Tuning: eff_weight 1.2, hit rate 38.23%, FLOPs saved 132.47e12
+Tuning: eff_weight 1.3, hit rate 38.23%, FLOPs saved 132.47e12
+Tuning: eff_weight 1.0, hit rate 38.91%, FLOPs saved 134.85e12
+Tuning: eff_weight 1.4, hit rate 38.76%, FLOPs saved 134.30e12
+Tuning: eff_weight 1.5, hit rate 38.76%, FLOPs saved 134.30e12
+Tuning: eff_weight 1.6, hit rate 39.26%, FLOPs saved 136.06e12
+Tuning: eff_weight 1.8, hit rate 40.78%, FLOPs saved 141.31e12
+Tuning: eff_weight 1.7, hit rate 39.26%, FLOPs saved 136.06e12
+Tuning: eff_weight 1.9, hit rate 40.78%, FLOPs saved 141.31e12
+Tuning: eff_weight 2.0, hit rate 40.94%, FLOPs saved 141.88e12
+Tuning config took 0.34s
+V2: Updated eff_weight to be 0.2
+V2: hit rate 14.37%, FLOPs saved 2730.70e12
+V3: eff_weight 0, hit rate 12.70%, FLOPs saved 2410.06e12
+V3: eff_weight 0.1, hit rate 13.21%, FLOPs saved 2507.81e12
+V3: eff_weight 0.2, hit rate 14.44%, FLOPs saved 2743.77e12
+V3: eff_weight 0.3, hit rate 15.67%, FLOPs saved 2978.45e12
+V3: eff_weight 0.4, hit rate 15.86%, FLOPs saved 3014.76e12
+V3: eff_weight 0.5, hit rate 15.93%, FLOPs saved 3028.24e12
+V3: eff_weight 0.6, hit rate 16.41%, FLOPs saved 3120.02e12
+V3: eff_weight 0.7, hit rate 16.19%, FLOPs saved 3077.53e12
+V3: eff_weight 0.8, hit rate 16.46%, FLOPs saved 3130.83e12
+V3: eff_weight 0.9, hit rate 16.61%, FLOPs saved 3159.13e12
+V3: eff_weight 1.0, hit rate 16.40%, FLOPs saved 3117.89e12
+V3: eff_weight 1.1, hit rate 12.19%, FLOPs saved 2318.97e12
+V3: eff_weight 1.2, hit rate 12.48%, FLOPs saved 2374.27e12
+V3: eff_weight 1.3, hit rate 12.19%, FLOPs saved 2319.70e12
+V3: eff_weight 1.4, hit rate 12.81%, FLOPs saved 2436.88e12
+V3: eff_weight 1.5, hit rate 12.92%, FLOPs saved 2458.69e12
+V3: eff_weight 1.6, hit rate 12.06%, FLOPs saved 2294.91e12
+V3: eff_weight 1.7, hit rate 11.84%, FLOPs saved 2254.01e12
+V3: eff_weight 1.8, hit rate 11.94%, FLOPs saved 2272.21e12
+V3: eff_weight 1.9, hit rate 11.12%, FLOPs saved 2115.41e12
+V3: eff_weight 2.0, hit rate 11.29%, FLOPs saved 2148.73e12
+V3: hit rate 16.61%, FLOPs saved 3159.13e12
+V2 compared to V1: hit_rate_win 12.63%, flops_saved_win 12.67%
+V2 compared to vLLM: hit_rate_win 331.43%, flops_saved_win 331.61%
+V3 compared to V1: hit_rate_win 30.18%, flops_saved_win 30.35%
+V3 compared to vLLM: hit_rate_win 398.65%, flops_saved_win 399.32%
+V1 compared to vLLM: hit_rate_win 283.05%, flops_saved_win 283.07%
+Results stored in ./results/1000000000.0/sharegpt_sps=5_nums=100/2026_04_22_10_54_06.pickle
+==================================================
+2026-04-22 10:54:11 EST
+Cache size 1.0 GB, sessions per second: 10
+Running trace (1238 requests): ./traces/sharegpt_sps=10_nums=100.jsonl
+vLLM+: hit rate 3.49%, FLOPs saved 663.23e12
+V1: hit rate 13.65%, FLOPs saved 2591.42e12
+V2: Evict() first called, has seen 25 requests, setting bootstrap_window_size to be 125
+len(self.request_history_windowed) 125
+Running config tuning
+Tuning: eff_weight 0, hit rate 27.33%, FLOPs saved 74.19e12
+Tuning: eff_weight 0.1, hit rate 30.83%, FLOPs saved 83.71e12
+Tuning: eff_weight 0.3, hit rate 31.23%, FLOPs saved 84.81e12
+Tuning: eff_weight 0.2, hit rate 30.53%, FLOPs saved 82.91e12
+Tuning: eff_weight 0.4, hit rate 31.23%, FLOPs saved 84.81e12
+Tuning: eff_weight 0.5, hit rate 30.68%, FLOPs saved 83.32e12
+Tuning: eff_weight 0.6, hit rate 30.68%, FLOPs saved 83.32e12
+Tuning: eff_weight 0.7, hit rate 29.71%, FLOPs saved 80.68e12
+Tuning: eff_weight 0.8, hit rate 31.52%, FLOPs saved 85.60e12
+Tuning: eff_weight 0.9, hit rate 31.52%, FLOPs saved 85.60e12
+Tuning: eff_weight 1.0, hit rate 31.52%, FLOPs saved 85.59e12
+Tuning: eff_weight 1.1, hit rate 31.52%, FLOPs saved 85.59e12
+Tuning: eff_weight 1.2, hit rate 31.52%, FLOPs saved 85.59e12
+Tuning: eff_weight 1.3, hit rate 31.52%, FLOPs saved 85.59e12
+Tuning: eff_weight 1.4, hit rate 31.52%, FLOPs saved 85.59e12
+Tuning: eff_weight 1.6, hit rate 31.52%, FLOPs saved 85.59e12
+Tuning: eff_weight 1.5, hit rate 31.52%, FLOPs saved 85.59e12
+Tuning: eff_weight 1.7, hit rate 31.52%, FLOPs saved 85.59e12
+Tuning: eff_weight 1.8, hit rate 31.52%, FLOPs saved 85.59e12
+Tuning: eff_weight 1.9, hit rate 31.52%, FLOPs saved 85.59e12
+Tuning: eff_weight 2.0, hit rate 31.52%, FLOPs saved 85.59e12
+Tuning config took 0.34s
+V2: Updated eff_weight to be 0.8
+V2: hit rate 17.14%, FLOPs saved 3259.07e12
+V3: eff_weight 0, hit rate 13.78%, FLOPs saved 2616.12e12
+V3: eff_weight 0.1, hit rate 15.00%, FLOPs saved 2847.99e12
+V3: eff_weight 0.2, hit rate 14.73%, FLOPs saved 2799.02e12
+V3: eff_weight 0.3, hit rate 15.48%, FLOPs saved 2943.51e12
+V3: eff_weight 0.4, hit rate 16.14%, FLOPs saved 3066.91e12
+V3: eff_weight 0.5, hit rate 17.73%, FLOPs saved 3371.30e12
+V3: eff_weight 0.6, hit rate 17.31%, FLOPs saved 3291.93e12
+V3: eff_weight 0.7, hit rate 17.20%, FLOPs saved 3271.80e12
+V3: eff_weight 0.8, hit rate 17.23%, FLOPs saved 3276.32e12
+V3: eff_weight 0.9, hit rate 17.19%, FLOPs saved 3269.49e12
+V3: eff_weight 1.0, hit rate 16.90%, FLOPs saved 3214.87e12
+V3: eff_weight 1.1, hit rate 13.01%, FLOPs saved 2475.90e12
+V3: eff_weight 1.2, hit rate 12.76%, FLOPs saved 2428.40e12
+V3: eff_weight 1.3, hit rate 12.27%, FLOPs saved 2334.71e12
+V3: eff_weight 1.4, hit rate 12.80%, FLOPs saved 2434.65e12
+V3: eff_weight 1.5, hit rate 13.13%, FLOPs saved 2498.16e12
+V3: eff_weight 1.6, hit rate 13.34%, FLOPs saved 2537.98e12
+V3: eff_weight 1.7, hit rate 13.84%, FLOPs saved 2632.60e12
+V3: eff_weight 1.8, hit rate 13.51%, FLOPs saved 2570.00e12
+V3: eff_weight 1.9, hit rate 12.74%, FLOPs saved 2424.35e12
+V3: eff_weight 2.0, hit rate 12.49%, FLOPs saved 2375.53e12
+V3: hit rate 17.73%, FLOPs saved 3371.30e12
+V2 compared to V1: hit_rate_win 25.56%, flops_saved_win 25.76%
+V2 compared to vLLM: hit_rate_win 390.32%, flops_saved_win 391.39%
+V3 compared to V1: hit_rate_win 29.90%, flops_saved_win 30.09%
+V3 compared to vLLM: hit_rate_win 407.28%, flops_saved_win 408.31%
+V1 compared to vLLM: hit_rate_win 290.52%, flops_saved_win 290.73%
+Results stored in ./results/1000000000.0/sharegpt_sps=10_nums=100/2026_04_22_10_54_11.pickle
+==================================================
+2026-04-22 10:54:16 EST
+Cache size 2.0 GB, sessions per second: 0.25
+Running trace (1238 requests): ./traces/sharegpt_sps=0.25_nums=100.jsonl
+vLLM+: hit rate 5.94%, FLOPs saved 1125.25e12
+V1: hit rate 47.72%, FLOPs saved 9061.70e12
+V2: Evict() first called, has seen 49 requests, setting bootstrap_window_size to be 245
+len(self.request_history_windowed) 245
+Running config tuning
+Tuning: eff_weight 0.2, hit rate 76.72%, FLOPs saved 1653.37e12
+Tuning: eff_weight 0.1, hit rate 77.58%, FLOPs saved 1672.31e12
+Tuning: eff_weight 0.3, hit rate 76.10%, FLOPs saved 1640.09e12
+Tuning: eff_weight 0.4, hit rate 76.17%, FLOPs saved 1641.54e12
+Tuning: eff_weight 0.5, hit rate 74.58%, FLOPs saved 1607.25e12
+Tuning: eff_weight 0.6, hit rate 75.24%, FLOPs saved 1621.53e12
+Tuning: eff_weight 0, hit rate 75.84%, FLOPs saved 1635.45e12
+Tuning: eff_weight 0.7, hit rate 72.23%, FLOPs saved 1556.06e12
+Tuning: eff_weight 0.8, hit rate 74.17%, FLOPs saved 1598.24e12
+Tuning: eff_weight 0.9, hit rate 74.57%, FLOPs saved 1607.06e12
+Tuning: eff_weight 1.0, hit rate 72.91%, FLOPs saved 1571.00e12
+Tuning: eff_weight 1.1, hit rate 73.25%, FLOPs saved 1578.36e12
+Tuning: eff_weight 1.2, hit rate 75.32%, FLOPs saved 1623.29e12
+Tuning: eff_weight 1.3, hit rate 73.44%, FLOPs saved 1582.50e12
+Tuning: eff_weight 1.4, hit rate 74.21%, FLOPs saved 1599.24e12
+Tuning: eff_weight 1.5, hit rate 72.84%, FLOPs saved 1569.61e12
+Tuning: eff_weight 1.6, hit rate 72.08%, FLOPs saved 1553.27e12
+Tuning: eff_weight 1.7, hit rate 72.08%, FLOPs saved 1553.27e12
+Tuning: eff_weight 1.8, hit rate 72.08%, FLOPs saved 1553.27e12
+Tuning: eff_weight 1.9, hit rate 72.65%, FLOPs saved 1565.55e12
+Tuning: eff_weight 2.0, hit rate 73.70%, FLOPs saved 1588.31e12
+Tuning config took 0.47s
+V2: Updated eff_weight to be 0.1
+V2: hit rate 52.31%, FLOPs saved 9930.01e12
+V3: eff_weight 0, hit rate 51.10%, FLOPs saved 9702.65e12
+V3: eff_weight 0.1, hit rate 52.85%, FLOPs saved 10032.91e12
+V3: eff_weight 0.2, hit rate 51.31%, FLOPs saved 9739.91e12
+V3: eff_weight 0.3, hit rate 49.60%, FLOPs saved 9415.32e12
+V3: eff_weight 0.4, hit rate 48.63%, FLOPs saved 9231.47e12
+V3: eff_weight 0.5, hit rate 47.34%, FLOPs saved 8989.22e12
+V3: eff_weight 0.6, hit rate 45.56%, FLOPs saved 8650.92e12
+V3: eff_weight 0.7, hit rate 44.84%, FLOPs saved 8513.70e12
+V3: eff_weight 0.8, hit rate 44.83%, FLOPs saved 8512.11e12
+V3: eff_weight 0.9, hit rate 44.14%, FLOPs saved 8383.30e12
+V3: eff_weight 1.0, hit rate 42.43%, FLOPs saved 8056.88e12
+V3: eff_weight 1.1, hit rate 34.48%, FLOPs saved 6546.66e12
+V3: eff_weight 1.2, hit rate 36.43%, FLOPs saved 6915.75e12
+V3: eff_weight 1.3, hit rate 30.55%, FLOPs saved 5801.46e12
+V3: eff_weight 1.4, hit rate 34.08%, FLOPs saved 6469.98e12
+V3: eff_weight 1.5, hit rate 31.01%, FLOPs saved 5887.64e12
+V3: eff_weight 1.6, hit rate 32.92%, FLOPs saved 6252.39e12
+V3: eff_weight 1.7, hit rate 33.63%, FLOPs saved 6387.77e12
+V3: eff_weight 1.8, hit rate 32.45%, FLOPs saved 6163.36e12
+V3: eff_weight 1.9, hit rate 29.83%, FLOPs saved 5664.67e12
+V3: eff_weight 2.0, hit rate 34.75%, FLOPs saved 6600.79e12
+V3: hit rate 52.85%, FLOPs saved 10032.91e12
+V2 compared to V1: hit_rate_win 9.61%, flops_saved_win 9.58%
+V2 compared to vLLM: hit_rate_win 780.62%, flops_saved_win 782.47%
+V3 compared to V1: hit_rate_win 10.75%, flops_saved_win 10.72%
+V3 compared to vLLM: hit_rate_win 789.79%, flops_saved_win 791.62%
+V1 compared to vLLM: hit_rate_win 703.43%, flops_saved_win 705.31%
+Results stored in ./results/2000000000.0/sharegpt_sps=0.25_nums=100/2026_04_22_10_54_16.pickle
+==================================================
+2026-04-22 10:54:21 EST
+Cache size 2.0 GB, sessions per second: 0.5
+Running trace (1238 requests): ./traces/sharegpt_sps=0.5_nums=100.jsonl
+vLLM+: hit rate 5.04%, FLOPs saved 956.37e12
+V1: hit rate 39.30%, FLOPs saved 7463.62e12
+V2: Evict() first called, has seen 50 requests, setting bootstrap_window_size to be 250
+len(self.request_history_windowed) 250
+Running config tuning
+Tuning: eff_weight 0.2, hit rate 72.56%, FLOPs saved 1329.29e12
+Tuning: eff_weight 0.3, hit rate 71.22%, FLOPs saved 1304.61e12
+Tuning: eff_weight 0.1, hit rate 75.61%, FLOPs saved 1385.33e12
+Tuning: eff_weight 0.5, hit rate 70.70%, FLOPs saved 1295.08e12
+Tuning: eff_weight 0.6, hit rate 69.98%, FLOPs saved 1281.73e12
+Tuning: eff_weight 0.4, hit rate 71.31%, FLOPs saved 1306.28e12
+Tuning: eff_weight 0, hit rate 76.74%, FLOPs saved 1406.52e12
+Tuning: eff_weight 0.7, hit rate 69.82%, FLOPs saved 1278.83e12
+Tuning: eff_weight 0.9, hit rate 68.18%, FLOPs saved 1248.79e12
+Tuning: eff_weight 1.0, hit rate 68.32%, FLOPs saved 1251.38e12
+Tuning: eff_weight 1.3, hit rate 68.40%, FLOPs saved 1252.92e12
+Tuning: eff_weight 1.2, hit rate 69.02%, FLOPs saved 1264.28e12
+Tuning: eff_weight 1.1, hit rate 69.08%, FLOPs saved 1265.24e12
+Tuning: eff_weight 1.6, hit rate 69.35%, FLOPs saved 1270.33e12
+Tuning: eff_weight 1.5, hit rate 68.14%, FLOPs saved 1248.23e12
+Tuning: eff_weight 1.7, hit rate 69.08%, FLOPs saved 1265.44e12
+Tuning: eff_weight 1.8, hit rate 68.84%, FLOPs saved 1261.06e12
+Tuning: eff_weight 1.9, hit rate 68.84%, FLOPs saved 1261.06e12
+Tuning: eff_weight 2.0, hit rate 68.84%, FLOPs saved 1261.06e12
+Tuning: eff_weight 0.8, hit rate 69.77%, FLOPs saved 1277.95e12
+Tuning: eff_weight 1.4, hit rate 68.56%, FLOPs saved 1255.94e12
+Tuning config took 0.51s
+V2: Updated eff_weight to be 0
+V2: hit rate 42.73%, FLOPs saved 8115.05e12
+V3: eff_weight 0, hit rate 42.73%, FLOPs saved 8115.05e12
+V3: eff_weight 0.1, hit rate 43.78%, FLOPs saved 8312.52e12
+V3: eff_weight 0.2, hit rate 42.76%, FLOPs saved 8117.46e12
+V3: eff_weight 0.3, hit rate 42.20%, FLOPs saved 8012.22e12
+V3: eff_weight 0.4, hit rate 41.43%, FLOPs saved 7866.95e12
+V3: eff_weight 0.5, hit rate 42.10%, FLOPs saved 7995.64e12
+V3: eff_weight 0.6, hit rate 41.70%, FLOPs saved 7921.11e12
+V3: eff_weight 0.7, hit rate 39.75%, FLOPs saved 7551.58e12
+V3: eff_weight 0.8, hit rate 36.02%, FLOPs saved 6843.40e12
+V3: eff_weight 0.9, hit rate 36.43%, FLOPs saved 6922.05e12
+V3: eff_weight 1.0, hit rate 36.13%, FLOPs saved 6864.79e12
+V3: eff_weight 1.1, hit rate 32.03%, FLOPs saved 6083.24e12
+V3: eff_weight 1.2, hit rate 30.66%, FLOPs saved 5822.81e12
+V3: eff_weight 1.3, hit rate 27.34%, FLOPs saved 5193.79e12
+V3: eff_weight 1.4, hit rate 25.79%, FLOPs saved 4898.45e12
+V3: eff_weight 1.5, hit rate 27.87%, FLOPs saved 5295.07e12
+V3: eff_weight 1.6, hit rate 26.08%, FLOPs saved 4951.39e12
+V3: eff_weight 1.7, hit rate 29.98%, FLOPs saved 5692.52e12
+V3: eff_weight 1.8, hit rate 26.13%, FLOPs saved 4962.30e12
+V3: eff_weight 1.9, hit rate 27.02%, FLOPs saved 5132.41e12
+V3: eff_weight 2.0, hit rate 25.78%, FLOPs saved 4895.69e12
+V3: hit rate 43.78%, FLOPs saved 8312.52e12
+V2 compared to V1: hit_rate_win 8.73%, flops_saved_win 8.73%
+V2 compared to vLLM: hit_rate_win 747.17%, flops_saved_win 748.53%
+V3 compared to V1: hit_rate_win 11.40%, flops_saved_win 11.37%
+V3 compared to vLLM: hit_rate_win 768.01%, flops_saved_win 769.18%
+V1 compared to vLLM: hit_rate_win 679.16%, flops_saved_win 680.41%
+Results stored in ./results/2000000000.0/sharegpt_sps=0.5_nums=100/2026_04_22_10_54_21.pickle
+==================================================
+2026-04-22 10:54:27 EST
+Cache size 2.0 GB, sessions per second: 1
+Running trace (1238 requests): ./traces/sharegpt_sps=1_nums=100.jsonl
+vLLM+: hit rate 3.96%, FLOPs saved 750.88e12
+V1: hit rate 34.45%, FLOPs saved 6543.99e12
+V2: Evict() first called, has seen 52 requests, setting bootstrap_window_size to be 260
+len(self.request_history_windowed) 260
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 71.60%, FLOPs saved 1181.99e12
+Tuning: eff_weight 0.4, hit rate 69.70%, FLOPs saved 1150.52e12
+Tuning: eff_weight 0.5, hit rate 68.46%, FLOPs saved 1129.98e12
+Tuning: eff_weight 0.3, hit rate 69.37%, FLOPs saved 1144.98e12
+Tuning: eff_weight 0, hit rate 64.55%, FLOPs saved 1065.85e12
+Tuning: eff_weight 0.2, hit rate 67.89%, FLOPs saved 1120.55e12
+Tuning: eff_weight 0.6, hit rate 68.46%, FLOPs saved 1129.99e12
+Tuning: eff_weight 0.7, hit rate 68.71%, FLOPs saved 1134.18e12
+Tuning: eff_weight 0.9, hit rate 68.55%, FLOPs saved 1131.51e12
+Tuning: eff_weight 0.8, hit rate 68.11%, FLOPs saved 1124.31e12
+Tuning: eff_weight 1.0, hit rate 68.30%, FLOPs saved 1127.30e12
+Tuning: eff_weight 1.2, hit rate 67.25%, FLOPs saved 1110.03e12
+Tuning: eff_weight 1.1, hit rate 67.25%, FLOPs saved 1110.03e12
+Tuning: eff_weight 1.3, hit rate 67.63%, FLOPs saved 1116.34e12
+Tuning: eff_weight 1.4, hit rate 67.64%, FLOPs saved 1116.48e12
+Tuning: eff_weight 1.5, hit rate 67.62%, FLOPs saved 1116.13e12
+Tuning: eff_weight 1.8, hit rate 67.62%, FLOPs saved 1116.13e12
+Tuning: eff_weight 1.7, hit rate 67.62%, FLOPs saved 1116.13e12
+Tuning: eff_weight 1.9, hit rate 67.62%, FLOPs saved 1116.13e12
+Tuning: eff_weight 1.6, hit rate 67.62%, FLOPs saved 1116.13e12
+Tuning: eff_weight 2.0, hit rate 67.58%, FLOPs saved 1115.44e12
+Tuning config took 0.48s
+V2: Updated eff_weight to be 0.1
+V2: hit rate 36.76%, FLOPs saved 6981.82e12
+V3: eff_weight 0, hit rate 35.18%, FLOPs saved 6681.93e12
+V3: eff_weight 0.1, hit rate 37.32%, FLOPs saved 7087.31e12
+V3: eff_weight 0.2, hit rate 37.33%, FLOPs saved 7089.54e12
+V3: eff_weight 0.3, hit rate 36.90%, FLOPs saved 7008.11e12
+V3: eff_weight 0.4, hit rate 35.97%, FLOPs saved 6831.77e12
+V3: eff_weight 0.5, hit rate 35.15%, FLOPs saved 6678.79e12
+V3: eff_weight 0.6, hit rate 36.13%, FLOPs saved 6864.80e12
+V3: eff_weight 0.7, hit rate 33.74%, FLOPs saved 6410.58e12
+V3: eff_weight 0.8, hit rate 33.10%, FLOPs saved 6290.33e12
+V3: eff_weight 0.9, hit rate 31.81%, FLOPs saved 6045.22e12
+V3: eff_weight 1.0, hit rate 31.22%, FLOPs saved 5933.54e12
+V3: eff_weight 1.1, hit rate 23.87%, FLOPs saved 4534.96e12
+V3: eff_weight 1.2, hit rate 23.82%, FLOPs saved 4525.79e12
+V3: eff_weight 1.3, hit rate 22.24%, FLOPs saved 4226.07e12
+V3: eff_weight 1.4, hit rate 23.47%, FLOPs saved 4460.08e12
+V3: eff_weight 1.5, hit rate 23.36%, FLOPs saved 4438.30e12
+V3: eff_weight 1.6, hit rate 22.81%, FLOPs saved 4332.53e12
+V3: eff_weight 1.7, hit rate 23.24%, FLOPs saved 4415.57e12
+V3: eff_weight 1.8, hit rate 23.47%, FLOPs saved 4459.30e12
+V3: eff_weight 1.9, hit rate 23.28%, FLOPs saved 4422.48e12
+V3: eff_weight 2.0, hit rate 23.40%, FLOPs saved 4445.73e12
+V3: hit rate 37.33%, FLOPs saved 7089.54e12
+V2 compared to V1: hit_rate_win 6.71%, flops_saved_win 6.69%
+V2 compared to vLLM: hit_rate_win 828.06%, flops_saved_win 829.82%
+V3 compared to V1: hit_rate_win 8.36%, flops_saved_win 8.34%
+V3 compared to vLLM: hit_rate_win 842.42%, flops_saved_win 844.17%
+V1 compared to vLLM: hit_rate_win 769.67%, flops_saved_win 771.51%
+Results stored in ./results/2000000000.0/sharegpt_sps=1_nums=100/2026_04_22_10_54_27.pickle
+==================================================
+2026-04-22 10:54:33 EST
+Cache size 2.0 GB, sessions per second: 2
+Running trace (1238 requests): ./traces/sharegpt_sps=2_nums=100.jsonl
+vLLM+: hit rate 3.88%, FLOPs saved 736.02e12
+V1: hit rate 31.71%, FLOPs saved 6025.55e12
+V2: Evict() first called, has seen 53 requests, setting bootstrap_window_size to be 265
+len(self.request_history_windowed) 265
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 59.61%, FLOPs saved 839.03e12
+Tuning: eff_weight 0.3, hit rate 61.87%, FLOPs saved 870.75e12
+Tuning: eff_weight 0.2, hit rate 60.33%, FLOPs saved 849.04e12
+Tuning: eff_weight 0.4, hit rate 60.94%, FLOPs saved 857.64e12
+Tuning: eff_weight 0.5, hit rate 61.06%, FLOPs saved 859.23e12
+Tuning: eff_weight 0.6, hit rate 61.36%, FLOPs saved 863.42e12
+Tuning: eff_weight 0, hit rate 59.34%, FLOPs saved 835.61e12
+Tuning: eff_weight 0.7, hit rate 60.66%, FLOPs saved 853.51e12
+Tuning: eff_weight 0.8, hit rate 60.02%, FLOPs saved 844.38e12
+Tuning: eff_weight 1.0, hit rate 61.13%, FLOPs saved 860.15e12
+Tuning: eff_weight 0.9, hit rate 61.25%, FLOPs saved 861.84e12
+Tuning: eff_weight 1.1, hit rate 61.13%, FLOPs saved 860.15e12
+Tuning: eff_weight 1.2, hit rate 59.55%, FLOPs saved 837.73e12
+Tuning: eff_weight 1.3, hit rate 59.55%, FLOPs saved 837.73e12
+Tuning: eff_weight 1.4, hit rate 60.46%, FLOPs saved 850.64e12
+Tuning: eff_weight 1.5, hit rate 60.46%, FLOPs saved 850.64e12
+Tuning: eff_weight 1.7, hit rate 60.74%, FLOPs saved 854.69e12
+Tuning: eff_weight 1.8, hit rate 60.62%, FLOPs saved 852.92e12
+Tuning: eff_weight 1.9, hit rate 60.62%, FLOPs saved 852.92e12
+Tuning: eff_weight 2.0, hit rate 60.73%, FLOPs saved 854.46e12
+Tuning: eff_weight 1.6, hit rate 60.33%, FLOPs saved 848.87e12
+Tuning config took 0.49s
+V2: Updated eff_weight to be 0.3
+V2: hit rate 34.70%, FLOPs saved 6593.46e12
+V3: eff_weight 0, hit rate 33.45%, FLOPs saved 6355.41e12
+V3: eff_weight 0.1, hit rate 34.44%, FLOPs saved 6543.24e12
+V3: eff_weight 0.2, hit rate 34.39%, FLOPs saved 6532.70e12
+V3: eff_weight 0.3, hit rate 34.61%, FLOPs saved 6575.69e12
+V3: eff_weight 0.4, hit rate 34.30%, FLOPs saved 6516.62e12
+V3: eff_weight 0.5, hit rate 31.81%, FLOPs saved 6045.55e12
+V3: eff_weight 0.6, hit rate 32.97%, FLOPs saved 6266.64e12
+V3: eff_weight 0.7, hit rate 32.24%, FLOPs saved 6128.54e12
+V3: eff_weight 0.8, hit rate 29.29%, FLOPs saved 5568.31e12
+V3: eff_weight 0.9, hit rate 29.63%, FLOPs saved 5632.35e12
+V3: eff_weight 1.0, hit rate 29.14%, FLOPs saved 5539.65e12
+V3: eff_weight 1.1, hit rate 22.74%, FLOPs saved 4323.11e12
+V3: eff_weight 1.2, hit rate 24.00%, FLOPs saved 4562.85e12
+V3: eff_weight 1.3, hit rate 21.47%, FLOPs saved 4080.45e12
+V3: eff_weight 1.4, hit rate 21.47%, FLOPs saved 4080.48e12
+V3: eff_weight 1.5, hit rate 19.14%, FLOPs saved 3636.53e12
+V3: eff_weight 1.6, hit rate 19.97%, FLOPs saved 3794.66e12
+V3: eff_weight 1.7, hit rate 19.11%, FLOPs saved 3631.78e12
+V3: eff_weight 1.8, hit rate 18.75%, FLOPs saved 3563.86e12
+V3: eff_weight 1.9, hit rate 18.04%, FLOPs saved 3426.85e12
+V3: eff_weight 2.0, hit rate 17.77%, FLOPs saved 3375.96e12
+V3: hit rate 34.61%, FLOPs saved 6575.69e12
+V2 compared to V1: hit_rate_win 9.43%, flops_saved_win 9.43%
+V2 compared to vLLM: hit_rate_win 794.08%, flops_saved_win 795.82%
+V3 compared to V1: hit_rate_win 9.14%, flops_saved_win 9.13%
+V3 compared to vLLM: hit_rate_win 791.72%, flops_saved_win 793.41%
+V1 compared to vLLM: hit_rate_win 717.05%, flops_saved_win 718.66%
+Results stored in ./results/2000000000.0/sharegpt_sps=2_nums=100/2026_04_22_10_54_33.pickle
+==================================================
+2026-04-22 10:54:39 EST
+Cache size 2.0 GB, sessions per second: 5
+Running trace (1238 requests): ./traces/sharegpt_sps=5_nums=100.jsonl
+vLLM+: hit rate 3.94%, FLOPs saved 746.83e12
+V1: hit rate 30.97%, FLOPs saved 5884.57e12
+V2: Evict() first called, has seen 50 requests, setting bootstrap_window_size to be 250
+len(self.request_history_windowed) 250
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 50.66%, FLOPs saved 511.60e12
+Tuning: eff_weight 0.2, hit rate 50.77%, FLOPs saved 512.63e12
+Tuning: eff_weight 0, hit rate 44.17%, FLOPs saved 446.12e12
+Tuning: eff_weight 0.4, hit rate 50.87%, FLOPs saved 513.67e12
+Tuning: eff_weight 0.6, hit rate 51.37%, FLOPs saved 518.66e12
+Tuning: eff_weight 0.5, hit rate 50.98%, FLOPs saved 514.76e12
+Tuning: eff_weight 0.8, hit rate 50.85%, FLOPs saved 513.37e12
+Tuning: eff_weight 0.9, hit rate 50.11%, FLOPs saved 505.95e12
+Tuning: eff_weight 1.0, hit rate 50.42%, FLOPs saved 509.07e12
+Tuning: eff_weight 1.3, hit rate 51.45%, FLOPs saved 519.47e12
+Tuning: eff_weight 1.1, hit rate 49.75%, FLOPs saved 502.22e12
+Tuning: eff_weight 1.2, hit rate 49.97%, FLOPs saved 504.42e12
+Tuning: eff_weight 1.4, hit rate 51.45%, FLOPs saved 519.47e12
+Tuning: eff_weight 1.7, hit rate 51.50%, FLOPs saved 520.00e12
+Tuning: eff_weight 1.8, hit rate 51.50%, FLOPs saved 520.00e12
+Tuning: eff_weight 1.9, hit rate 51.50%, FLOPs saved 520.00e12
+Tuning: eff_weight 2.0, hit rate 51.50%, FLOPs saved 520.00e12
+Tuning: eff_weight 0.3, hit rate 51.67%, FLOPs saved 521.74e12
+Tuning: eff_weight 0.7, hit rate 50.85%, FLOPs saved 513.37e12
+Tuning: eff_weight 1.6, hit rate 51.78%, FLOPs saved 522.81e12
+Tuning: eff_weight 1.5, hit rate 51.61%, FLOPs saved 521.06e12
+Tuning config took 0.49s
+V2: Updated eff_weight to be 1.6
+V2: hit rate 19.45%, FLOPs saved 3698.47e12
+V3: eff_weight 0, hit rate 31.60%, FLOPs saved 6002.83e12
+V3: eff_weight 0.1, hit rate 33.26%, FLOPs saved 6317.59e12
+V3: eff_weight 0.2, hit rate 32.98%, FLOPs saved 6265.01e12
+V3: eff_weight 0.3, hit rate 34.03%, FLOPs saved 6465.26e12
+V3: eff_weight 0.4, hit rate 33.99%, FLOPs saved 6458.49e12
+V3: eff_weight 0.5, hit rate 32.50%, FLOPs saved 6177.02e12
+V3: eff_weight 0.6, hit rate 31.73%, FLOPs saved 6033.40e12
+V3: eff_weight 0.7, hit rate 30.87%, FLOPs saved 5869.75e12
+V3: eff_weight 0.8, hit rate 28.61%, FLOPs saved 5439.51e12
+V3: eff_weight 0.9, hit rate 28.84%, FLOPs saved 5482.48e12
+V3: eff_weight 1.0, hit rate 27.92%, FLOPs saved 5308.09e12
+V3: eff_weight 1.1, hit rate 23.75%, FLOPs saved 4516.33e12
+V3: eff_weight 1.2, hit rate 21.34%, FLOPs saved 4057.91e12
+V3: eff_weight 1.3, hit rate 20.80%, FLOPs saved 3954.72e12
+V3: eff_weight 1.4, hit rate 22.21%, FLOPs saved 4222.79e12
+V3: eff_weight 1.5, hit rate 19.93%, FLOPs saved 3789.28e12
+V3: eff_weight 1.6, hit rate 19.77%, FLOPs saved 3758.70e12
+V3: eff_weight 1.7, hit rate 18.77%, FLOPs saved 3568.64e12
+V3: eff_weight 1.8, hit rate 19.05%, FLOPs saved 3622.56e12
+V3: eff_weight 1.9, hit rate 18.81%, FLOPs saved 3575.95e12
+V3: eff_weight 2.0, hit rate 18.37%, FLOPs saved 3492.25e12
+V3: hit rate 34.03%, FLOPs saved 6465.26e12
+V2 compared to V1: hit_rate_win -37.21%, flops_saved_win -37.15%
+V2 compared to vLLM: hit_rate_win 394.18%, flops_saved_win 395.23%
+V3 compared to V1: hit_rate_win 9.87%, flops_saved_win 9.87%
+V3 compared to vLLM: hit_rate_win 764.71%, flops_saved_win 765.70%
+V1 compared to vLLM: hit_rate_win 687.05%, flops_saved_win 687.94%
+Results stored in ./results/2000000000.0/sharegpt_sps=5_nums=100/2026_04_22_10_54_39.pickle
+==================================================
+2026-04-22 10:54:45 EST
+Cache size 2.0 GB, sessions per second: 10
+Running trace (1238 requests): ./traces/sharegpt_sps=10_nums=100.jsonl
+vLLM+: hit rate 4.11%, FLOPs saved 779.70e12
+V1: hit rate 29.24%, FLOPs saved 5555.60e12
+V2: Evict() first called, has seen 49 requests, setting bootstrap_window_size to be 245
+len(self.request_history_windowed) 245
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 40.03%, FLOPs saved 348.39e12
+Tuning: eff_weight 0, hit rate 39.72%, FLOPs saved 345.77e12
+Tuning: eff_weight 0.4, hit rate 40.49%, FLOPs saved 352.32e12
+Tuning: eff_weight 0.2, hit rate 39.49%, FLOPs saved 343.70e12
+Tuning: eff_weight 0.3, hit rate 38.82%, FLOPs saved 337.75e12
+Tuning: eff_weight 0.8, hit rate 42.34%, FLOPs saved 368.43e12
+Tuning: eff_weight 0.7, hit rate 42.34%, FLOPs saved 368.43e12
+Tuning: eff_weight 0.9, hit rate 42.34%, FLOPs saved 368.43e12
+Tuning: eff_weight 0.6, hit rate 41.02%, FLOPs saved 356.98e12
+Tuning: eff_weight 1.0, hit rate 41.97%, FLOPs saved 365.20e12
+Tuning: eff_weight 1.1, hit rate 41.97%, FLOPs saved 365.20e12
+Tuning: eff_weight 1.2, hit rate 42.71%, FLOPs saved 371.68e12
+Tuning: eff_weight 1.3, hit rate 42.71%, FLOPs saved 371.68e12
+Tuning: eff_weight 1.4, hit rate 42.71%, FLOPs saved 371.68e12
+Tuning: eff_weight 1.6, hit rate 43.03%, FLOPs saved 374.50e12
+Tuning: eff_weight 1.7, hit rate 43.03%, FLOPs saved 374.50e12
+Tuning: eff_weight 1.8, hit rate 42.39%, FLOPs saved 368.89e12
+Tuning: eff_weight 1.9, hit rate 42.39%, FLOPs saved 368.89e12
+Tuning: eff_weight 2.0, hit rate 42.39%, FLOPs saved 368.89e12
+Tuning: eff_weight 0.5, hit rate 41.02%, FLOPs saved 356.96e12
+Tuning: eff_weight 1.5, hit rate 43.03%, FLOPs saved 374.50e12
+Tuning config took 0.48s
+V2: Updated eff_weight to be 1.6
+V2: hit rate 20.40%, FLOPs saved 3880.61e12
+V3: eff_weight 0, hit rate 30.94%, FLOPs saved 5879.10e12
+V3: eff_weight 0.1, hit rate 32.65%, FLOPs saved 6204.61e12
+V3: eff_weight 0.2, hit rate 33.21%, FLOPs saved 6309.92e12
+V3: eff_weight 0.3, hit rate 33.17%, FLOPs saved 6302.90e12
+V3: eff_weight 0.4, hit rate 32.90%, FLOPs saved 6253.36e12
+V3: eff_weight 0.5, hit rate 31.29%, FLOPs saved 5947.74e12
+V3: eff_weight 0.6, hit rate 31.09%, FLOPs saved 5909.96e12
+V3: eff_weight 0.7, hit rate 31.32%, FLOPs saved 5954.21e12
+V3: eff_weight 0.8, hit rate 31.32%, FLOPs saved 5954.01e12
+V3: eff_weight 0.9, hit rate 29.66%, FLOPs saved 5639.00e12
+V3: eff_weight 1.0, hit rate 28.67%, FLOPs saved 5451.40e12
+V3: eff_weight 1.1, hit rate 23.72%, FLOPs saved 4510.79e12
+V3: eff_weight 1.2, hit rate 20.87%, FLOPs saved 3969.22e12
+V3: eff_weight 1.3, hit rate 21.70%, FLOPs saved 4126.82e12
+V3: eff_weight 1.4, hit rate 21.13%, FLOPs saved 4017.77e12
+V3: eff_weight 1.5, hit rate 20.44%, FLOPs saved 3886.39e12
+V3: eff_weight 1.6, hit rate 19.46%, FLOPs saved 3699.55e12
+V3: eff_weight 1.7, hit rate 18.23%, FLOPs saved 3465.08e12
+V3: eff_weight 1.8, hit rate 18.14%, FLOPs saved 3448.29e12
+V3: eff_weight 1.9, hit rate 18.76%, FLOPs saved 3567.44e12
+V3: eff_weight 2.0, hit rate 19.69%, FLOPs saved 3742.97e12
+V3: hit rate 33.21%, FLOPs saved 6309.92e12
+V2 compared to V1: hit_rate_win -30.21%, flops_saved_win -30.15%
+V2 compared to vLLM: hit_rate_win 396.48%, flops_saved_win 397.71%
+V3 compared to V1: hit_rate_win 13.58%, flops_saved_win 13.58%
+V3 compared to vLLM: hit_rate_win 708.02%, flops_saved_win 709.28%
+V1 compared to vLLM: hit_rate_win 611.43%, flops_saved_win 612.53%
+Results stored in ./results/2000000000.0/sharegpt_sps=10_nums=100/2026_04_22_10_54_45.pickle
+==================================================
+2026-04-22 10:54:50 EST
+Cache size 3.0 GB, sessions per second: 0.25
+Running trace (1238 requests): ./traces/sharegpt_sps=0.25_nums=100.jsonl
+vLLM+: hit rate 8.96%, FLOPs saved 1698.94e12
+V1: hit rate 62.44%, FLOPs saved 11856.77e12
+V2: Evict() first called, has seen 77 requests, setting bootstrap_window_size to be 385
+len(self.request_history_windowed) 385
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 81.66%, FLOPs saved 3189.82e12
+Tuning: eff_weight 0.2, hit rate 80.20%, FLOPs saved 3131.66e12
+Tuning: eff_weight 0.3, hit rate 78.36%, FLOPs saved 3060.02e12
+Tuning: eff_weight 0.4, hit rate 77.87%, FLOPs saved 3040.39e12
+Tuning: eff_weight 0.5, hit rate 75.77%, FLOPs saved 2958.41e12
+Tuning: eff_weight 0.6, hit rate 74.73%, FLOPs saved 2917.48e12
+Tuning: eff_weight 0.8, hit rate 74.55%, FLOPs saved 2910.31e12
+Tuning: eff_weight 0, hit rate 87.96%, FLOPs saved 3437.26e12
+Tuning: eff_weight 0.9, hit rate 74.27%, FLOPs saved 2899.46e12
+Tuning: eff_weight 1.0, hit rate 75.32%, FLOPs saved 2940.25e12
+Tuning: eff_weight 1.1, hit rate 75.45%, FLOPs saved 2945.74e12
+Tuning: eff_weight 1.3, hit rate 75.16%, FLOPs saved 2934.24e12
+Tuning: eff_weight 1.4, hit rate 74.27%, FLOPs saved 2899.40e12
+Tuning: eff_weight 1.5, hit rate 74.72%, FLOPs saved 2916.78e12
+Tuning: eff_weight 1.6, hit rate 74.23%, FLOPs saved 2897.79e12
+Tuning: eff_weight 1.7, hit rate 73.94%, FLOPs saved 2886.24e12
+Tuning: eff_weight 1.8, hit rate 73.75%, FLOPs saved 2878.85e12
+Tuning: eff_weight 1.9, hit rate 74.17%, FLOPs saved 2895.08e12
+Tuning: eff_weight 2.0, hit rate 73.84%, FLOPs saved 2882.26e12
+Tuning: eff_weight 0.7, hit rate 75.66%, FLOPs saved 2953.82e12
+Tuning: eff_weight 1.2, hit rate 74.82%, FLOPs saved 2920.65e12
+Tuning config took 0.72s
+V2: Updated eff_weight to be 0
+V2: hit rate 67.41%, FLOPs saved 12800.53e12
+V3: eff_weight 0, hit rate 67.41%, FLOPs saved 12800.53e12
+V3: eff_weight 0.1, hit rate 65.55%, FLOPs saved 12441.12e12
+V3: eff_weight 0.2, hit rate 62.33%, FLOPs saved 11829.35e12
+V3: eff_weight 0.3, hit rate 60.44%, FLOPs saved 11473.09e12
+V3: eff_weight 0.4, hit rate 58.61%, FLOPs saved 11124.12e12
+V3: eff_weight 0.5, hit rate 55.40%, FLOPs saved 10516.29e12
+V3: eff_weight 0.6, hit rate 52.88%, FLOPs saved 10037.07e12
+V3: eff_weight 0.7, hit rate 51.52%, FLOPs saved 9779.96e12
+V3: eff_weight 0.8, hit rate 50.42%, FLOPs saved 9570.99e12
+V3: eff_weight 0.9, hit rate 50.14%, FLOPs saved 9520.31e12
+V3: eff_weight 1.0, hit rate 49.20%, FLOPs saved 9338.86e12
+V3: eff_weight 1.1, hit rate 42.53%, FLOPs saved 8073.91e12
+V3: eff_weight 1.2, hit rate 42.25%, FLOPs saved 8018.80e12
+V3: eff_weight 1.3, hit rate 42.50%, FLOPs saved 8067.03e12
+V3: eff_weight 1.4, hit rate 40.36%, FLOPs saved 7659.99e12
+V3: eff_weight 1.5, hit rate 42.55%, FLOPs saved 8077.78e12
+V3: eff_weight 1.6, hit rate 41.31%, FLOPs saved 7842.00e12
+V3: eff_weight 1.7, hit rate 40.92%, FLOPs saved 7769.06e12
+V3: eff_weight 1.8, hit rate 41.57%, FLOPs saved 7891.42e12
+V3: eff_weight 1.9, hit rate 41.69%, FLOPs saved 7913.34e12
+V3: eff_weight 2.0, hit rate 41.26%, FLOPs saved 7832.59e12
+V3: hit rate 67.41%, FLOPs saved 12800.53e12
+V2 compared to V1: hit_rate_win 7.96%, flops_saved_win 7.96%
+V2 compared to vLLM: hit_rate_win 651.96%, flops_saved_win 653.44%
+V3 compared to V1: hit_rate_win 7.96%, flops_saved_win 7.96%
+V3 compared to vLLM: hit_rate_win 651.96%, flops_saved_win 653.44%
+V1 compared to vLLM: hit_rate_win 596.51%, flops_saved_win 597.89%
+Results stored in ./results/3000000000.0/sharegpt_sps=0.25_nums=100/2026_04_22_10_54_50.pickle
+==================================================
+2026-04-22 10:54:57 EST
+Cache size 3.0 GB, sessions per second: 0.5
+Running trace (1238 requests): ./traces/sharegpt_sps=0.5_nums=100.jsonl
+vLLM+: hit rate 6.85%, FLOPs saved 1297.92e12
+V1: hit rate 54.60%, FLOPs saved 10370.30e12
+V2: Evict() first called, has seen 80 requests, setting bootstrap_window_size to be 400
+len(self.request_history_windowed) 400
+Running config tuning
+Tuning: eff_weight 0.2, hit rate 74.68%, FLOPs saved 2820.00e12
+Tuning: eff_weight 0.1, hit rate 75.39%, FLOPs saved 2847.29e12
+Tuning: eff_weight 0.3, hit rate 71.13%, FLOPs saved 2684.98e12
+Tuning: eff_weight 0.4, hit rate 70.76%, FLOPs saved 2670.67e12
+Tuning: eff_weight 0.5, hit rate 70.17%, FLOPs saved 2648.19e12
+Tuning: eff_weight 0, hit rate 78.85%, FLOPs saved 2979.80e12
+Tuning: eff_weight 0.7, hit rate 69.50%, FLOPs saved 2622.83e12
+Tuning: eff_weight 0.8, hit rate 69.50%, FLOPs saved 2622.83e12
+Tuning: eff_weight 0.9, hit rate 69.41%, FLOPs saved 2619.47e12
+Tuning: eff_weight 1.0, hit rate 70.63%, FLOPs saved 2665.68e12
+Tuning: eff_weight 1.1, hit rate 69.79%, FLOPs saved 2633.64e12
+Tuning: eff_weight 0.6, hit rate 69.48%, FLOPs saved 2621.93e12
+Tuning: eff_weight 1.2, hit rate 70.28%, FLOPs saved 2652.31e12
+Tuning: eff_weight 1.3, hit rate 70.89%, FLOPs saved 2675.56e12
+Tuning: eff_weight 1.4, hit rate 70.59%, FLOPs saved 2663.88e12
+Tuning: eff_weight 1.5, hit rate 68.82%, FLOPs saved 2596.96e12
+Tuning: eff_weight 1.6, hit rate 68.82%, FLOPs saved 2596.96e12
+Tuning: eff_weight 1.7, hit rate 69.17%, FLOPs saved 2610.50e12
+Tuning: eff_weight 1.8, hit rate 69.43%, FLOPs saved 2620.08e12
+Tuning: eff_weight 1.9, hit rate 69.24%, FLOPs saved 2612.98e12
+Tuning: eff_weight 2.0, hit rate 69.18%, FLOPs saved 2610.72e12
+Tuning config took 0.66s
+V2: Updated eff_weight to be 0
+V2: hit rate 58.66%, FLOPs saved 11141.29e12
+V3: eff_weight 0, hit rate 58.66%, FLOPs saved 11141.29e12
+V3: eff_weight 0.1, hit rate 59.78%, FLOPs saved 11347.99e12
+V3: eff_weight 0.2, hit rate 58.42%, FLOPs saved 11089.11e12
+V3: eff_weight 0.3, hit rate 56.57%, FLOPs saved 10737.09e12
+V3: eff_weight 0.4, hit rate 54.28%, FLOPs saved 10303.06e12
+V3: eff_weight 0.5, hit rate 54.44%, FLOPs saved 10333.30e12
+V3: eff_weight 0.6, hit rate 52.10%, FLOPs saved 9891.07e12
+V3: eff_weight 0.7, hit rate 49.75%, FLOPs saved 9445.02e12
+V3: eff_weight 0.8, hit rate 49.63%, FLOPs saved 9423.45e12
+V3: eff_weight 0.9, hit rate 50.19%, FLOPs saved 9527.67e12
+V3: eff_weight 1.0, hit rate 49.04%, FLOPs saved 9310.68e12
+V3: eff_weight 1.1, hit rate 40.28%, FLOPs saved 7647.87e12
+V3: eff_weight 1.2, hit rate 42.99%, FLOPs saved 8160.48e12
+V3: eff_weight 1.3, hit rate 40.82%, FLOPs saved 7748.11e12
+V3: eff_weight 1.4, hit rate 41.53%, FLOPs saved 7885.33e12
+V3: eff_weight 1.5, hit rate 37.93%, FLOPs saved 7201.45e12
+V3: eff_weight 1.6, hit rate 39.20%, FLOPs saved 7442.52e12
+V3: eff_weight 1.7, hit rate 35.77%, FLOPs saved 6791.30e12
+V3: eff_weight 1.8, hit rate 34.27%, FLOPs saved 6507.66e12
+V3: eff_weight 1.9, hit rate 33.69%, FLOPs saved 6396.61e12
+V3: eff_weight 2.0, hit rate 33.51%, FLOPs saved 6361.69e12
+V3: hit rate 59.78%, FLOPs saved 11347.99e12
+V2 compared to V1: hit_rate_win 7.43%, flops_saved_win 7.43%
+V2 compared to vLLM: hit_rate_win 756.59%, flops_saved_win 758.39%
+V3 compared to V1: hit_rate_win 9.49%, flops_saved_win 9.43%
+V3 compared to vLLM: hit_rate_win 772.97%, flops_saved_win 774.32%
+V1 compared to vLLM: hit_rate_win 697.32%, flops_saved_win 698.99%
+Results stored in ./results/3000000000.0/sharegpt_sps=0.5_nums=100/2026_04_22_10_54_57.pickle
+==================================================
+2026-04-22 10:55:04 EST
+Cache size 3.0 GB, sessions per second: 1
+Running trace (1238 requests): ./traces/sharegpt_sps=1_nums=100.jsonl
+vLLM+: hit rate 5.21%, FLOPs saved 987.07e12
+V1: hit rate 48.87%, FLOPs saved 9283.81e12
+V2: Evict() first called, has seen 79 requests, setting bootstrap_window_size to be 395
+len(self.request_history_windowed) 395
+Running config tuning
+Tuning: eff_weight 0.2, hit rate 65.63%, FLOPs saved 1989.52e12
+Tuning: eff_weight 0.1, hit rate 69.77%, FLOPs saved 2115.63e12
+Tuning: eff_weight 0.4, hit rate 65.50%, FLOPs saved 1985.14e12
+Tuning: eff_weight 0.5, hit rate 65.18%, FLOPs saved 1975.41e12
+Tuning: eff_weight 0, hit rate 70.45%, FLOPs saved 2137.86e12
+Tuning: eff_weight 0.3, hit rate 65.74%, FLOPs saved 1992.51e12
+Tuning: eff_weight 0.6, hit rate 65.45%, FLOPs saved 1983.59e12
+Tuning: eff_weight 0.7, hit rate 66.16%, FLOPs saved 2005.60e12
+Tuning: eff_weight 0.8, hit rate 65.02%, FLOPs saved 1970.52e12
+Tuning: eff_weight 0.9, hit rate 65.23%, FLOPs saved 1976.78e12
+Tuning: eff_weight 1.0, hit rate 65.29%, FLOPs saved 1978.77e12
+Tuning: eff_weight 1.1, hit rate 64.89%, FLOPs saved 1966.49e12
+Tuning: eff_weight 1.2, hit rate 65.47%, FLOPs saved 1984.48e12
+Tuning: eff_weight 1.3, hit rate 65.46%, FLOPs saved 1984.22e12
+Tuning: eff_weight 1.5, hit rate 65.06%, FLOPs saved 1971.90e12
+Tuning: eff_weight 1.6, hit rate 65.15%, FLOPs saved 1974.41e12
+Tuning: eff_weight 1.8, hit rate 65.33%, FLOPs saved 1980.02e12
+Tuning: eff_weight 1.9, hit rate 65.26%, FLOPs saved 1977.78e12
+Tuning: eff_weight 2.0, hit rate 65.26%, FLOPs saved 1977.77e12
+Tuning: eff_weight 1.4, hit rate 65.06%, FLOPs saved 1971.90e12
+Tuning: eff_weight 1.7, hit rate 65.15%, FLOPs saved 1974.57e12
+Tuning config took 0.72s
+V2: Updated eff_weight to be 0
+V2: hit rate 52.99%, FLOPs saved 10064.73e12
+V3: eff_weight 0, hit rate 52.99%, FLOPs saved 10064.73e12
+V3: eff_weight 0.1, hit rate 55.02%, FLOPs saved 10445.73e12
+V3: eff_weight 0.2, hit rate 52.37%, FLOPs saved 9943.45e12
+V3: eff_weight 0.3, hit rate 52.15%, FLOPs saved 9901.05e12
+V3: eff_weight 0.4, hit rate 51.78%, FLOPs saved 9831.26e12
+V3: eff_weight 0.5, hit rate 51.39%, FLOPs saved 9757.66e12
+V3: eff_weight 0.6, hit rate 48.47%, FLOPs saved 9205.85e12
+V3: eff_weight 0.7, hit rate 46.90%, FLOPs saved 8907.72e12
+V3: eff_weight 0.8, hit rate 45.06%, FLOPs saved 8558.27e12
+V3: eff_weight 0.9, hit rate 44.89%, FLOPs saved 8525.70e12
+V3: eff_weight 1.0, hit rate 45.45%, FLOPs saved 8632.02e12
+V3: eff_weight 1.1, hit rate 35.18%, FLOPs saved 6680.57e12
+V3: eff_weight 1.2, hit rate 35.25%, FLOPs saved 6695.13e12
+V3: eff_weight 1.3, hit rate 36.07%, FLOPs saved 6850.79e12
+V3: eff_weight 1.4, hit rate 34.88%, FLOPs saved 6624.63e12
+V3: eff_weight 1.5, hit rate 34.91%, FLOPs saved 6629.58e12
+V3: eff_weight 1.6, hit rate 32.51%, FLOPs saved 6174.73e12
+V3: eff_weight 1.7, hit rate 33.97%, FLOPs saved 6452.46e12
+V3: eff_weight 1.8, hit rate 34.42%, FLOPs saved 6536.79e12
+V3: eff_weight 1.9, hit rate 33.02%, FLOPs saved 6271.49e12
+V3: eff_weight 2.0, hit rate 33.42%, FLOPs saved 6347.89e12
+V3: hit rate 55.02%, FLOPs saved 10445.73e12
+V2 compared to V1: hit_rate_win 8.41%, flops_saved_win 8.41%
+V2 compared to vLLM: hit_rate_win 917.27%, flops_saved_win 919.65%
+V3 compared to V1: hit_rate_win 12.58%, flops_saved_win 12.52%
+V3 compared to vLLM: hit_rate_win 956.34%, flops_saved_win 958.25%
+V1 compared to vLLM: hit_rate_win 838.33%, flops_saved_win 840.54%
+Results stored in ./results/3000000000.0/sharegpt_sps=1_nums=100/2026_04_22_10_55_04.pickle
+==================================================
+2026-04-22 10:55:11 EST
+Cache size 3.0 GB, sessions per second: 2
+Running trace (1238 requests): ./traces/sharegpt_sps=2_nums=100.jsonl
+vLLM+: hit rate 5.26%, FLOPs saved 997.75e12
+V1: hit rate 46.42%, FLOPs saved 8818.41e12
+V2: Evict() first called, has seen 77 requests, setting bootstrap_window_size to be 385
+len(self.request_history_windowed) 385
+Running config tuning
+Tuning: eff_weight 0.2, hit rate 65.47%, FLOPs saved 1623.51e12
+Tuning: eff_weight 0.3, hit rate 64.60%, FLOPs saved 1602.01e12
+Tuning: eff_weight 0.1, hit rate 65.76%, FLOPs saved 1630.94e12
+Tuning: eff_weight 0.4, hit rate 65.16%, FLOPs saved 1615.51e12
+Tuning: eff_weight 0, hit rate 61.88%, FLOPs saved 1535.21e12
+Tuning: eff_weight 0.5, hit rate 65.24%, FLOPs saved 1617.49e12
+Tuning: eff_weight 0.6, hit rate 65.38%, FLOPs saved 1621.10e12
+Tuning: eff_weight 0.7, hit rate 64.31%, FLOPs saved 1594.50e12
+Tuning: eff_weight 0.8, hit rate 63.96%, FLOPs saved 1585.88e12
+Tuning: eff_weight 0.9, hit rate 63.78%, FLOPs saved 1581.41e12
+Tuning: eff_weight 1.0, hit rate 63.44%, FLOPs saved 1572.99e12
+Tuning: eff_weight 1.1, hit rate 63.17%, FLOPs saved 1566.18e12
+Tuning: eff_weight 1.2, hit rate 62.52%, FLOPs saved 1550.14e12
+Tuning: eff_weight 1.3, hit rate 63.56%, FLOPs saved 1575.91e12
+Tuning: eff_weight 1.4, hit rate 62.61%, FLOPs saved 1552.19e12
+Tuning: eff_weight 1.5, hit rate 62.80%, FLOPs saved 1556.99e12
+Tuning: eff_weight 1.6, hit rate 62.73%, FLOPs saved 1555.40e12
+Tuning: eff_weight 1.7, hit rate 63.28%, FLOPs saved 1569.05e12
+Tuning: eff_weight 1.8, hit rate 63.29%, FLOPs saved 1569.13e12
+Tuning: eff_weight 1.9, hit rate 62.79%, FLOPs saved 1556.69e12
+Tuning: eff_weight 2.0, hit rate 62.85%, FLOPs saved 1558.20e12
+Tuning config took 0.59s
+V2: Updated eff_weight to be 0.1
+V2: hit rate 51.52%, FLOPs saved 9783.22e12
+V3: eff_weight 0, hit rate 49.59%, FLOPs saved 9420.39e12
+V3: eff_weight 0.1, hit rate 52.05%, FLOPs saved 9882.91e12
+V3: eff_weight 0.2, hit rate 52.42%, FLOPs saved 9952.99e12
+V3: eff_weight 0.3, hit rate 49.83%, FLOPs saved 9464.47e12
+V3: eff_weight 0.4, hit rate 48.54%, FLOPs saved 9217.84e12
+V3: eff_weight 0.5, hit rate 47.07%, FLOPs saved 8940.86e12
+V3: eff_weight 0.6, hit rate 44.71%, FLOPs saved 8493.56e12
+V3: eff_weight 0.7, hit rate 44.29%, FLOPs saved 8413.73e12
+V3: eff_weight 0.8, hit rate 42.95%, FLOPs saved 8158.69e12
+V3: eff_weight 0.9, hit rate 41.56%, FLOPs saved 7896.17e12
+V3: eff_weight 1.0, hit rate 40.12%, FLOPs saved 7622.66e12
+V3: eff_weight 1.1, hit rate 34.82%, FLOPs saved 6614.21e12
+V3: eff_weight 1.2, hit rate 34.02%, FLOPs saved 6463.49e12
+V3: eff_weight 1.3, hit rate 33.18%, FLOPs saved 6303.44e12
+V3: eff_weight 1.4, hit rate 32.52%, FLOPs saved 6178.23e12
+V3: eff_weight 1.5, hit rate 31.62%, FLOPs saved 6007.89e12
+V3: eff_weight 1.6, hit rate 30.89%, FLOPs saved 5867.71e12
+V3: eff_weight 1.7, hit rate 29.91%, FLOPs saved 5682.88e12
+V3: eff_weight 1.8, hit rate 29.64%, FLOPs saved 5630.60e12
+V3: eff_weight 1.9, hit rate 27.03%, FLOPs saved 5133.48e12
+V3: eff_weight 2.0, hit rate 27.03%, FLOPs saved 5133.62e12
+V3: hit rate 52.42%, FLOPs saved 9952.99e12
+V2 compared to V1: hit_rate_win 10.99%, flops_saved_win 10.94%
+V2 compared to vLLM: hit_rate_win 879.17%, flops_saved_win 880.53%
+V3 compared to V1: hit_rate_win 12.93%, flops_saved_win 12.87%
+V3 compared to vLLM: hit_rate_win 896.29%, flops_saved_win 897.54%
+V1 compared to vLLM: hit_rate_win 782.21%, flops_saved_win 783.83%
+Results stored in ./results/3000000000.0/sharegpt_sps=2_nums=100/2026_04_22_10_55_11.pickle
+==================================================
+2026-04-22 10:55:18 EST
+Cache size 3.0 GB, sessions per second: 5
+Running trace (1238 requests): ./traces/sharegpt_sps=5_nums=100.jsonl
+vLLM+: hit rate 5.07%, FLOPs saved 961.12e12
+V1: hit rate 43.13%, FLOPs saved 8193.89e12
+V2: Evict() first called, has seen 73 requests, setting bootstrap_window_size to be 365
+len(self.request_history_windowed) 365
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 60.21%, FLOPs saved 1299.27e12
+Tuning: eff_weight 0.2, hit rate 62.11%, FLOPs saved 1340.35e12
+Tuning: eff_weight 0.3, hit rate 62.34%, FLOPs saved 1345.39e12
+Tuning: eff_weight 0, hit rate 52.15%, FLOPs saved 1125.76e12
+Tuning: eff_weight 0.4, hit rate 60.78%, FLOPs saved 1311.45e12
+Tuning: eff_weight 0.5, hit rate 61.23%, FLOPs saved 1320.92e12
+Tuning: eff_weight 0.6, hit rate 61.12%, FLOPs saved 1318.63e12
+Tuning: eff_weight 0.7, hit rate 60.65%, FLOPs saved 1308.59e12
+Tuning: eff_weight 0.8, hit rate 60.85%, FLOPs saved 1312.83e12
+Tuning: eff_weight 0.9, hit rate 60.85%, FLOPs saved 1312.84e12
+Tuning: eff_weight 1.0, hit rate 61.22%, FLOPs saved 1320.91e12
+Tuning: eff_weight 1.1, hit rate 61.43%, FLOPs saved 1325.41e12
+Tuning: eff_weight 1.2, hit rate 61.87%, FLOPs saved 1334.87e12
+Tuning: eff_weight 1.3, hit rate 61.27%, FLOPs saved 1322.06e12
+Tuning: eff_weight 1.4, hit rate 60.92%, FLOPs saved 1314.41e12
+Tuning: eff_weight 1.5, hit rate 61.01%, FLOPs saved 1316.52e12
+Tuning: eff_weight 1.7, hit rate 60.85%, FLOPs saved 1312.94e12
+Tuning: eff_weight 1.6, hit rate 61.01%, FLOPs saved 1316.52e12
+Tuning: eff_weight 1.8, hit rate 60.55%, FLOPs saved 1306.53e12
+Tuning: eff_weight 1.9, hit rate 60.55%, FLOPs saved 1306.53e12
+Tuning: eff_weight 2.0, hit rate 60.55%, FLOPs saved 1306.53e12
+Tuning config took 0.57s
+V2: Updated eff_weight to be 0.3
+V2: hit rate 48.50%, FLOPs saved 9213.09e12
+V3: eff_weight 0, hit rate 46.75%, FLOPs saved 8882.30e12
+V3: eff_weight 0.1, hit rate 50.94%, FLOPs saved 9673.53e12
+V3: eff_weight 0.2, hit rate 49.19%, FLOPs saved 9340.80e12
+V3: eff_weight 0.3, hit rate 49.49%, FLOPs saved 9399.36e12
+V3: eff_weight 0.4, hit rate 47.52%, FLOPs saved 9026.79e12
+V3: eff_weight 0.5, hit rate 46.09%, FLOPs saved 8755.60e12
+V3: eff_weight 0.6, hit rate 44.94%, FLOPs saved 8537.21e12
+V3: eff_weight 0.7, hit rate 41.44%, FLOPs saved 7871.69e12
+V3: eff_weight 0.8, hit rate 41.52%, FLOPs saved 7887.03e12
+V3: eff_weight 0.9, hit rate 39.54%, FLOPs saved 7511.69e12
+V3: eff_weight 1.0, hit rate 40.71%, FLOPs saved 7734.10e12
+V3: eff_weight 1.1, hit rate 32.82%, FLOPs saved 6235.54e12
+V3: eff_weight 1.2, hit rate 29.70%, FLOPs saved 5642.12e12
+V3: eff_weight 1.3, hit rate 33.59%, FLOPs saved 6381.42e12
+V3: eff_weight 1.4, hit rate 32.84%, FLOPs saved 6237.97e12
+V3: eff_weight 1.5, hit rate 28.25%, FLOPs saved 5367.51e12
+V3: eff_weight 1.6, hit rate 28.45%, FLOPs saved 5405.89e12
+V3: eff_weight 1.7, hit rate 28.55%, FLOPs saved 5424.69e12
+V3: eff_weight 1.8, hit rate 30.63%, FLOPs saved 5818.41e12
+V3: eff_weight 1.9, hit rate 30.38%, FLOPs saved 5771.11e12
+V3: eff_weight 2.0, hit rate 30.29%, FLOPs saved 5754.70e12
+V3: hit rate 50.94%, FLOPs saved 9673.53e12
+V2 compared to V1: hit_rate_win 12.46%, flops_saved_win 12.44%
+V2 compared to vLLM: hit_rate_win 857.48%, flops_saved_win 858.58%
+V3 compared to V1: hit_rate_win 18.11%, flops_saved_win 18.06%
+V3 compared to vLLM: hit_rate_win 905.65%, flops_saved_win 906.49%
+V1 compared to vLLM: hit_rate_win 751.42%, flops_saved_win 752.54%
+Results stored in ./results/3000000000.0/sharegpt_sps=5_nums=100/2026_04_22_10_55_18.pickle
+==================================================
+2026-04-22 10:55:25 EST
+Cache size 3.0 GB, sessions per second: 10
+Running trace (1238 requests): ./traces/sharegpt_sps=10_nums=100.jsonl
+vLLM+: hit rate 5.17%, FLOPs saved 980.06e12
+V1: hit rate 44.35%, FLOPs saved 8427.89e12
+V2: Evict() first called, has seen 70 requests, setting bootstrap_window_size to be 350
+len(self.request_history_windowed) 350
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 60.13%, FLOPs saved 1209.39e12
+Tuning: eff_weight 0.2, hit rate 59.46%, FLOPs saved 1195.73e12
+Tuning: eff_weight 0.4, hit rate 58.50%, FLOPs saved 1176.14e12
+Tuning: eff_weight 0, hit rate 52.39%, FLOPs saved 1054.27e12
+Tuning: eff_weight 0.5, hit rate 58.97%, FLOPs saved 1185.64e12
+Tuning: eff_weight 0.6, hit rate 57.86%, FLOPs saved 1163.30e12
+Tuning: eff_weight 0.8, hit rate 58.26%, FLOPs saved 1171.32e12
+Tuning: eff_weight 0.9, hit rate 57.83%, FLOPs saved 1162.74e12
+Tuning: eff_weight 1.0, hit rate 58.08%, FLOPs saved 1167.69e12
+Tuning: eff_weight 1.1, hit rate 58.35%, FLOPs saved 1173.11e12
+Tuning: eff_weight 1.2, hit rate 59.07%, FLOPs saved 1187.96e12
+Tuning: eff_weight 1.3, hit rate 58.24%, FLOPs saved 1171.22e12
+Tuning: eff_weight 1.4, hit rate 59.59%, FLOPs saved 1198.39e12
+Tuning: eff_weight 1.5, hit rate 58.32%, FLOPs saved 1172.42e12
+Tuning: eff_weight 1.6, hit rate 58.29%, FLOPs saved 1171.83e12
+Tuning: eff_weight 1.7, hit rate 58.74%, FLOPs saved 1181.26e12
+Tuning: eff_weight 1.8, hit rate 59.67%, FLOPs saved 1200.11e12
+Tuning: eff_weight 1.9, hit rate 58.38%, FLOPs saved 1173.91e12
+Tuning: eff_weight 2.0, hit rate 58.43%, FLOPs saved 1175.05e12
+Tuning: eff_weight 0.3, hit rate 58.82%, FLOPs saved 1182.85e12
+Tuning: eff_weight 0.7, hit rate 58.26%, FLOPs saved 1171.32e12
+Tuning config took 0.61s
+V2: Updated eff_weight to be 0.1
+V2: hit rate 49.80%, FLOPs saved 9458.85e12
+V3: eff_weight 0, hit rate 47.37%, FLOPs saved 9001.23e12
+V3: eff_weight 0.1, hit rate 50.53%, FLOPs saved 9596.60e12
+V3: eff_weight 0.2, hit rate 50.40%, FLOPs saved 9571.69e12
+V3: eff_weight 0.3, hit rate 49.22%, FLOPs saved 9349.10e12
+V3: eff_weight 0.4, hit rate 47.58%, FLOPs saved 9036.56e12
+V3: eff_weight 0.5, hit rate 43.81%, FLOPs saved 8323.09e12
+V3: eff_weight 0.6, hit rate 43.26%, FLOPs saved 8218.52e12
+V3: eff_weight 0.7, hit rate 41.60%, FLOPs saved 7903.66e12
+V3: eff_weight 0.8, hit rate 40.74%, FLOPs saved 7740.48e12
+V3: eff_weight 0.9, hit rate 39.40%, FLOPs saved 7486.89e12
+V3: eff_weight 1.0, hit rate 40.05%, FLOPs saved 7610.27e12
+V3: eff_weight 1.1, hit rate 35.07%, FLOPs saved 6664.29e12
+V3: eff_weight 1.2, hit rate 35.10%, FLOPs saved 6668.98e12
+V3: eff_weight 1.3, hit rate 34.05%, FLOPs saved 6469.73e12
+V3: eff_weight 1.4, hit rate 32.50%, FLOPs saved 6176.01e12
+V3: eff_weight 1.5, hit rate 32.50%, FLOPs saved 6174.10e12
+V3: eff_weight 1.6, hit rate 33.08%, FLOPs saved 6284.51e12
+V3: eff_weight 1.7, hit rate 32.29%, FLOPs saved 6135.78e12
+V3: eff_weight 1.8, hit rate 31.58%, FLOPs saved 6000.53e12
+V3: eff_weight 1.9, hit rate 31.21%, FLOPs saved 5930.53e12
+V3: eff_weight 2.0, hit rate 30.59%, FLOPs saved 5811.79e12
+V3: hit rate 50.53%, FLOPs saved 9596.60e12
+V2 compared to V1: hit_rate_win 12.29%, flops_saved_win 12.23%
+V2 compared to vLLM: hit_rate_win 863.96%, flops_saved_win 865.13%
+V3 compared to V1: hit_rate_win 13.93%, flops_saved_win 13.87%
+V3 compared to vLLM: hit_rate_win 878.09%, flops_saved_win 879.19%
+V1 compared to vLLM: hit_rate_win 758.47%, flops_saved_win 759.94%
+Results stored in ./results/3000000000.0/sharegpt_sps=10_nums=100/2026_04_22_10_55_25.pickle
+==================================================
+2026-04-22 10:55:31 EST
+Cache size 4.0 GB, sessions per second: 0.25
+Running trace (1238 requests): ./traces/sharegpt_sps=0.25_nums=100.jsonl
+vLLM+: hit rate 11.69%, FLOPs saved 2216.32e12
+V1: hit rate 70.83%, FLOPs saved 13448.81e12
+V2: Evict() first called, has seen 108 requests, setting bootstrap_window_size to be 540
+len(self.request_history_windowed) 540
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 82.04%, FLOPs saved 4584.70e12
+Tuning: eff_weight 0.4, hit rate 75.83%, FLOPs saved 4235.39e12
+Tuning: eff_weight 0.5, hit rate 74.54%, FLOPs saved 4163.41e12
+Tuning: eff_weight 0.6, hit rate 73.25%, FLOPs saved 4090.55e12
+Tuning: eff_weight 0.7, hit rate 73.18%, FLOPs saved 4086.81e12
+Tuning: eff_weight 0.8, hit rate 72.36%, FLOPs saved 4040.15e12
+Tuning: eff_weight 0.9, hit rate 71.87%, FLOPs saved 4012.82e12
+Tuning: eff_weight 1.1, hit rate 71.42%, FLOPs saved 3988.32e12
+Tuning: eff_weight 1.3, hit rate 72.38%, FLOPs saved 4042.39e12
+Tuning: eff_weight 0.3, hit rate 76.75%, FLOPs saved 4287.06e12
+Tuning: eff_weight 1.4, hit rate 71.22%, FLOPs saved 3976.84e12
+Tuning: eff_weight 0, hit rate 88.74%, FLOPs saved 4961.82e12
+Tuning: eff_weight 1.5, hit rate 71.22%, FLOPs saved 3976.84e12
+Tuning: eff_weight 1.6, hit rate 71.04%, FLOPs saved 3967.09e12
+Tuning: eff_weight 0.2, hit rate 79.93%, FLOPs saved 4465.46e12
+Tuning: eff_weight 1.8, hit rate 70.43%, FLOPs saved 3931.98e12
+Tuning: eff_weight 1.9, hit rate 70.62%, FLOPs saved 3942.89e12
+Tuning: eff_weight 1.0, hit rate 72.24%, FLOPs saved 4033.77e12
+Tuning: eff_weight 1.2, hit rate 72.45%, FLOPs saved 4045.94e12
+Tuning: eff_weight 1.7, hit rate 71.02%, FLOPs saved 3965.52e12
+Tuning: eff_weight 2.0, hit rate 70.62%, FLOPs saved 3942.89e12
+Tuning config took 0.99s
+V2: Updated eff_weight to be 0
+V2: hit rate 76.60%, FLOPs saved 14544.39e12
+V3: eff_weight 0, hit rate 76.60%, FLOPs saved 14544.39e12
+V3: eff_weight 0.1, hit rate 71.21%, FLOPs saved 13512.94e12
+V3: eff_weight 0.2, hit rate 67.17%, FLOPs saved 12744.08e12
+V3: eff_weight 0.3, hit rate 63.50%, FLOPs saved 12047.39e12
+V3: eff_weight 0.4, hit rate 62.67%, FLOPs saved 11892.55e12
+V3: eff_weight 0.5, hit rate 59.70%, FLOPs saved 11329.44e12
+V3: eff_weight 0.6, hit rate 56.08%, FLOPs saved 10641.71e12
+V3: eff_weight 0.7, hit rate 56.16%, FLOPs saved 10657.44e12
+V3: eff_weight 0.8, hit rate 56.69%, FLOPs saved 10757.77e12
+V3: eff_weight 0.9, hit rate 53.89%, FLOPs saved 10226.91e12
+V3: eff_weight 1.0, hit rate 56.13%, FLOPs saved 10652.52e12
+V3: eff_weight 1.1, hit rate 46.95%, FLOPs saved 8908.32e12
+V3: eff_weight 1.2, hit rate 48.63%, FLOPs saved 9228.88e12
+V3: eff_weight 1.3, hit rate 49.61%, FLOPs saved 9416.01e12
+V3: eff_weight 1.4, hit rate 46.93%, FLOPs saved 8907.79e12
+V3: eff_weight 1.5, hit rate 45.94%, FLOPs saved 8718.29e12
+V3: eff_weight 1.6, hit rate 48.51%, FLOPs saved 9207.67e12
+V3: eff_weight 1.7, hit rate 55.79%, FLOPs saved 10586.67e12
+V3: eff_weight 1.8, hit rate 47.33%, FLOPs saved 8980.18e12
+V3: eff_weight 1.9, hit rate 46.40%, FLOPs saved 8804.03e12
+V3: eff_weight 2.0, hit rate 46.20%, FLOPs saved 8766.77e12
+V3: hit rate 76.60%, FLOPs saved 14544.39e12
+V2 compared to V1: hit_rate_win 8.15%, flops_saved_win 8.15%
+V2 compared to vLLM: hit_rate_win 555.18%, flops_saved_win 556.24%
+V3 compared to V1: hit_rate_win 8.15%, flops_saved_win 8.15%
+V3 compared to vLLM: hit_rate_win 555.18%, flops_saved_win 556.24%
+V1 compared to vLLM: hit_rate_win 505.82%, flops_saved_win 506.81%
+Results stored in ./results/4000000000.0/sharegpt_sps=0.25_nums=100/2026_04_22_10_55_31.pickle
+==================================================
+2026-04-22 10:55:40 EST
+Cache size 4.0 GB, sessions per second: 0.5
+Running trace (1238 requests): ./traces/sharegpt_sps=0.5_nums=100.jsonl
+vLLM+: hit rate 8.35%, FLOPs saved 1582.25e12
+V1: hit rate 64.66%, FLOPs saved 12278.77e12
+V2: Evict() first called, has seen 106 requests, setting bootstrap_window_size to be 530
+len(self.request_history_windowed) 530
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 78.98%, FLOPs saved 4034.66e12
+Tuning: eff_weight 0.3, hit rate 72.93%, FLOPs saved 3723.83e12
+Tuning: eff_weight 0.2, hit rate 75.06%, FLOPs saved 3833.84e12
+Tuning: eff_weight 0.4, hit rate 73.09%, FLOPs saved 3732.17e12
+Tuning: eff_weight 0.5, hit rate 72.00%, FLOPs saved 3676.27e12
+Tuning: eff_weight 0.6, hit rate 73.03%, FLOPs saved 3728.67e12
+Tuning: eff_weight 0.7, hit rate 73.01%, FLOPs saved 3728.04e12
+Tuning: eff_weight 0.8, hit rate 72.51%, FLOPs saved 3702.13e12
+Tuning: eff_weight 0.9, hit rate 72.27%, FLOPs saved 3690.05e12
+Tuning: eff_weight 1.0, hit rate 71.92%, FLOPs saved 3671.71e12
+Tuning: eff_weight 0, hit rate 84.20%, FLOPs saved 4303.87e12
+Tuning: eff_weight 1.1, hit rate 71.89%, FLOPs saved 3670.43e12
+Tuning: eff_weight 1.4, hit rate 71.88%, FLOPs saved 3670.06e12
+Tuning: eff_weight 1.5, hit rate 71.11%, FLOPs saved 3630.55e12
+Tuning: eff_weight 1.6, hit rate 71.46%, FLOPs saved 3648.14e12
+Tuning: eff_weight 1.8, hit rate 72.42%, FLOPs saved 3697.43e12
+Tuning: eff_weight 1.2, hit rate 72.62%, FLOPs saved 3708.09e12
+Tuning: eff_weight 1.9, hit rate 71.40%, FLOPs saved 3645.22e12
+Tuning: eff_weight 2.0, hit rate 72.50%, FLOPs saved 3702.15e12
+Tuning: eff_weight 1.3, hit rate 71.85%, FLOPs saved 3668.20e12
+Tuning: eff_weight 1.7, hit rate 71.56%, FLOPs saved 3653.65e12
+Tuning config took 0.96s
+V2: Updated eff_weight to be 0
+V2: hit rate 70.42%, FLOPs saved 13373.13e12
+V3: eff_weight 0, hit rate 70.42%, FLOPs saved 13373.13e12
+V3: eff_weight 0.1, hit rate 68.01%, FLOPs saved 12907.22e12
+V3: eff_weight 0.2, hit rate 63.98%, FLOPs saved 12139.54e12
+V3: eff_weight 0.3, hit rate 60.87%, FLOPs saved 11550.90e12
+V3: eff_weight 0.4, hit rate 60.00%, FLOPs saved 11386.22e12
+V3: eff_weight 0.5, hit rate 58.79%, FLOPs saved 11155.54e12
+V3: eff_weight 0.6, hit rate 57.99%, FLOPs saved 11004.23e12
+V3: eff_weight 0.7, hit rate 56.94%, FLOPs saved 10806.26e12
+V3: eff_weight 0.8, hit rate 56.10%, FLOPs saved 10647.41e12
+V3: eff_weight 0.9, hit rate 56.45%, FLOPs saved 10713.53e12
+V3: eff_weight 1.0, hit rate 53.70%, FLOPs saved 10193.02e12
+V3: eff_weight 1.1, hit rate 50.99%, FLOPs saved 9677.44e12
+V3: eff_weight 1.2, hit rate 49.59%, FLOPs saved 9412.31e12
+V3: eff_weight 1.3, hit rate 51.78%, FLOPs saved 9828.98e12
+V3: eff_weight 1.4, hit rate 51.70%, FLOPs saved 9812.64e12
+V3: eff_weight 1.5, hit rate 49.76%, FLOPs saved 9445.10e12
+V3: eff_weight 1.6, hit rate 51.39%, FLOPs saved 9753.86e12
+V3: eff_weight 1.7, hit rate 46.45%, FLOPs saved 8816.60e12
+V3: eff_weight 1.8, hit rate 46.76%, FLOPs saved 8875.28e12
+V3: eff_weight 1.9, hit rate 50.50%, FLOPs saved 9586.83e12
+V3: eff_weight 2.0, hit rate 51.41%, FLOPs saved 9759.24e12
+V3: hit rate 70.42%, FLOPs saved 13373.13e12
+V2 compared to V1: hit_rate_win 8.92%, flops_saved_win 8.91%
+V2 compared to vLLM: hit_rate_win 743.81%, flops_saved_win 745.19%
+V3 compared to V1: hit_rate_win 8.92%, flops_saved_win 8.91%
+V3 compared to vLLM: hit_rate_win 743.81%, flops_saved_win 745.19%
+V1 compared to vLLM: hit_rate_win 674.73%, flops_saved_win 676.03%
+Results stored in ./results/4000000000.0/sharegpt_sps=0.5_nums=100/2026_04_22_10_55_40.pickle
+==================================================
+2026-04-22 10:55:48 EST
+Cache size 4.0 GB, sessions per second: 1
+Running trace (1238 requests): ./traces/sharegpt_sps=1_nums=100.jsonl
+vLLM+: hit rate 6.96%, FLOPs saved 1318.99e12
+V1: hit rate 60.69%, FLOPs saved 11526.64e12
+V2: Evict() first called, has seen 104 requests, setting bootstrap_window_size to be 520
+len(self.request_history_windowed) 520
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 71.82%, FLOPs saved 3130.29e12
+Tuning: eff_weight 0.2, hit rate 69.81%, FLOPs saved 3042.49e12
+Tuning: eff_weight 0.3, hit rate 68.56%, FLOPs saved 2987.63e12
+Tuning: eff_weight 0.4, hit rate 67.88%, FLOPs saved 2958.11e12
+Tuning: eff_weight 0.5, hit rate 67.28%, FLOPs saved 2931.77e12
+Tuning: eff_weight 0.6, hit rate 67.02%, FLOPs saved 2920.24e12
+Tuning: eff_weight 0.8, hit rate 66.16%, FLOPs saved 2882.19e12
+Tuning: eff_weight 0.9, hit rate 65.82%, FLOPs saved 2867.55e12
+Tuning: eff_weight 0, hit rate 75.80%, FLOPs saved 3306.07e12
+Tuning: eff_weight 1.0, hit rate 66.33%, FLOPs saved 2889.61e12
+Tuning: eff_weight 1.2, hit rate 66.08%, FLOPs saved 2878.62e12
+Tuning: eff_weight 1.1, hit rate 65.92%, FLOPs saved 2871.83e12
+Tuning: eff_weight 1.3, hit rate 65.66%, FLOPs saved 2860.75e12
+Tuning: eff_weight 1.4, hit rate 66.08%, FLOPs saved 2878.86e12
+Tuning: eff_weight 1.6, hit rate 66.32%, FLOPs saved 2889.23e12
+Tuning: eff_weight 1.7, hit rate 66.30%, FLOPs saved 2888.26e12
+Tuning: eff_weight 1.8, hit rate 66.24%, FLOPs saved 2885.70e12
+Tuning: eff_weight 1.9, hit rate 67.10%, FLOPs saved 2923.54e12
+Tuning: eff_weight 2.0, hit rate 68.38%, FLOPs saved 2979.34e12
+Tuning: eff_weight 0.7, hit rate 66.52%, FLOPs saved 2898.18e12
+Tuning: eff_weight 1.5, hit rate 65.72%, FLOPs saved 2863.36e12
+Tuning config took 0.91s
+V2: Updated eff_weight to be 0
+V2: hit rate 66.25%, FLOPs saved 12582.59e12
+V3: eff_weight 0, hit rate 66.25%, FLOPs saved 12582.59e12
+V3: eff_weight 0.1, hit rate 65.30%, FLOPs saved 12393.59e12
+V3: eff_weight 0.2, hit rate 62.54%, FLOPs saved 11869.35e12
+V3: eff_weight 0.3, hit rate 60.78%, FLOPs saved 11534.17e12
+V3: eff_weight 0.4, hit rate 59.25%, FLOPs saved 11244.92e12
+V3: eff_weight 0.5, hit rate 57.38%, FLOPs saved 10890.61e12
+V3: eff_weight 0.6, hit rate 56.18%, FLOPs saved 10662.16e12
+V3: eff_weight 0.7, hit rate 55.24%, FLOPs saved 10483.85e12
+V3: eff_weight 0.8, hit rate 55.31%, FLOPs saved 10498.03e12
+V3: eff_weight 0.9, hit rate 53.20%, FLOPs saved 10098.69e12
+V3: eff_weight 1.0, hit rate 52.38%, FLOPs saved 9943.53e12
+V3: eff_weight 1.1, hit rate 49.10%, FLOPs saved 9320.14e12
+V3: eff_weight 1.2, hit rate 45.79%, FLOPs saved 8691.66e12
+V3: eff_weight 1.3, hit rate 45.45%, FLOPs saved 8629.34e12
+V3: eff_weight 1.4, hit rate 45.18%, FLOPs saved 8577.05e12
+V3: eff_weight 1.5, hit rate 46.32%, FLOPs saved 8793.94e12
+V3: eff_weight 1.6, hit rate 44.27%, FLOPs saved 8404.63e12
+V3: eff_weight 1.7, hit rate 43.17%, FLOPs saved 8195.10e12
+V3: eff_weight 1.8, hit rate 43.59%, FLOPs saved 8274.06e12
+V3: eff_weight 1.9, hit rate 43.05%, FLOPs saved 8171.82e12
+V3: eff_weight 2.0, hit rate 46.08%, FLOPs saved 8745.53e12
+V3: hit rate 66.25%, FLOPs saved 12582.59e12
+V2 compared to V1: hit_rate_win 9.17%, flops_saved_win 9.16%
+V2 compared to vLLM: hit_rate_win 852.28%, flops_saved_win 853.96%
+V3 compared to V1: hit_rate_win 9.17%, flops_saved_win 9.16%
+V3 compared to vLLM: hit_rate_win 852.28%, flops_saved_win 853.96%
+V1 compared to vLLM: hit_rate_win 772.29%, flops_saved_win 773.90%
+Results stored in ./results/4000000000.0/sharegpt_sps=1_nums=100/2026_04_22_10_55_48.pickle
+==================================================
+2026-04-22 10:55:56 EST
+Cache size 4.0 GB, sessions per second: 2
+Running trace (1238 requests): ./traces/sharegpt_sps=2_nums=100.jsonl
+vLLM+: hit rate 6.41%, FLOPs saved 1215.52e12
+V1: hit rate 57.69%, FLOPs saved 10959.84e12
+V2: Evict() first called, has seen 103 requests, setting bootstrap_window_size to be 515
+len(self.request_history_windowed) 515
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 67.99%, FLOPs saved 2893.21e12
+Tuning: eff_weight 0.3, hit rate 67.76%, FLOPs saved 2883.18e12
+Tuning: eff_weight 0.2, hit rate 67.10%, FLOPs saved 2855.51e12
+Tuning: eff_weight 0.4, hit rate 66.72%, FLOPs saved 2838.80e12
+Tuning: eff_weight 0.6, hit rate 66.65%, FLOPs saved 2835.63e12
+Tuning: eff_weight 0.5, hit rate 66.47%, FLOPs saved 2827.99e12
+Tuning: eff_weight 0.7, hit rate 66.89%, FLOPs saved 2846.12e12
+Tuning: eff_weight 0.8, hit rate 67.07%, FLOPs saved 2853.74e12
+Tuning: eff_weight 0, hit rate 67.37%, FLOPs saved 2869.51e12
+Tuning: eff_weight 0.9, hit rate 67.02%, FLOPs saved 2851.38e12
+Tuning: eff_weight 1.0, hit rate 66.78%, FLOPs saved 2841.09e12
+Tuning: eff_weight 1.1, hit rate 67.04%, FLOPs saved 2852.34e12
+Tuning: eff_weight 1.2, hit rate 65.52%, FLOPs saved 2787.68e12
+Tuning: eff_weight 1.3, hit rate 66.28%, FLOPs saved 2820.16e12
+Tuning: eff_weight 1.4, hit rate 66.41%, FLOPs saved 2825.46e12
+Tuning: eff_weight 1.5, hit rate 65.93%, FLOPs saved 2805.07e12
+Tuning: eff_weight 1.6, hit rate 66.02%, FLOPs saved 2809.12e12
+Tuning: eff_weight 1.7, hit rate 66.06%, FLOPs saved 2810.90e12
+Tuning: eff_weight 1.8, hit rate 65.94%, FLOPs saved 2805.62e12
+Tuning: eff_weight 1.9, hit rate 66.07%, FLOPs saved 2811.10e12
+Tuning: eff_weight 2.0, hit rate 65.86%, FLOPs saved 2802.39e12
+Tuning config took 0.82s
+V2: Updated eff_weight to be 0.1
+V2: hit rate 63.79%, FLOPs saved 12109.30e12
+V3: eff_weight 0, hit rate 62.88%, FLOPs saved 11944.49e12
+V3: eff_weight 0.1, hit rate 63.59%, FLOPs saved 12068.48e12
+V3: eff_weight 0.2, hit rate 62.39%, FLOPs saved 11838.45e12
+V3: eff_weight 0.3, hit rate 60.48%, FLOPs saved 11477.04e12
+V3: eff_weight 0.4, hit rate 58.03%, FLOPs saved 11013.39e12
+V3: eff_weight 0.5, hit rate 57.59%, FLOPs saved 10928.18e12
+V3: eff_weight 0.6, hit rate 55.72%, FLOPs saved 10574.26e12
+V3: eff_weight 0.7, hit rate 56.32%, FLOPs saved 10687.14e12
+V3: eff_weight 0.8, hit rate 55.30%, FLOPs saved 10495.26e12
+V3: eff_weight 0.9, hit rate 55.50%, FLOPs saved 10532.98e12
+V3: eff_weight 1.0, hit rate 54.74%, FLOPs saved 10390.31e12
+V3: eff_weight 1.1, hit rate 50.34%, FLOPs saved 9552.90e12
+V3: eff_weight 1.2, hit rate 43.70%, FLOPs saved 8296.75e12
+V3: eff_weight 1.3, hit rate 43.50%, FLOPs saved 8258.18e12
+V3: eff_weight 1.4, hit rate 42.92%, FLOPs saved 8147.65e12
+V3: eff_weight 1.5, hit rate 44.61%, FLOPs saved 8468.92e12
+V3: eff_weight 1.6, hit rate 43.56%, FLOPs saved 8268.17e12
+V3: eff_weight 1.7, hit rate 43.56%, FLOPs saved 8269.35e12
+V3: eff_weight 1.8, hit rate 43.61%, FLOPs saved 8278.62e12
+V3: eff_weight 1.9, hit rate 42.19%, FLOPs saved 8007.40e12
+V3: eff_weight 2.0, hit rate 43.95%, FLOPs saved 8341.79e12
+V3: hit rate 63.59%, FLOPs saved 12068.48e12
+V2 compared to V1: hit_rate_win 10.57%, flops_saved_win 10.49%
+V2 compared to vLLM: hit_rate_win 895.30%, flops_saved_win 896.22%
+V3 compared to V1: hit_rate_win 10.22%, flops_saved_win 10.12%
+V3 compared to vLLM: hit_rate_win 892.16%, flops_saved_win 892.87%
+V1 compared to vLLM: hit_rate_win 800.19%, flops_saved_win 801.66%
+Results stored in ./results/4000000000.0/sharegpt_sps=2_nums=100/2026_04_22_10_55_56.pickle
+==================================================
+2026-04-22 10:56:03 EST
+Cache size 4.0 GB, sessions per second: 5
+Running trace (1238 requests): ./traces/sharegpt_sps=5_nums=100.jsonl
+vLLM+: hit rate 6.20%, FLOPs saved 1175.91e12
+V1: hit rate 54.93%, FLOPs saved 10435.85e12
+V2: Evict() first called, has seen 98 requests, setting bootstrap_window_size to be 490
+len(self.request_history_windowed) 490
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 63.87%, FLOPs saved 2517.33e12
+Tuning: eff_weight 0.3, hit rate 62.61%, FLOPs saved 2467.42e12
+Tuning: eff_weight 0.4, hit rate 61.67%, FLOPs saved 2430.14e12
+Tuning: eff_weight 0.5, hit rate 61.55%, FLOPs saved 2425.31e12
+Tuning: eff_weight 0.6, hit rate 61.09%, FLOPs saved 2407.32e12
+Tuning: eff_weight 0.7, hit rate 62.54%, FLOPs saved 2464.35e12
+Tuning: eff_weight 0.8, hit rate 61.46%, FLOPs saved 2422.04e12
+Tuning: eff_weight 0.9, hit rate 61.76%, FLOPs saved 2433.54e12
+Tuning: eff_weight 0, hit rate 64.00%, FLOPs saved 2524.96e12
+Tuning: eff_weight 1.0, hit rate 61.82%, FLOPs saved 2435.93e12
+Tuning: eff_weight 1.1, hit rate 62.53%, FLOPs saved 2463.84e12
+Tuning: eff_weight 1.4, hit rate 62.85%, FLOPs saved 2476.54e12
+Tuning: eff_weight 1.5, hit rate 62.85%, FLOPs saved 2476.54e12
+Tuning: eff_weight 0.2, hit rate 63.79%, FLOPs saved 2513.87e12
+Tuning: eff_weight 1.3, hit rate 62.53%, FLOPs saved 2463.84e12
+Tuning: eff_weight 1.7, hit rate 63.10%, FLOPs saved 2486.49e12
+Tuning: eff_weight 1.6, hit rate 63.10%, FLOPs saved 2486.49e12
+Tuning: eff_weight 1.8, hit rate 63.26%, FLOPs saved 2492.57e12
+Tuning: eff_weight 1.9, hit rate 63.26%, FLOPs saved 2492.57e12
+Tuning: eff_weight 2.0, hit rate 63.59%, FLOPs saved 2505.72e12
+Tuning: eff_weight 1.2, hit rate 62.53%, FLOPs saved 2463.84e12
+Tuning config took 0.80s
+V2: Updated eff_weight to be 0
+V2: hit rate 60.94%, FLOPs saved 11576.81e12
+V3: eff_weight 0, hit rate 60.94%, FLOPs saved 11576.81e12
+V3: eff_weight 0.1, hit rate 62.02%, FLOPs saved 11772.74e12
+V3: eff_weight 0.2, hit rate 60.27%, FLOPs saved 11438.46e12
+V3: eff_weight 0.3, hit rate 57.77%, FLOPs saved 10964.23e12
+V3: eff_weight 0.4, hit rate 56.70%, FLOPs saved 10762.61e12
+V3: eff_weight 0.5, hit rate 55.14%, FLOPs saved 10466.64e12
+V3: eff_weight 0.6, hit rate 54.13%, FLOPs saved 10275.24e12
+V3: eff_weight 0.7, hit rate 55.62%, FLOPs saved 10556.18e12
+V3: eff_weight 0.8, hit rate 50.34%, FLOPs saved 9557.71e12
+V3: eff_weight 0.9, hit rate 49.30%, FLOPs saved 9361.33e12
+V3: eff_weight 1.0, hit rate 47.15%, FLOPs saved 8953.79e12
+V3: eff_weight 1.1, hit rate 41.33%, FLOPs saved 7847.22e12
+V3: eff_weight 1.2, hit rate 41.70%, FLOPs saved 7916.73e12
+V3: eff_weight 1.3, hit rate 43.27%, FLOPs saved 8214.74e12
+V3: eff_weight 1.4, hit rate 44.34%, FLOPs saved 8418.81e12
+V3: eff_weight 1.5, hit rate 44.71%, FLOPs saved 8489.21e12
+V3: eff_weight 1.6, hit rate 42.66%, FLOPs saved 8099.67e12
+V3: eff_weight 1.7, hit rate 42.64%, FLOPs saved 8095.06e12
+V3: eff_weight 1.8, hit rate 41.93%, FLOPs saved 7961.64e12
+V3: eff_weight 1.9, hit rate 40.99%, FLOPs saved 7783.52e12
+V3: eff_weight 2.0, hit rate 42.66%, FLOPs saved 8098.82e12
+V3: hit rate 62.02%, FLOPs saved 11772.74e12
+V2 compared to V1: hit_rate_win 10.94%, flops_saved_win 10.93%
+V2 compared to vLLM: hit_rate_win 883.39%, flops_saved_win 884.50%
+V3 compared to V1: hit_rate_win 12.91%, flops_saved_win 12.81%
+V3 compared to vLLM: hit_rate_win 900.87%, flops_saved_win 901.16%
+V1 compared to vLLM: hit_rate_win 786.42%, flops_saved_win 787.47%
+Results stored in ./results/4000000000.0/sharegpt_sps=5_nums=100/2026_04_22_10_56_03.pickle
+==================================================
+2026-04-22 10:56:11 EST
+Cache size 4.0 GB, sessions per second: 10
+Running trace (1238 requests): ./traces/sharegpt_sps=10_nums=100.jsonl
+vLLM+: hit rate 6.39%, FLOPs saved 1212.82e12
+V1: hit rate 55.63%, FLOPs saved 10568.39e12
+V2: Evict() first called, has seen 92 requests, setting bootstrap_window_size to be 460
+len(self.request_history_windowed) 460
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 64.33%, FLOPs saved 2294.31e12
+Tuning: eff_weight 0.2, hit rate 65.43%, FLOPs saved 2333.24e12
+Tuning: eff_weight 0.3, hit rate 64.38%, FLOPs saved 2295.72e12
+Tuning: eff_weight 0.4, hit rate 63.21%, FLOPs saved 2253.58e12
+Tuning: eff_weight 0.5, hit rate 63.79%, FLOPs saved 2274.71e12
+Tuning: eff_weight 0.6, hit rate 63.61%, FLOPs saved 2267.83e12
+Tuning: eff_weight 0.8, hit rate 63.07%, FLOPs saved 2248.72e12
+Tuning: eff_weight 0.9, hit rate 62.68%, FLOPs saved 2234.39e12
+Tuning: eff_weight 0, hit rate 63.95%, FLOPs saved 2283.63e12
+Tuning: eff_weight 1.0, hit rate 62.65%, FLOPs saved 2233.58e12
+Tuning: eff_weight 1.1, hit rate 63.05%, FLOPs saved 2247.87e12
+Tuning: eff_weight 1.2, hit rate 63.42%, FLOPs saved 2261.34e12
+Tuning: eff_weight 1.3, hit rate 63.81%, FLOPs saved 2275.26e12
+Tuning: eff_weight 1.4, hit rate 63.81%, FLOPs saved 2275.26e12
+Tuning: eff_weight 1.5, hit rate 63.81%, FLOPs saved 2275.26e12
+Tuning: eff_weight 1.6, hit rate 62.52%, FLOPs saved 2229.30e12
+Tuning: eff_weight 1.8, hit rate 61.88%, FLOPs saved 2206.33e12
+Tuning: eff_weight 1.9, hit rate 61.24%, FLOPs saved 2183.20e12
+Tuning: eff_weight 2.0, hit rate 61.24%, FLOPs saved 2183.20e12
+Tuning: eff_weight 0.7, hit rate 63.31%, FLOPs saved 2257.22e12
+Tuning: eff_weight 1.7, hit rate 62.43%, FLOPs saved 2226.22e12
+Tuning config took 0.82s
+V2: Updated eff_weight to be 0.2
+V2: hit rate 59.78%, FLOPs saved 11351.96e12
+V3: eff_weight 0, hit rate 60.93%, FLOPs saved 11576.18e12
+V3: eff_weight 0.1, hit rate 61.99%, FLOPs saved 11768.10e12
+V3: eff_weight 0.2, hit rate 60.27%, FLOPs saved 11440.48e12
+V3: eff_weight 0.3, hit rate 57.91%, FLOPs saved 10992.22e12
+V3: eff_weight 0.4, hit rate 55.99%, FLOPs saved 10628.82e12
+V3: eff_weight 0.5, hit rate 56.58%, FLOPs saved 10740.88e12
+V3: eff_weight 0.6, hit rate 52.99%, FLOPs saved 10061.00e12
+V3: eff_weight 0.7, hit rate 51.50%, FLOPs saved 9778.65e12
+V3: eff_weight 0.8, hit rate 51.94%, FLOPs saved 9863.47e12
+V3: eff_weight 0.9, hit rate 48.83%, FLOPs saved 9272.88e12
+V3: eff_weight 1.0, hit rate 46.35%, FLOPs saved 8800.59e12
+V3: eff_weight 1.1, hit rate 44.57%, FLOPs saved 8461.70e12
+V3: eff_weight 1.2, hit rate 42.56%, FLOPs saved 8081.28e12
+V3: eff_weight 1.3, hit rate 42.96%, FLOPs saved 8158.38e12
+V3: eff_weight 1.4, hit rate 41.29%, FLOPs saved 7839.38e12
+V3: eff_weight 1.5, hit rate 40.96%, FLOPs saved 7778.40e12
+V3: eff_weight 1.6, hit rate 40.75%, FLOPs saved 7737.95e12
+V3: eff_weight 1.7, hit rate 40.93%, FLOPs saved 7772.10e12
+V3: eff_weight 1.8, hit rate 40.71%, FLOPs saved 7731.22e12
+V3: eff_weight 1.9, hit rate 40.60%, FLOPs saved 7709.10e12
+V3: eff_weight 2.0, hit rate 40.43%, FLOPs saved 7678.53e12
+V3: hit rate 61.99%, FLOPs saved 11768.10e12
+V2 compared to V1: hit_rate_win 7.47%, flops_saved_win 7.41%
+V2 compared to vLLM: hit_rate_win 835.22%, flops_saved_win 836.00%
+V3 compared to V1: hit_rate_win 11.44%, flops_saved_win 11.35%
+V3 compared to vLLM: hit_rate_win 869.78%, flops_saved_win 870.31%
+V1 compared to vLLM: hit_rate_win 770.19%, flops_saved_win 771.39%
+Results stored in ./results/4000000000.0/sharegpt_sps=10_nums=100/2026_04_22_10_56_11.pickle
+==================================================
+2026-04-22 10:56:19 EST
+Cache size 5.0 GB, sessions per second: 0.25
+Running trace (1238 requests): ./traces/sharegpt_sps=0.25_nums=100.jsonl
+vLLM+: hit rate 14.38%, FLOPs saved 2726.77e12
+V1: hit rate 77.07%, FLOPs saved 14633.61e12
+V2: Evict() first called, has seen 133 requests, setting bootstrap_window_size to be 665
+len(self.request_history_windowed) 665
+Running config tuning
+Tuning: eff_weight 0.2, hit rate 77.84%, FLOPs saved 4980.02e12
+Tuning: eff_weight 0.3, hit rate 76.14%, FLOPs saved 4870.33e12
+Tuning: eff_weight 0.1, hit rate 81.30%, FLOPs saved 5202.63e12
+Tuning: eff_weight 0.4, hit rate 74.26%, FLOPs saved 4749.15e12
+Tuning: eff_weight 0.5, hit rate 75.14%, FLOPs saved 4805.89e12
+Tuning: eff_weight 0.6, hit rate 74.15%, FLOPs saved 4742.47e12
+Tuning: eff_weight 0.7, hit rate 74.30%, FLOPs saved 4751.78e12
+Tuning: eff_weight 0.8, hit rate 72.86%, FLOPs saved 4659.58e12
+Tuning: eff_weight 0.9, hit rate 72.98%, FLOPs saved 4667.54e12
+Tuning: eff_weight 1.0, hit rate 72.94%, FLOPs saved 4664.37e12
+Tuning: eff_weight 1.1, hit rate 72.54%, FLOPs saved 4638.94e12
+Tuning: eff_weight 1.2, hit rate 72.78%, FLOPs saved 4654.21e12
+Tuning: eff_weight 0, hit rate 89.75%, FLOPs saved 5746.08e12
+Tuning: eff_weight 1.3, hit rate 72.20%, FLOPs saved 4617.09e12
+Tuning: eff_weight 1.4, hit rate 72.51%, FLOPs saved 4636.93e12
+Tuning: eff_weight 1.5, hit rate 72.39%, FLOPs saved 4629.56e12
+Tuning: eff_weight 1.6, hit rate 72.56%, FLOPs saved 4640.01e12
+Tuning: eff_weight 1.7, hit rate 72.40%, FLOPs saved 4629.79e12
+Tuning: eff_weight 1.8, hit rate 72.12%, FLOPs saved 4611.98e12
+Tuning: eff_weight 1.9, hit rate 71.99%, FLOPs saved 4604.01e12
+Tuning: eff_weight 2.0, hit rate 72.15%, FLOPs saved 4613.87e12
+Tuning config took 1.22s
+V2: Updated eff_weight to be 0
+V2: hit rate 81.79%, FLOPs saved 15530.51e12
+V3: eff_weight 0, hit rate 81.79%, FLOPs saved 15530.51e12
+V3: eff_weight 0.1, hit rate 74.74%, FLOPs saved 14182.30e12
+V3: eff_weight 0.2, hit rate 70.70%, FLOPs saved 13411.80e12
+V3: eff_weight 0.3, hit rate 69.12%, FLOPs saved 13110.98e12
+V3: eff_weight 0.4, hit rate 67.54%, FLOPs saved 12809.74e12
+V3: eff_weight 0.5, hit rate 66.77%, FLOPs saved 12664.22e12
+V3: eff_weight 0.6, hit rate 66.14%, FLOPs saved 12544.49e12
+V3: eff_weight 0.7, hit rate 63.74%, FLOPs saved 12092.96e12
+V3: eff_weight 0.8, hit rate 64.51%, FLOPs saved 12235.73e12
+V3: eff_weight 0.9, hit rate 63.92%, FLOPs saved 12125.17e12
+V3: eff_weight 1.0, hit rate 63.78%, FLOPs saved 12099.65e12
+V3: eff_weight 1.1, hit rate 62.94%, FLOPs saved 11940.38e12
+V3: eff_weight 1.2, hit rate 60.72%, FLOPs saved 11522.06e12
+V3: eff_weight 1.3, hit rate 59.55%, FLOPs saved 11298.82e12
+V3: eff_weight 1.4, hit rate 59.59%, FLOPs saved 11306.92e12
+V3: eff_weight 1.5, hit rate 58.48%, FLOPs saved 11098.77e12
+V3: eff_weight 1.6, hit rate 59.08%, FLOPs saved 11210.70e12
+V3: eff_weight 1.7, hit rate 59.21%, FLOPs saved 11235.39e12
+V3: eff_weight 1.8, hit rate 57.59%, FLOPs saved 10927.76e12
+V3: eff_weight 1.9, hit rate 58.74%, FLOPs saved 11145.47e12
+V3: eff_weight 2.0, hit rate 58.85%, FLOPs saved 11166.46e12
+V3: hit rate 81.79%, FLOPs saved 15530.51e12
+V2 compared to V1: hit_rate_win 6.12%, flops_saved_win 6.13%
+V2 compared to vLLM: hit_rate_win 468.69%, flops_saved_win 469.56%
+V3 compared to V1: hit_rate_win 6.12%, flops_saved_win 6.13%
+V3 compared to vLLM: hit_rate_win 468.69%, flops_saved_win 469.56%
+V1 compared to vLLM: hit_rate_win 435.87%, flops_saved_win 436.66%
+Results stored in ./results/5000000000.0/sharegpt_sps=0.25_nums=100/2026_04_22_10_56_19.pickle
+==================================================
+2026-04-22 10:56:28 EST
+Cache size 5.0 GB, sessions per second: 0.5
+Running trace (1238 requests): ./traces/sharegpt_sps=0.5_nums=100.jsonl
+vLLM+: hit rate 9.80%, FLOPs saved 1857.79e12
+V1: hit rate 72.15%, FLOPs saved 13700.38e12
+V2: Evict() first called, has seen 132 requests, setting bootstrap_window_size to be 660
+len(self.request_history_windowed) 660
+Running config tuning
+Tuning: eff_weight 0.2, hit rate 72.76%, FLOPs saved 4279.49e12
+Tuning: eff_weight 0.1, hit rate 76.38%, FLOPs saved 4493.47e12
+Tuning: eff_weight 0.3, hit rate 72.52%, FLOPs saved 4265.10e12
+Tuning: eff_weight 0.4, hit rate 72.14%, FLOPs saved 4242.57e12
+Tuning: eff_weight 0.5, hit rate 72.02%, FLOPs saved 4235.58e12
+Tuning: eff_weight 0.6, hit rate 69.74%, FLOPs saved 4101.39e12
+Tuning: eff_weight 0.7, hit rate 69.82%, FLOPs saved 4106.34e12
+Tuning: eff_weight 0.8, hit rate 69.77%, FLOPs saved 4103.52e12
+Tuning: eff_weight 0.9, hit rate 69.62%, FLOPs saved 4094.26e12
+Tuning: eff_weight 1.0, hit rate 70.39%, FLOPs saved 4140.19e12
+Tuning: eff_weight 1.1, hit rate 70.49%, FLOPs saved 4146.00e12
+Tuning: eff_weight 1.2, hit rate 70.32%, FLOPs saved 4135.91e12
+Tuning: eff_weight 0, hit rate 84.30%, FLOPs saved 4963.22e12
+Tuning: eff_weight 1.4, hit rate 71.13%, FLOPs saved 4183.91e12
+Tuning: eff_weight 1.3, hit rate 70.47%, FLOPs saved 4145.01e12
+Tuning: eff_weight 1.5, hit rate 70.98%, FLOPs saved 4174.75e12
+Tuning: eff_weight 1.6, hit rate 70.12%, FLOPs saved 4124.32e12
+Tuning: eff_weight 1.7, hit rate 70.18%, FLOPs saved 4127.95e12
+Tuning: eff_weight 1.8, hit rate 70.44%, FLOPs saved 4142.75e12
+Tuning: eff_weight 1.9, hit rate 70.24%, FLOPs saved 4131.31e12
+Tuning: eff_weight 2.0, hit rate 70.45%, FLOPs saved 4143.54e12
+Tuning config took 1.14s
+V2: Updated eff_weight to be 0
+V2: hit rate 79.05%, FLOPs saved 15011.63e12
+V3: eff_weight 0, hit rate 79.05%, FLOPs saved 15011.63e12
+V3: eff_weight 0.1, hit rate 71.89%, FLOPs saved 13640.61e12
+V3: eff_weight 0.2, hit rate 68.01%, FLOPs saved 12903.16e12
+V3: eff_weight 0.3, hit rate 66.13%, FLOPs saved 12542.87e12
+V3: eff_weight 0.4, hit rate 64.22%, FLOPs saved 12181.67e12
+V3: eff_weight 0.5, hit rate 63.77%, FLOPs saved 12096.82e12
+V3: eff_weight 0.6, hit rate 62.50%, FLOPs saved 11859.44e12
+V3: eff_weight 0.7, hit rate 61.83%, FLOPs saved 11732.34e12
+V3: eff_weight 0.8, hit rate 61.39%, FLOPs saved 11647.48e12
+V3: eff_weight 0.9, hit rate 62.20%, FLOPs saved 11802.08e12
+V3: eff_weight 1.0, hit rate 61.61%, FLOPs saved 11689.33e12
+V3: eff_weight 1.1, hit rate 61.41%, FLOPs saved 11651.74e12
+V3: eff_weight 1.2, hit rate 58.09%, FLOPs saved 11022.32e12
+V3: eff_weight 1.3, hit rate 53.10%, FLOPs saved 10074.51e12
+V3: eff_weight 1.4, hit rate 54.23%, FLOPs saved 10291.58e12
+V3: eff_weight 1.5, hit rate 56.42%, FLOPs saved 10706.94e12
+V3: eff_weight 1.6, hit rate 54.25%, FLOPs saved 10295.44e12
+V3: eff_weight 1.7, hit rate 55.41%, FLOPs saved 10516.38e12
+V3: eff_weight 1.8, hit rate 56.22%, FLOPs saved 10666.94e12
+V3: eff_weight 1.9, hit rate 54.85%, FLOPs saved 10410.63e12
+V3: eff_weight 2.0, hit rate 56.20%, FLOPs saved 10664.47e12
+V3: hit rate 79.05%, FLOPs saved 15011.63e12
+V2 compared to V1: hit_rate_win 9.57%, flops_saved_win 9.57%
+V2 compared to vLLM: hit_rate_win 706.56%, flops_saved_win 708.04%
+V3 compared to V1: hit_rate_win 9.57%, flops_saved_win 9.57%
+V3 compared to vLLM: hit_rate_win 706.56%, flops_saved_win 708.04%
+V1 compared to vLLM: hit_rate_win 636.14%, flops_saved_win 637.46%
+Results stored in ./results/5000000000.0/sharegpt_sps=0.5_nums=100/2026_04_22_10_56_28.pickle
+==================================================
+2026-04-22 10:56:37 EST
+Cache size 5.0 GB, sessions per second: 1
+Running trace (1238 requests): ./traces/sharegpt_sps=1_nums=100.jsonl
+vLLM+: hit rate 8.45%, FLOPs saved 1602.93e12
+V1: hit rate 68.75%, FLOPs saved 13056.73e12
+V2: Evict() first called, has seen 132 requests, setting bootstrap_window_size to be 660
+len(self.request_history_windowed) 660
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 70.73%, FLOPs saved 4160.08e12
+Tuning: eff_weight 0.2, hit rate 69.49%, FLOPs saved 4086.28e12
+Tuning: eff_weight 0.3, hit rate 68.78%, FLOPs saved 4044.02e12
+Tuning: eff_weight 0.4, hit rate 68.11%, FLOPs saved 4004.67e12
+Tuning: eff_weight 0.5, hit rate 67.35%, FLOPs saved 3959.64e12
+Tuning: eff_weight 0.6, hit rate 67.99%, FLOPs saved 3997.58e12
+Tuning: eff_weight 0.7, hit rate 66.62%, FLOPs saved 3916.72e12
+Tuning: eff_weight 0.8, hit rate 66.24%, FLOPs saved 3894.80e12
+Tuning: eff_weight 0.9, hit rate 66.37%, FLOPs saved 3902.09e12
+Tuning: eff_weight 1.0, hit rate 65.65%, FLOPs saved 3859.51e12
+Tuning: eff_weight 1.1, hit rate 66.68%, FLOPs saved 3919.90e12
+Tuning: eff_weight 0, hit rate 76.95%, FLOPs saved 4530.11e12
+Tuning: eff_weight 1.2, hit rate 66.52%, FLOPs saved 3910.42e12
+Tuning: eff_weight 1.3, hit rate 66.46%, FLOPs saved 3907.03e12
+Tuning: eff_weight 1.4, hit rate 66.09%, FLOPs saved 3885.24e12
+Tuning: eff_weight 1.5, hit rate 67.41%, FLOPs saved 3963.04e12
+Tuning: eff_weight 1.6, hit rate 66.28%, FLOPs saved 3895.97e12
+Tuning: eff_weight 1.7, hit rate 66.28%, FLOPs saved 3895.97e12
+Tuning: eff_weight 1.8, hit rate 66.33%, FLOPs saved 3899.18e12
+Tuning: eff_weight 1.9, hit rate 66.19%, FLOPs saved 3891.14e12
+Tuning: eff_weight 2.0, hit rate 66.42%, FLOPs saved 3904.53e12
+Tuning config took 1.13s
+V2: Updated eff_weight to be 0
+V2: hit rate 75.25%, FLOPs saved 14290.33e12
+V3: eff_weight 0, hit rate 75.25%, FLOPs saved 14290.33e12
+V3: eff_weight 0.1, hit rate 69.72%, FLOPs saved 13227.01e12
+V3: eff_weight 0.2, hit rate 66.25%, FLOPs saved 12565.63e12
+V3: eff_weight 0.3, hit rate 65.15%, FLOPs saved 12358.01e12
+V3: eff_weight 0.4, hit rate 64.10%, FLOPs saved 12158.32e12
+V3: eff_weight 0.5, hit rate 63.16%, FLOPs saved 11981.69e12
+V3: eff_weight 0.6, hit rate 63.38%, FLOPs saved 12022.97e12
+V3: eff_weight 0.7, hit rate 62.23%, FLOPs saved 11804.44e12
+V3: eff_weight 0.8, hit rate 60.71%, FLOPs saved 11517.86e12
+V3: eff_weight 0.9, hit rate 61.13%, FLOPs saved 11597.25e12
+V3: eff_weight 1.0, hit rate 61.22%, FLOPs saved 11613.52e12
+V3: eff_weight 1.1, hit rate 61.43%, FLOPs saved 11652.79e12
+V3: eff_weight 1.2, hit rate 61.11%, FLOPs saved 11593.69e12
+V3: eff_weight 1.3, hit rate 56.94%, FLOPs saved 10803.93e12
+V3: eff_weight 1.4, hit rate 58.96%, FLOPs saved 11187.36e12
+V3: eff_weight 1.5, hit rate 59.41%, FLOPs saved 11269.40e12
+V3: eff_weight 1.6, hit rate 58.73%, FLOPs saved 11142.08e12
+V3: eff_weight 1.7, hit rate 58.34%, FLOPs saved 11068.96e12
+V3: eff_weight 1.8, hit rate 59.09%, FLOPs saved 11210.11e12
+V3: eff_weight 1.9, hit rate 59.09%, FLOPs saved 11209.92e12
+V3: eff_weight 2.0, hit rate 58.92%, FLOPs saved 11177.81e12
+V3: hit rate 75.25%, FLOPs saved 14290.33e12
+V2 compared to V1: hit_rate_win 9.46%, flops_saved_win 9.45%
+V2 compared to vLLM: hit_rate_win 789.98%, flops_saved_win 791.51%
+V3 compared to V1: hit_rate_win 9.46%, flops_saved_win 9.45%
+V3 compared to vLLM: hit_rate_win 789.98%, flops_saved_win 791.51%
+V1 compared to vLLM: hit_rate_win 713.09%, flops_saved_win 714.55%
+Results stored in ./results/5000000000.0/sharegpt_sps=1_nums=100/2026_04_22_10_56_37.pickle
+==================================================
+2026-04-22 10:56:46 EST
+Cache size 5.0 GB, sessions per second: 2
+Running trace (1238 requests): ./traces/sharegpt_sps=2_nums=100.jsonl
+vLLM+: hit rate 7.71%, FLOPs saved 1462.57e12
+V1: hit rate 66.97%, FLOPs saved 12720.90e12
+V2: Evict() first called, has seen 125 requests, setting bootstrap_window_size to be 625
+len(self.request_history_windowed) 625
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 69.11%, FLOPs saved 3932.58e12
+Tuning: eff_weight 0.2, hit rate 66.99%, FLOPs saved 3811.37e12
+Tuning: eff_weight 0.3, hit rate 66.44%, FLOPs saved 3780.62e12
+Tuning: eff_weight 0.4, hit rate 66.89%, FLOPs saved 3805.99e12
+Tuning: eff_weight 0.5, hit rate 67.02%, FLOPs saved 3813.05e12
+Tuning: eff_weight 0.6, hit rate 66.62%, FLOPs saved 3790.33e12
+Tuning: eff_weight 0.7, hit rate 66.13%, FLOPs saved 3762.00e12
+Tuning: eff_weight 0.8, hit rate 65.93%, FLOPs saved 3750.76e12
+Tuning: eff_weight 0.9, hit rate 66.58%, FLOPs saved 3787.15e12
+Tuning: eff_weight 1.0, hit rate 66.40%, FLOPs saved 3777.09e12
+Tuning: eff_weight 1.1, hit rate 66.00%, FLOPs saved 3754.75e12
+Tuning: eff_weight 0, hit rate 72.09%, FLOPs saved 4105.67e12
+Tuning: eff_weight 1.2, hit rate 66.70%, FLOPs saved 3794.38e12
+Tuning: eff_weight 1.3, hit rate 66.70%, FLOPs saved 3794.38e12
+Tuning: eff_weight 1.4, hit rate 66.70%, FLOPs saved 3794.29e12
+Tuning: eff_weight 1.5, hit rate 66.70%, FLOPs saved 3794.29e12
+Tuning: eff_weight 1.6, hit rate 66.59%, FLOPs saved 3787.97e12
+Tuning: eff_weight 1.7, hit rate 66.59%, FLOPs saved 3787.97e12
+Tuning: eff_weight 1.8, hit rate 66.59%, FLOPs saved 3787.97e12
+Tuning: eff_weight 1.9, hit rate 66.58%, FLOPs saved 3787.14e12
+Tuning: eff_weight 2.0, hit rate 66.58%, FLOPs saved 3787.14e12
+Tuning config took 1.07s
+V2: Updated eff_weight to be 0
+V2: hit rate 73.26%, FLOPs saved 13913.01e12
+V3: eff_weight 0, hit rate 73.26%, FLOPs saved 13913.01e12
+V3: eff_weight 0.1, hit rate 68.50%, FLOPs saved 12996.54e12
+V3: eff_weight 0.2, hit rate 65.18%, FLOPs saved 12364.93e12
+V3: eff_weight 0.3, hit rate 62.92%, FLOPs saved 11935.74e12
+V3: eff_weight 0.4, hit rate 62.05%, FLOPs saved 11773.02e12
+V3: eff_weight 0.5, hit rate 60.39%, FLOPs saved 11456.62e12
+V3: eff_weight 0.6, hit rate 58.53%, FLOPs saved 11105.78e12
+V3: eff_weight 0.7, hit rate 58.24%, FLOPs saved 11050.13e12
+V3: eff_weight 0.8, hit rate 57.50%, FLOPs saved 10912.89e12
+V3: eff_weight 0.9, hit rate 56.10%, FLOPs saved 10643.88e12
+V3: eff_weight 1.0, hit rate 56.63%, FLOPs saved 10746.06e12
+V3: eff_weight 1.1, hit rate 57.04%, FLOPs saved 10823.15e12
+V3: eff_weight 1.2, hit rate 50.46%, FLOPs saved 9573.31e12
+V3: eff_weight 1.3, hit rate 50.75%, FLOPs saved 9631.01e12
+V3: eff_weight 1.4, hit rate 50.63%, FLOPs saved 9605.60e12
+V3: eff_weight 1.5, hit rate 51.05%, FLOPs saved 9688.06e12
+V3: eff_weight 1.6, hit rate 50.75%, FLOPs saved 9629.89e12
+V3: eff_weight 1.7, hit rate 50.50%, FLOPs saved 9583.49e12
+V3: eff_weight 1.8, hit rate 50.11%, FLOPs saved 9510.09e12
+V3: eff_weight 1.9, hit rate 49.96%, FLOPs saved 9480.21e12
+V3: eff_weight 2.0, hit rate 51.43%, FLOPs saved 9758.97e12
+V3: hit rate 73.26%, FLOPs saved 13913.01e12
+V2 compared to V1: hit_rate_win 9.38%, flops_saved_win 9.37%
+V2 compared to vLLM: hit_rate_win 849.80%, flops_saved_win 851.27%
+V3 compared to V1: hit_rate_win 9.38%, flops_saved_win 9.37%
+V3 compared to vLLM: hit_rate_win 849.80%, flops_saved_win 851.27%
+V1 compared to vLLM: hit_rate_win 768.34%, flops_saved_win 769.76%
+Results stored in ./results/5000000000.0/sharegpt_sps=2_nums=100/2026_04_22_10_56_46.pickle
+==================================================
+2026-04-22 10:56:55 EST
+Cache size 5.0 GB, sessions per second: 5
+Running trace (1238 requests): ./traces/sharegpt_sps=5_nums=100.jsonl
+vLLM+: hit rate 7.20%, FLOPs saved 1366.07e12
+V1: hit rate 64.98%, FLOPs saved 12342.85e12
+V2: Evict() first called, has seen 120 requests, setting bootstrap_window_size to be 600
+len(self.request_history_windowed) 600
+Running config tuning
+Tuning: eff_weight 0.2, hit rate 66.13%, FLOPs saved 3741.28e12
+Tuning: eff_weight 0.1, hit rate 68.79%, FLOPs saved 3892.71e12
+Tuning: eff_weight 0.3, hit rate 65.68%, FLOPs saved 3715.35e12
+Tuning: eff_weight 0.4, hit rate 65.66%, FLOPs saved 3713.78e12
+Tuning: eff_weight 0.6, hit rate 64.93%, FLOPs saved 3672.87e12
+Tuning: eff_weight 0.7, hit rate 64.02%, FLOPs saved 3620.99e12
+Tuning: eff_weight 0.5, hit rate 65.21%, FLOPs saved 3688.31e12
+Tuning: eff_weight 0.8, hit rate 64.22%, FLOPs saved 3632.76e12
+Tuning: eff_weight 0.9, hit rate 64.25%, FLOPs saved 3634.31e12
+Tuning: eff_weight 1.1, hit rate 63.65%, FLOPs saved 3599.79e12
+Tuning: eff_weight 0, hit rate 69.31%, FLOPs saved 3925.61e12
+Tuning: eff_weight 1.3, hit rate 63.83%, FLOPs saved 3610.13e12
+Tuning: eff_weight 1.2, hit rate 63.99%, FLOPs saved 3618.99e12
+Tuning: eff_weight 1.4, hit rate 63.83%, FLOPs saved 3610.13e12
+Tuning: eff_weight 1.6, hit rate 63.99%, FLOPs saved 3618.79e12
+Tuning: eff_weight 1.7, hit rate 64.10%, FLOPs saved 3624.87e12
+Tuning: eff_weight 1.8, hit rate 64.16%, FLOPs saved 3628.71e12
+Tuning: eff_weight 1.9, hit rate 64.10%, FLOPs saved 3624.87e12
+Tuning: eff_weight 2.0, hit rate 64.10%, FLOPs saved 3624.87e12
+Tuning: eff_weight 1.0, hit rate 64.06%, FLOPs saved 3622.92e12
+Tuning: eff_weight 1.5, hit rate 63.99%, FLOPs saved 3618.78e12
+Tuning config took 1.11s
+V2: Updated eff_weight to be 0
+V2: hit rate 71.72%, FLOPs saved 13623.37e12
+V3: eff_weight 0, hit rate 71.72%, FLOPs saved 13623.37e12
+V3: eff_weight 0.1, hit rate 67.18%, FLOPs saved 12745.37e12
+V3: eff_weight 0.2, hit rate 63.73%, FLOPs saved 12091.07e12
+V3: eff_weight 0.3, hit rate 62.18%, FLOPs saved 11796.26e12
+V3: eff_weight 0.4, hit rate 60.81%, FLOPs saved 11536.46e12
+V3: eff_weight 0.5, hit rate 59.52%, FLOPs saved 11293.26e12
+V3: eff_weight 0.6, hit rate 58.30%, FLOPs saved 11064.13e12
+V3: eff_weight 0.7, hit rate 56.14%, FLOPs saved 10655.56e12
+V3: eff_weight 0.8, hit rate 52.71%, FLOPs saved 10007.30e12
+V3: eff_weight 0.9, hit rate 55.14%, FLOPs saved 10464.98e12
+V3: eff_weight 1.0, hit rate 51.03%, FLOPs saved 9686.60e12
+V3: eff_weight 1.1, hit rate 51.15%, FLOPs saved 9707.36e12
+V3: eff_weight 1.2, hit rate 44.85%, FLOPs saved 8513.60e12
+V3: eff_weight 1.3, hit rate 45.27%, FLOPs saved 8592.25e12
+V3: eff_weight 1.4, hit rate 45.05%, FLOPs saved 8551.10e12
+V3: eff_weight 1.5, hit rate 44.96%, FLOPs saved 8533.54e12
+V3: eff_weight 1.6, hit rate 43.91%, FLOPs saved 8335.17e12
+V3: eff_weight 1.7, hit rate 45.62%, FLOPs saved 8658.25e12
+V3: eff_weight 1.8, hit rate 47.65%, FLOPs saved 9044.08e12
+V3: eff_weight 1.9, hit rate 44.01%, FLOPs saved 8352.25e12
+V3: eff_weight 2.0, hit rate 44.01%, FLOPs saved 8352.54e12
+V3: hit rate 71.72%, FLOPs saved 13623.37e12
+V2 compared to V1: hit_rate_win 10.39%, flops_saved_win 10.37%
+V2 compared to vLLM: hit_rate_win 896.14%, flops_saved_win 897.27%
+V3 compared to V1: hit_rate_win 10.39%, flops_saved_win 10.37%
+V3 compared to vLLM: hit_rate_win 896.14%, flops_saved_win 897.27%
+V1 compared to vLLM: hit_rate_win 802.41%, flops_saved_win 803.53%
+Results stored in ./results/5000000000.0/sharegpt_sps=5_nums=100/2026_04_22_10_56_55.pickle
+==================================================
+2026-04-22 10:57:04 EST
+Cache size 5.0 GB, sessions per second: 10
+Running trace (1238 requests): ./traces/sharegpt_sps=10_nums=100.jsonl
+vLLM+: hit rate 7.80%, FLOPs saved 1480.67e12
+V1: hit rate 65.05%, FLOPs saved 12356.85e12
+V2: Evict() first called, has seen 116 requests, setting bootstrap_window_size to be 580
+len(self.request_history_windowed) 580
+Running config tuning
+Tuning: eff_weight 0.1, hit rate 68.37%, FLOPs saved 3726.60e12
+Tuning: eff_weight 0.2, hit rate 66.05%, FLOPs saved 3598.86e12
+Tuning: eff_weight 0.3, hit rate 65.97%, FLOPs saved 3594.71e12
+Tuning: eff_weight 0.4, hit rate 65.77%, FLOPs saved 3583.41e12
+Tuning: eff_weight 0.6, hit rate 64.94%, FLOPs saved 3537.76e12
+Tuning: eff_weight 0.5, hit rate 65.90%, FLOPs saved 3590.36e12
+Tuning: eff_weight 0.7, hit rate 65.48%, FLOPs saved 3567.55e12
+Tuning: eff_weight 0.8, hit rate 65.46%, FLOPs saved 3566.18e12
+Tuning: eff_weight 0.9, hit rate 64.88%, FLOPs saved 3534.22e12
+Tuning: eff_weight 1.0, hit rate 65.01%, FLOPs saved 3541.41e12
+Tuning: eff_weight 1.1, hit rate 64.56%, FLOPs saved 3516.74e12
+Tuning: eff_weight 1.2, hit rate 64.85%, FLOPs saved 3532.68e12
+Tuning: eff_weight 0, hit rate 70.74%, FLOPs saved 3859.34e12
+Tuning: eff_weight 1.3, hit rate 64.36%, FLOPs saved 3505.94e12
+Tuning: eff_weight 1.4, hit rate 65.12%, FLOPs saved 3547.46e12
+Tuning: eff_weight 1.5, hit rate 65.35%, FLOPs saved 3559.96e12
+Tuning: eff_weight 1.6, hit rate 64.97%, FLOPs saved 3539.04e12
+Tuning: eff_weight 1.7, hit rate 64.61%, FLOPs saved 3519.52e12
+Tuning: eff_weight 1.8, hit rate 64.91%, FLOPs saved 3536.03e12
+Tuning: eff_weight 1.9, hit rate 64.66%, FLOPs saved 3522.15e12
+Tuning: eff_weight 2.0, hit rate 64.82%, FLOPs saved 3530.76e12
+Tuning config took 1.00s
+V2: Updated eff_weight to be 0
+V2: hit rate 71.75%, FLOPs saved 13628.47e12
+V3: eff_weight 0, hit rate 71.75%, FLOPs saved 13628.47e12
+V3: eff_weight 0.1, hit rate 66.96%, FLOPs saved 12705.69e12
+V3: eff_weight 0.2, hit rate 63.13%, FLOPs saved 11977.52e12
+V3: eff_weight 0.3, hit rate 61.36%, FLOPs saved 11642.34e12
+V3: eff_weight 0.4, hit rate 59.71%, FLOPs saved 11331.18e12
+V3: eff_weight 0.5, hit rate 57.54%, FLOPs saved 10921.04e12
+V3: eff_weight 0.6, hit rate 55.04%, FLOPs saved 10446.37e12
+V3: eff_weight 0.7, hit rate 57.15%, FLOPs saved 10845.62e12
+V3: eff_weight 0.8, hit rate 55.84%, FLOPs saved 10597.92e12
+V3: eff_weight 0.9, hit rate 53.93%, FLOPs saved 10234.59e12
+V3: eff_weight 1.0, hit rate 53.53%, FLOPs saved 10160.64e12
+V3: eff_weight 1.1, hit rate 45.52%, FLOPs saved 8639.84e12
+V3: eff_weight 1.2, hit rate 46.09%, FLOPs saved 8745.64e12
+V3: eff_weight 1.3, hit rate 44.57%, FLOPs saved 8460.82e12
+V3: eff_weight 1.4, hit rate 44.36%, FLOPs saved 8419.46e12
+V3: eff_weight 1.5, hit rate 45.01%, FLOPs saved 8541.68e12
+V3: eff_weight 1.6, hit rate 43.30%, FLOPs saved 8218.57e12
+V3: eff_weight 1.7, hit rate 43.58%, FLOPs saved 8271.33e12
+V3: eff_weight 1.8, hit rate 42.47%, FLOPs saved 8060.68e12
+V3: eff_weight 1.9, hit rate 43.01%, FLOPs saved 8162.41e12
+V3: eff_weight 2.0, hit rate 41.75%, FLOPs saved 7922.91e12
+V3: hit rate 71.75%, FLOPs saved 13628.47e12
+V2 compared to V1: hit_rate_win 10.30%, flops_saved_win 10.29%
+V2 compared to vLLM: hit_rate_win 819.52%, flops_saved_win 820.43%
+V3 compared to V1: hit_rate_win 10.30%, flops_saved_win 10.29%
+V3 compared to vLLM: hit_rate_win 819.52%, flops_saved_win 820.43%
+V1 compared to vLLM: hit_rate_win 733.63%, flops_saved_win 734.55%
+Results stored in ./results/5000000000.0/sharegpt_sps=10_nums=100/2026_04_22_10_57_04.pickle
+==================================================
+2026-04-22 10:57:12 EST
+Cache size 10.0 GB, sessions per second: 0.25
+Running trace (1238 requests): ./traces/sharegpt_sps=0.25_nums=100.jsonl
+vLLM+: hit rate 32.25%, FLOPs saved 6122.68e12
+V1: hit rate 88.01%, FLOPs saved 16711.21e12
+V2: Evict() first called, has seen 265 requests, setting bootstrap_window_size to be 1325
+V2: hit rate 90.41%, FLOPs saved 17166.85e12
+V3: eff_weight 0, hit rate 90.41%, FLOPs saved 17166.85e12
+V3: eff_weight 0.1, hit rate 80.93%, FLOPs saved 15354.36e12
+V3: eff_weight 0.2, hit rate 78.25%, FLOPs saved 14843.07e12
+V3: eff_weight 0.3, hit rate 76.28%, FLOPs saved 14467.93e12
+V3: eff_weight 0.4, hit rate 75.29%, FLOPs saved 14277.89e12
+V3: eff_weight 0.5, hit rate 74.89%, FLOPs saved 14201.89e12
+V3: eff_weight 0.6, hit rate 74.92%, FLOPs saved 14208.04e12
+V3: eff_weight 0.7, hit rate 74.33%, FLOPs saved 14095.45e12
+V3: eff_weight 0.8, hit rate 74.70%, FLOPs saved 14165.17e12
+V3: eff_weight 0.9, hit rate 74.36%, FLOPs saved 14100.32e12
+V3: eff_weight 1.0, hit rate 73.78%, FLOPs saved 13989.64e12
+V3: eff_weight 1.1, hit rate 73.76%, FLOPs saved 13986.37e12
+V3: eff_weight 1.2, hit rate 73.55%, FLOPs saved 13945.85e12
+V3: eff_weight 1.3, hit rate 73.76%, FLOPs saved 13986.64e12
+V3: eff_weight 1.4, hit rate 73.19%, FLOPs saved 13877.11e12
+V3: eff_weight 1.5, hit rate 73.18%, FLOPs saved 13875.52e12
+V3: eff_weight 1.6, hit rate 73.12%, FLOPs saved 13863.09e12
+V3: eff_weight 1.7, hit rate 73.78%, FLOPs saved 13990.82e12
+V3: eff_weight 1.8, hit rate 73.26%, FLOPs saved 13890.84e12
+V3: eff_weight 1.9, hit rate 73.46%, FLOPs saved 13928.45e12
+V3: eff_weight 2.0, hit rate 73.48%, FLOPs saved 13933.62e12
+V3: hit rate 90.41%, FLOPs saved 17166.85e12
+V2 compared to V1: hit_rate_win 2.73%, flops_saved_win 2.73%
+V2 compared to vLLM: hit_rate_win 180.31%, flops_saved_win 180.38%
+V3 compared to V1: hit_rate_win 2.73%, flops_saved_win 2.73%
+V3 compared to vLLM: hit_rate_win 180.31%, flops_saved_win 180.38%
+V1 compared to vLLM: hit_rate_win 172.86%, flops_saved_win 172.94%
+Results stored in ./results/10000000000.0/sharegpt_sps=0.25_nums=100/2026_04_22_10_57_12.pickle
+==================================================
+2026-04-22 10:57:24 EST
+Cache size 10.0 GB, sessions per second: 0.5
+Running trace (1238 requests): ./traces/sharegpt_sps=0.5_nums=100.jsonl
+vLLM+: hit rate 23.07%, FLOPs saved 4378.34e12
+V1: hit rate 87.46%, FLOPs saved 16606.76e12
+V2: Evict() first called, has seen 259 requests, setting bootstrap_window_size to be 1295
+V2: hit rate 91.00%, FLOPs saved 17279.33e12
+V3: eff_weight 0, hit rate 91.00%, FLOPs saved 17279.33e12
+V3: eff_weight 0.1, hit rate 78.62%, FLOPs saved 14916.34e12
+V3: eff_weight 0.2, hit rate 75.14%, FLOPs saved 14251.80e12
+V3: eff_weight 0.3, hit rate 74.46%, FLOPs saved 14119.86e12
+V3: eff_weight 0.4, hit rate 73.34%, FLOPs saved 13908.21e12
+V3: eff_weight 0.5, hit rate 72.77%, FLOPs saved 13798.81e12
+V3: eff_weight 0.6, hit rate 72.82%, FLOPs saved 13807.87e12
+V3: eff_weight 0.7, hit rate 72.17%, FLOPs saved 13682.78e12
+V3: eff_weight 0.8, hit rate 71.96%, FLOPs saved 13642.85e12
+V3: eff_weight 0.9, hit rate 71.61%, FLOPs saved 13576.59e12
+V3: eff_weight 1.0, hit rate 71.51%, FLOPs saved 13558.35e12
+V3: eff_weight 1.1, hit rate 71.79%, FLOPs saved 13610.57e12
+V3: eff_weight 1.2, hit rate 71.48%, FLOPs saved 13551.49e12
+V3: eff_weight 1.3, hit rate 71.67%, FLOPs saved 13587.42e12
+V3: eff_weight 1.4, hit rate 71.75%, FLOPs saved 13603.21e12
+V3: eff_weight 1.5, hit rate 71.80%, FLOPs saved 13613.85e12
+V3: eff_weight 1.6, hit rate 71.46%, FLOPs saved 13548.60e12
+V3: eff_weight 1.7, hit rate 71.63%, FLOPs saved 13581.12e12
+V3: eff_weight 1.8, hit rate 71.19%, FLOPs saved 13496.97e12
+V3: eff_weight 1.9, hit rate 70.90%, FLOPs saved 13440.31e12
+V3: eff_weight 2.0, hit rate 70.93%, FLOPs saved 13446.95e12
+V3: hit rate 91.00%, FLOPs saved 17279.33e12
+V2 compared to V1: hit_rate_win 4.05%, flops_saved_win 4.05%
+V2 compared to vLLM: hit_rate_win 294.47%, flops_saved_win 294.65%
+V3 compared to V1: hit_rate_win 4.05%, flops_saved_win 4.05%
+V3 compared to vLLM: hit_rate_win 294.47%, flops_saved_win 294.65%
+V1 compared to vLLM: hit_rate_win 279.11%, flops_saved_win 279.29%
+Results stored in ./results/10000000000.0/sharegpt_sps=0.5_nums=100/2026_04_22_10_57_24.pickle
+==================================================
+2026-04-22 10:57:35 EST
+Cache size 10.0 GB, sessions per second: 1
+Running trace (1238 requests): ./traces/sharegpt_sps=1_nums=100.jsonl
+vLLM+: hit rate 17.80%, FLOPs saved 3377.93e12
+V1: hit rate 86.19%, FLOPs saved 16365.23e12
+V2: Evict() first called, has seen 256 requests, setting bootstrap_window_size to be 1280
+V2: hit rate 90.36%, FLOPs saved 17159.34e12
+V3: eff_weight 0, hit rate 90.36%, FLOPs saved 17159.34e12
+V3: eff_weight 0.1, hit rate 77.11%, FLOPs saved 14628.12e12
+V3: eff_weight 0.2, hit rate 73.99%, FLOPs saved 14033.11e12
+V3: eff_weight 0.3, hit rate 71.75%, FLOPs saved 13603.41e12
+V3: eff_weight 0.4, hit rate 71.60%, FLOPs saved 13575.65e12
+V3: eff_weight 0.5, hit rate 71.41%, FLOPs saved 13538.87e12
+V3: eff_weight 0.6, hit rate 71.09%, FLOPs saved 13477.05e12
+V3: eff_weight 0.7, hit rate 70.78%, FLOPs saved 13419.10e12
+V3: eff_weight 0.8, hit rate 70.00%, FLOPs saved 13269.55e12
+V3: eff_weight 0.9, hit rate 70.19%, FLOPs saved 13305.17e12
+V3: eff_weight 1.0, hit rate 70.11%, FLOPs saved 13291.42e12
+V3: eff_weight 1.1, hit rate 70.36%, FLOPs saved 13337.40e12
+V3: eff_weight 1.2, hit rate 69.78%, FLOPs saved 13227.91e12
+V3: eff_weight 1.3, hit rate 70.14%, FLOPs saved 13295.11e12
+V3: eff_weight 1.4, hit rate 69.85%, FLOPs saved 13240.27e12
+V3: eff_weight 1.5, hit rate 69.92%, FLOPs saved 13253.46e12
+V3: eff_weight 1.6, hit rate 70.77%, FLOPs saved 13416.49e12
+V3: eff_weight 1.7, hit rate 70.77%, FLOPs saved 13417.55e12
+V3: eff_weight 1.8, hit rate 70.45%, FLOPs saved 13354.71e12
+V3: eff_weight 1.9, hit rate 69.26%, FLOPs saved 13127.17e12
+V3: eff_weight 2.0, hit rate 69.01%, FLOPs saved 13080.33e12
+V3: hit rate 90.36%, FLOPs saved 17159.34e12
+V2 compared to V1: hit_rate_win 4.85%, flops_saved_win 4.85%
+V2 compared to vLLM: hit_rate_win 407.66%, flops_saved_win 407.98%
+V3 compared to V1: hit_rate_win 4.85%, flops_saved_win 4.85%
+V3 compared to vLLM: hit_rate_win 407.66%, flops_saved_win 407.98%
+V1 compared to vLLM: hit_rate_win 384.19%, flops_saved_win 384.47%
+Results stored in ./results/10000000000.0/sharegpt_sps=1_nums=100/2026_04_22_10_57_35.pickle
+==================================================
+2026-04-22 10:57:47 EST
+Cache size 10.0 GB, sessions per second: 2
+Running trace (1238 requests): ./traces/sharegpt_sps=2_nums=100.jsonl
+vLLM+: hit rate 16.86%, FLOPs saved 3200.35e12
+V1: hit rate 85.29%, FLOPs saved 16195.52e12
+V2: Evict() first called, has seen 250 requests, setting bootstrap_window_size to be 1250
+V2: hit rate 89.41%, FLOPs saved 16977.68e12
+V3: eff_weight 0, hit rate 89.41%, FLOPs saved 16977.68e12
+V3: eff_weight 0.1, hit rate 76.25%, FLOPs saved 14464.26e12
+V3: eff_weight 0.2, hit rate 72.58%, FLOPs saved 13762.68e12
+V3: eff_weight 0.3, hit rate 70.94%, FLOPs saved 13449.32e12
+V3: eff_weight 0.4, hit rate 69.67%, FLOPs saved 13208.02e12
+V3: eff_weight 0.5, hit rate 69.25%, FLOPs saved 13127.71e12
+V3: eff_weight 0.6, hit rate 69.42%, FLOPs saved 13159.19e12
+V3: eff_weight 0.7, hit rate 70.35%, FLOPs saved 13336.47e12
+V3: eff_weight 0.8, hit rate 69.10%, FLOPs saved 13099.09e12
+V3: eff_weight 0.9, hit rate 68.79%, FLOPs saved 13038.56e12
+V3: eff_weight 1.0, hit rate 69.04%, FLOPs saved 13086.03e12
+V3: eff_weight 1.1, hit rate 68.70%, FLOPs saved 13020.87e12
+V3: eff_weight 1.2, hit rate 69.12%, FLOPs saved 13102.37e12
+V3: eff_weight 1.3, hit rate 68.85%, FLOPs saved 13050.53e12
+V3: eff_weight 1.4, hit rate 68.81%, FLOPs saved 13043.98e12
+V3: eff_weight 1.5, hit rate 68.69%, FLOPs saved 13020.44e12
+V3: eff_weight 1.6, hit rate 69.14%, FLOPs saved 13105.58e12
+V3: eff_weight 1.7, hit rate 68.95%, FLOPs saved 13069.35e12
+V3: eff_weight 1.8, hit rate 68.85%, FLOPs saved 13051.18e12
+V3: eff_weight 1.9, hit rate 68.65%, FLOPs saved 13011.82e12
+V3: eff_weight 2.0, hit rate 68.75%, FLOPs saved 13031.17e12
+V3: hit rate 89.41%, FLOPs saved 16977.68e12
+V2 compared to V1: hit_rate_win 4.84%, flops_saved_win 4.83%
+V2 compared to vLLM: hit_rate_win 430.35%, flops_saved_win 430.49%
+V3 compared to V1: hit_rate_win 4.84%, flops_saved_win 4.83%
+V3 compared to vLLM: hit_rate_win 430.35%, flops_saved_win 430.49%
+V1 compared to vLLM: hit_rate_win 405.89%, flops_saved_win 406.05%
+Results stored in ./results/10000000000.0/sharegpt_sps=2_nums=100/2026_04_22_10_57_47.pickle
+==================================================
+2026-04-22 10:57:58 EST
+Cache size 10.0 GB, sessions per second: 5
+Running trace (1238 requests): ./traces/sharegpt_sps=5_nums=100.jsonl
+vLLM+: hit rate 14.46%, FLOPs saved 2744.48e12
+V1: hit rate 85.03%, FLOPs saved 16146.27e12
+V2: Evict() first called, has seen 244 requests, setting bootstrap_window_size to be 1220
+len(self.request_history_windowed) 1220
+Running config tuning
+Tuning: eff_weight 0.2, hit rate 64.08%, FLOPs saved 6634.40e12
+Tuning: eff_weight 0.3, hit rate 62.68%, FLOPs saved 6488.20e12
+Tuning: eff_weight 0.1, hit rate 68.74%, FLOPs saved 7119.94e12
+Tuning: eff_weight 0.5, hit rate 62.40%, FLOPs saved 6458.54e12
+Tuning: eff_weight 0.4, hit rate 62.56%, FLOPs saved 6475.54e12
+Tuning: eff_weight 0.6, hit rate 60.70%, FLOPs saved 6281.43e12
+Tuning: eff_weight 0.7, hit rate 61.08%, FLOPs saved 6321.48e12
+Tuning: eff_weight 0.8, hit rate 60.35%, FLOPs saved 6245.04e12
+Tuning: eff_weight 0.9, hit rate 61.19%, FLOPs saved 6332.97e12
+Tuning: eff_weight 1.0, hit rate 60.86%, FLOPs saved 6298.58e12
+Tuning: eff_weight 1.1, hit rate 60.85%, FLOPs saved 6297.50e12
+Tuning: eff_weight 1.3, hit rate 59.77%, FLOPs saved 6184.49e12
+Tuning: eff_weight 1.2, hit rate 60.80%, FLOPs saved 6292.02e12
+Tuning: eff_weight 1.4, hit rate 60.45%, FLOPs saved 6256.14e12
+Tuning: eff_weight 1.5, hit rate 60.50%, FLOPs saved 6261.14e12
+Tuning: eff_weight 1.6, hit rate 60.65%, FLOPs saved 6276.44e12
+Tuning: eff_weight 1.7, hit rate 60.69%, FLOPs saved 6280.87e12
+Tuning: eff_weight 1.8, hit rate 60.30%, FLOPs saved 6239.88e12
+Tuning: eff_weight 1.9, hit rate 60.67%, FLOPs saved 6279.05e12
+Tuning: eff_weight 2.0, hit rate 60.73%, FLOPs saved 6284.53e12
+Tuning: eff_weight 0, hit rate 88.76%, FLOPs saved 9206.73e12
+Tuning config took 3.10s
+V2: Updated eff_weight to be 0
+V2: hit rate 89.27%, FLOPs saved 16951.59e12
+V3: eff_weight 0, hit rate 89.27%, FLOPs saved 16951.59e12
+V3: eff_weight 0.1, hit rate 74.90%, FLOPs saved 14205.88e12
+V3: eff_weight 0.2, hit rate 71.55%, FLOPs saved 13568.17e12
+V3: eff_weight 0.3, hit rate 70.31%, FLOPs saved 13330.14e12
+V3: eff_weight 0.4, hit rate 69.96%, FLOPs saved 13263.00e12
+V3: eff_weight 0.5, hit rate 69.83%, FLOPs saved 13237.31e12
+V3: eff_weight 0.6, hit rate 68.82%, FLOPs saved 13046.32e12
+V3: eff_weight 0.7, hit rate 69.37%, FLOPs saved 13150.21e12
+V3: eff_weight 0.8, hit rate 68.98%, FLOPs saved 13076.17e12
+V3: eff_weight 0.9, hit rate 69.62%, FLOPs saved 13199.06e12
+V3: eff_weight 1.0, hit rate 69.37%, FLOPs saved 13150.60e12
+V3: eff_weight 1.1, hit rate 69.22%, FLOPs saved 13122.31e12
+V3: eff_weight 1.2, hit rate 69.30%, FLOPs saved 13136.75e12
+V3: eff_weight 1.3, hit rate 68.46%, FLOPs saved 12975.76e12
+V3: eff_weight 1.4, hit rate 68.99%, FLOPs saved 13077.62e12
+V3: eff_weight 1.5, hit rate 69.02%, FLOPs saved 13082.62e12
+V3: eff_weight 1.6, hit rate 69.09%, FLOPs saved 13095.61e12
+V3: eff_weight 1.7, hit rate 69.14%, FLOPs saved 13106.93e12
+V3: eff_weight 1.8, hit rate 68.79%, FLOPs saved 13039.65e12
+V3: eff_weight 1.9, hit rate 69.25%, FLOPs saved 13127.93e12
+V3: eff_weight 2.0, hit rate 69.38%, FLOPs saved 13152.10e12
+V3: hit rate 89.27%, FLOPs saved 16951.59e12
+V2 compared to V1: hit_rate_win 4.98%, flops_saved_win 4.99%
+V2 compared to vLLM: hit_rate_win 517.46%, flops_saved_win 517.66%
+V3 compared to V1: hit_rate_win 4.98%, flops_saved_win 4.99%
+V3 compared to vLLM: hit_rate_win 517.46%, flops_saved_win 517.66%
+V1 compared to vLLM: hit_rate_win 488.16%, flops_saved_win 488.32%
+Results stored in ./results/10000000000.0/sharegpt_sps=5_nums=100/2026_04_22_10_57_58.pickle
+==================================================
+2026-04-22 10:58:13 EST
+Cache size 10.0 GB, sessions per second: 10
+Running trace (1238 requests): ./traces/sharegpt_sps=10_nums=100.jsonl
+vLLM+: hit rate 15.94%, FLOPs saved 3026.33e12
+V1: hit rate 85.19%, FLOPs saved 16176.66e12
+V2: Evict() first called, has seen 246 requests, setting bootstrap_window_size to be 1230
+len(self.request_history_windowed) 1230
+Running config tuning
+Tuning: eff_weight 0.2, hit rate 65.08%, FLOPs saved 6808.41e12
+Tuning: eff_weight 0.1, hit rate 69.62%, FLOPs saved 7287.43e12
+Tuning: eff_weight 0.3, hit rate 62.61%, FLOPs saved 6548.98e12
+Tuning: eff_weight 0.4, hit rate 62.40%, FLOPs saved 6526.62e12
+Tuning: eff_weight 0.5, hit rate 62.86%, FLOPs saved 6574.49e12
+Tuning: eff_weight 0.6, hit rate 60.40%, FLOPs saved 6315.91e12
+Tuning: eff_weight 0.7, hit rate 61.49%, FLOPs saved 6430.91e12
+Tuning: eff_weight 0.9, hit rate 60.59%, FLOPs saved 6335.69e12
+Tuning: eff_weight 0.8, hit rate 61.39%, FLOPs saved 6420.17e12
+Tuning: eff_weight 1.1, hit rate 60.20%, FLOPs saved 6293.92e12
+Tuning: eff_weight 1.0, hit rate 60.86%, FLOPs saved 6364.29e12
+Tuning: eff_weight 1.2, hit rate 61.68%, FLOPs saved 6450.27e12
+Tuning: eff_weight 1.3, hit rate 59.78%, FLOPs saved 6250.13e12
+Tuning: eff_weight 1.4, hit rate 59.71%, FLOPs saved 6242.76e12
+Tuning: eff_weight 1.5, hit rate 60.49%, FLOPs saved 6324.60e12
+Tuning: eff_weight 1.6, hit rate 60.46%, FLOPs saved 6321.25e12
+Tuning: eff_weight 1.7, hit rate 59.90%, FLOPs saved 6262.78e12
+Tuning: eff_weight 1.8, hit rate 59.88%, FLOPs saved 6260.23e12
+Tuning: eff_weight 1.9, hit rate 59.88%, FLOPs saved 6260.23e12
+Tuning: eff_weight 2.0, hit rate 60.71%, FLOPs saved 6347.94e12
+Tuning: eff_weight 0, hit rate 88.71%, FLOPs saved 9297.82e12
+Tuning config took 3.11s
+V2: Updated eff_weight to be 0
+V2: hit rate 89.41%, FLOPs saved 16977.40e12
+V3: eff_weight 0, hit rate 89.41%, FLOPs saved 16977.40e12
+V3: eff_weight 0.1, hit rate 75.29%, FLOPs saved 14282.34e12
+V3: eff_weight 0.2, hit rate 72.37%, FLOPs saved 13724.27e12
+V3: eff_weight 0.3, hit rate 70.79%, FLOPs saved 13421.82e12
+V3: eff_weight 0.4, hit rate 70.28%, FLOPs saved 13323.64e12
+V3: eff_weight 0.5, hit rate 70.78%, FLOPs saved 13419.91e12
+V3: eff_weight 0.6, hit rate 68.97%, FLOPs saved 13073.16e12
+V3: eff_weight 0.7, hit rate 69.79%, FLOPs saved 13230.79e12
+V3: eff_weight 0.8, hit rate 69.75%, FLOPs saved 13221.86e12
+V3: eff_weight 0.9, hit rate 69.14%, FLOPs saved 13105.63e12
+V3: eff_weight 1.0, hit rate 69.47%, FLOPs saved 13169.45e12
+V3: eff_weight 1.1, hit rate 69.03%, FLOPs saved 13084.19e12
+V3: eff_weight 1.2, hit rate 70.14%, FLOPs saved 13296.05e12
+V3: eff_weight 1.3, hit rate 68.82%, FLOPs saved 13044.56e12
+V3: eff_weight 1.4, hit rate 68.73%, FLOPs saved 13027.06e12
+V3: eff_weight 1.5, hit rate 69.09%, FLOPs saved 13096.57e12
+V3: eff_weight 1.6, hit rate 69.07%, FLOPs saved 13093.22e12
+V3: eff_weight 1.7, hit rate 68.72%, FLOPs saved 13026.59e12
+V3: eff_weight 1.8, hit rate 68.71%, FLOPs saved 13024.65e12
+V3: eff_weight 1.9, hit rate 68.71%, FLOPs saved 13024.65e12
+V3: eff_weight 2.0, hit rate 69.14%, FLOPs saved 13105.23e12
+V3: hit rate 89.41%, FLOPs saved 16977.40e12
+V2 compared to V1: hit_rate_win 4.95%, flops_saved_win 4.95%
+V2 compared to vLLM: hit_rate_win 461.06%, flops_saved_win 460.99%
+V3 compared to V1: hit_rate_win 4.95%, flops_saved_win 4.95%
+V3 compared to vLLM: hit_rate_win 461.06%, flops_saved_win 460.99%
+V1 compared to vLLM: hit_rate_win 434.62%, flops_saved_win 434.53%
+Results stored in ./results/10000000000.0/sharegpt_sps=10_nums=100/2026_04_22_10_58_13.pickle

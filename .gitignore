@@ -7,11 +7,6 @@ __pycache__
 /datasets/swebench_20240820_honeycomb
 /tmp
 /traces
-/logs*
-/results/*.pickle
-/results/*/*.pickle
-/results/*/*/*.pickle
 /sweep/*.txt
 /figures
 *.tar.gz
-.DS_Store
